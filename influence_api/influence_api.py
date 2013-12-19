@@ -3,11 +3,9 @@
 #################
 
 # Created Date: 2013/12/17
-# Last Updated: 2013/12/17
+# Last Updated: 2013/12/19
 
 ### Resources ###
-
-
 from flask import Flask, jsonify, request
 import urllib2
 
@@ -19,6 +17,7 @@ from py2neo import neo4j
 
 app = Flask(__name__)
 
+#TODO put these in a configuration file
 req_param_list = ['graph_url', 'start_date', 'end_date', 'project', 'network', 'metric']
 opt_param_list = ['subforum', 'topic']
 metric_list = ['betweenness', 'closeness', 'degree', 'eigenvector', 'in_degree', 'out_degree', 'pagerank']
@@ -27,11 +26,14 @@ valid_urls = ['http://192.168.1.164:7474/db/data']
 #TODO add browsable api in root
 
 
-@app.route('/metrics/influence')
-def influence():
-	## >Parameter format
-	#?graph_url=<>&start_date=<>&end_date=<>&project=<>&network=<>
+@app.route('/metrics')
+def info():
+	available = 'Available Centrality Metrics: /metrics/centrality\n'
+	return available
 
+
+@app.route('/metrics/centrality')
+def centrality():
 	## >Get the REQUIRED parameters
 	req_params = {}
 	for entry in req_param_list:
@@ -98,8 +100,9 @@ def influence():
 		for con_rel in auth_con_rels:
 			#TODO thread this
 			## >If the relationship meets the required criteria
-			if ((con_rel['date'] >= params['start_date']) and
-				(con_rel['date'] <= params['end_date']) and
+			#TODO check the start and end dates?
+			if (int((con_rel['date']) >= int(params['start_date'])) and
+				(int(con_rel['date']) <= int(params['end_date'])) and
 				(con_rel['scored_project'] == params['project'])):
 				#con_name = con_rel.end_node['name']
 
@@ -147,5 +150,5 @@ def influence():
 	return jsonify(result=data_results)
 
 if __name__ == '__main__':
-	app.debug = True
+	app.debug = False
 	app.run(host='0.0.0.0')
