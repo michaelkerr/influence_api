@@ -12,6 +12,16 @@ import urllib2
 
 
 ### Functions ###
+def append_to_file(fileout, graph_metric, proj_name, net_name, sub_name, top_name):
+	with open(fileout, 'a') as output_file:
+		for key, value in graph_metric.iteritems():
+			write_string = key.encode('utf_8') + ', ' + str(value).encode('utf_8') + '\n'
+			output_file.write(write_string)
+	if not output_file.closed:
+		output_file.close()
+	return
+
+
 def check_if_none(req_params):
 	## >Remove optional params
 	del req_params['subforum']

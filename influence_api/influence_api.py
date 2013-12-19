@@ -8,48 +8,54 @@
 ### Resources ###
 
 
-from flask import Flask, Response, json, jsonify, request, Blueprint, render_template
-import json
-import re
+from flask import Flask, jsonify, request
 import urllib2
-from urlparse import urlparse
 
-from datetime import datetime
+#from datetime import datetime
 import inf_api_support as inf_sup
 import influence as inf
 import networkx as nx
 from py2neo import neo4j
-import sys
 
 app = Flask(__name__)
 
+req_param_list = ['graph_url', 'start_date', 'end_date', 'project', 'network', 'metric']
+opt_param_list = ['subforum', 'topic']
+metric_list = ['betweenness', 'closeness', 'degree', 'eigenvector', 'in_degree', 'out_degree', 'pagerank']
+valid_urls = ['http://192.168.1.164:7474/db/data']
 
 #TODO add browsable api in root
 
 
-@app.route('/_api/pagerank')
-def pagerank():
+@app.route('/metrics/influence')
+def influence():
+	## >Parameter format
+	#?graph_url=<>&start_date=<>&end_date=<>&project=<>&network=<>
+
 	## >Get the REQUIRED parameters
 	req_params = {}
-	req_params['graph_url'] = urllib2.unquote(request.args.get('graph_url'))
-	req_params['start_date'] = urllib2.unquote(request.args.get('start_date'))
-	req_params['end_date'] = urllib2.unquote(request.args.get('end_date'))
-	req_params['project'] = urllib2.unquote(request.args.get('project'))
-	req_params['network'] = urllib2.unquote(request.args.get('network'))
-	req_params['metric'] = 'Pagerank'
+	for entry in req_param_list:
+		if request.args.get(entry) is not None:
+			req_params[entry] = urllib2.unquote(request.args.get(entry)).replace('\'', '')
+		else:
+			ret_string = 'Required parameter missing: ' + entry
+			return jsonify(result=ret_string)
 
 	## >Get the OPTIONAL parameters
 	opt_params = {}
-	opt_params['subforum'] = urllib2.unquote(request.args.get('subforum'))
-	opt_params['topic'] = urllib2.unquote(request.args.get('topic'))
+	for entry in opt_param_list:
+		if request.args.get(entry) is not None:
+			opt_params[entry] = urllib2.unquote(request.args.get(entry)).replace('\'', '')
+		else:
+			opt_params[entry] = None
 
-	## >Check if any required parameters are None
-	for key, value in req_params.iteritems():
-		if value is None:
-			ret_string = 'Required parameter missing: ' + key
-			return jsonify(result=ret_string)
+	params = dict(req_params.items() + opt_params.items())
 
 	## >Create DB connection
+	if req_params['graph_url'].replace('\'', '') not in valid_urls:
+		ret_string = 'Invalid graph URL'
+		return jsonify(result=ret_string)
+
 	graph_db = neo4j.GraphDatabaseService(req_params['graph_url'])
 
 	## >Get the node index
@@ -57,16 +63,16 @@ def pagerank():
 
 	## >Get the project node
 	#TODO handle 'no project' calculations
-	project_node, = node_index.get("name", project)
+	project_node, = node_index.get("name", req_params['project'])
 	if project_node is None:
 		return jsonify(result='Project not in graph')
 
 	## >Get the network node
-	network_node, = node_index.get("name", network)
+	network_node, = node_index.get("name", req_params['network'])
 	if network_node is None:
 		return jsonify(result='Network not in graph')
 
-	elif not (network_node.match_outgoing(rel_type="belongs_to", end_node=project, limit=1)):
+	elif not (network_node.match_outgoing(rel_type="belongs_to", end_node=req_params['project'], limit=1)):
 			return jsonify(result='No valid Network-->Project relationship')
 
 	## >Get all the network-->author relationships in the graph
@@ -90,46 +96,56 @@ def pagerank():
 
 		## >For each relationship
 		for con_rel in auth_con_rels:
+			#TODO thread this
 			## >If the relationship meets the required criteria
-			if ((con_rel['date'] >= start_date) and (con_rel['date'] <= end_date) and (con_rel['scored_project'] == project)):
-				con_name = con_rel.end_node['name']
+			if ((con_rel['date'] >= params['start_date']) and
+				(con_rel['date'] <= params['end_date']) and
+				(con_rel['scored_project'] == params['project'])):
+				#con_name = con_rel.end_node['name']
 
 				## >Network level graph
-				if (subforum is None) and (topic is None):
+				if (params['subforum'] is None) and (params['topic'] is None):
 					con_dict = inf_sup.update_weights(con_rel, con_dict)
 
 				## >If a subforum is specified (but not a topic)
-				elif (subforum is not None) and (topic is None):
-					if (con_rel['subforum'].encode('utf_8') == subforum):
+				elif (params['subforum'] is not None) and (params['topic'] is None):
+					if (con_rel['subforum'].encode('utf_8') == params['subforum']):
 						con_dict = inf_sup.update_weights(con_rel, con_dict)
 
 				## >If a topic is specified (but not a subforum)
-				elif (subforum is None) and (topic is not None):
-					if (con_rel['topic'] == topic):
+				elif (params['subforum'] is None) and (params['topic'] is not None):
+					if (con_rel['topic'] == params['topic']):
 						con_dict = inf_sup.update_weights(con_rel, con_dict)
 
 				## >If both a subforum and topic are specified
-				elif ((subforum is not None) and (topic is not None)):
-					if ((con_rel['subforum'].encode('utf_8') == subforum) and (con_rel['topic'] == topic)):
+				elif ((params['subforum'] is not None) and (params['topic'] is not None)):
+					if ((con_rel['subforum'].encode('utf_8') == params['subforum']) and
+						(con_rel['topic'] == params['topic'])):
 						con_dict = inf_sup.update_weights(con_rel, con_dict)
 
 		## >Update the master list of (author, connection, weight) meeting the specified criteria for an author
 		for k, v in con_dict.iteritems():
 			author_list.append((author_node['name'], k, v))
 
-	## >Calculate the pagerank
-	return
+	## >Influence Calculations
+	if len(author_list) > 0:
+		G = nx.DiGraph()
+		G.add_weighted_edges_from(author_list)
+		if params['metric'] in metric_list:
+			calc_metric, stats = inf.run_metric(params['metric'], G, 'weight', True)
+			data_results = {}
+			data_results['query'] = params
+			metric_data = {}
+			for key, value in calc_metric.iteritems():
+				metric_data[key] = value
+			data_results['metrics'] = metric_data
+		else:
+			return jsonify(result='Invalid metric requested')
+	else:
+		return jsonify(result='Parameters produced no graph/metrics')
 
+	return jsonify(result=data_results)
 
 if __name__ == '__main__':
 	app.debug = True
 	app.run(host='0.0.0.0')
-
-
-start_date = None  # '20131101'
-end_date = None  # '20131131'
-project = None  # 'AQ (A)'
-network = None  # 'ye1.org'
-metric_name = None  # 'Pagerank'
-subforum = None
-topic = None
