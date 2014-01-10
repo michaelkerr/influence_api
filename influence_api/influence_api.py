@@ -2,11 +2,12 @@
 # influence api #
 #################
 
+# V0.2
 # Created Date: 2013/12/17
 # Last Updated: 2013/12/19
 
 ### Resources ###
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, make_response
 import urllib2
 
 #from datetime import datetime
@@ -18,7 +19,8 @@ from py2neo import neo4j
 app = Flask(__name__)
 
 #TODO put these in a configuration file
-req_param_list = ['graph_url', 'start_date', 'end_date', 'project', 'network', 'metric']
+#TODO TEST graphml support
+req_param_list = ['graph_url', 'start_date', 'end_date', 'project', 'network', 'metric', 'return_graph']
 opt_param_list = ['subforum', 'topic']
 metric_list = ['betweenness', 'closeness', 'degree', 'eigenvector', 'in_degree', 'out_degree', 'pagerank']
 valid_urls = ['http://192.168.1.164:7474/db/data']
@@ -137,21 +139,41 @@ def centrality():
 
 	## >Influence Calculations
 	if len(author_list) > 0:
+		## >Create a black graph
 		G = nx.DiGraph()
+
+		## >Add the endges to the graph
 		G.add_weighted_edges_from(author_list)
+
+		## >Check for a valid metric name
 		if params['metric'] in metric_list:
+			## >Run the requested metric, on the graph 'G'
 			calc_metric, stats = inf.run_metric(params['metric'], G, 'weight', True)
+			#TODO REMOVE THIS - DUBUG ONLY
 			inf_sup.append_to_file('test.txt', calc_metric, params['project'], params['network'], params['subforum'], params['topic'])
-			data_results = {}
-			data_results['query'] = params
-			metric_data = {}
-			for key, value in calc_metric.iteritems():
-				metric_data[key] = value
-			data_results['metrics'] = metric_data
 		else:
 			return jsonify(result='Invalid metric requested')
 	else:
 		return jsonify(result='Parameters produced no graph/metrics')
+
+	## >Build the dictionary to return
+	data_results = {}
+
+	## >Append the metric data
+	data_results['metrics'] = calc_metric
+
+	## >If graph requested
+	if params['return_graph'].lower() == 'true':
+		## >Append the graph data
+		data_results['graph'] = nx.to_edgelist(G, nodelist=None)
+		#data_results['graph'] = nx.to_dict_of_dicts(G, nodelist=None, edge_data=None)
+		#data_results['graph'] = nx.to_dict_of_lists(G, nodelist=None)
+
+	## >Add the query parameters
+	#TODO REMOVE - Debug only
+	if app.debug is True:
+		data_results['query'] = params
+		#data_results['stats'] =
 
 	return jsonify(result=data_results)
 

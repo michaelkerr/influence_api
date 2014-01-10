@@ -34,6 +34,20 @@ def check_if_none(req_params):
 	return True
 
 
+def create_filename(params):
+	filename = ''
+	if params['project'] is not None:
+		filename += params['project'] + '_'
+	if params['network'] is not None:
+		filename += params['network'] + '_'
+	if params['subforum'] is not None:
+		filename += params['subforum'] + '_'
+	if params['topic'] is not None:
+		filename += params['topic'] + '_'
+	filename += str(params['start_date']) + str(params['end_date']) + '.graphml'
+	return filename
+
+
 def get_parameters(request):
 	## >Get the REQUIRED parameters
 	param_dict = {}
