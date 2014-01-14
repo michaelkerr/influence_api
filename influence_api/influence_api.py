@@ -11,6 +11,7 @@ from flask import Flask, jsonify, request, make_response
 import urllib2
 
 #from datetime import datetime
+import HTMLParser
 import inf_api_support as inf_sup
 import influence as inf
 import networkx as nx
@@ -21,7 +22,7 @@ app = Flask(__name__)
 #TODO put these in a configuration file
 #TODO TEST graphml support
 req_param_list = ['graph_url', 'start_date', 'end_date', 'project', 'network', 'metric', 'return_graph']
-opt_param_list = ['subforum', 'topic']
+opt_param_list = ['subforum', 'topic', 'format']
 metric_list = ['betweenness', 'closeness', 'degree', 'eigenvector', 'in_degree', 'out_degree', 'pagerank']
 valid_urls = ['http://192.168.1.164:7474/db/data']
 
@@ -164,19 +165,69 @@ def centrality():
 
 	## >If graph requested
 	if params['return_graph'].lower() == 'true':
-		## >Append the graph data
-		data_results['graph'] = nx.to_edgelist(G, nodelist=None)
-		#data_results['graph'] = nx.to_dict_of_dicts(G, nodelist=None, edge_data=None)
-		#data_results['graph'] = nx.to_dict_of_lists(G, nodelist=None)
+		## >If format = data
+		if params['format'] is None:
+			## >Append the graph data
+			data_results['graph'] = nx.to_edgelist(G, nodelist=None)
+		## >If format = graphml
+		elif params['format'].lower() == 'graphml':
+			## >Create the graphml
+			graphml_name = inf_sup.create_filename(params)
+			graphml_data = '\n'.join(nx.generate_graphml(G))
+			graphml_final = '<?xml version="1.0" encoding="UTF-8"?>' + "\n"
+			h = HTMLParser.HTMLParser()
+			for line in graphml_data.split('>'):
+				line = h.unescape(line)
+				graphml_final += line + '>'
+				## >Get the node name
+				if 'node id' in line:
+					node_name = line.partition('"')[-1].rpartition('"')[0]
+					print node_name
+				if '<key' in line:
+					graphml_final += '\n' + '  <key attr.name="' + params['metric'] + '" attr.type="double" for="node" id="d1" />'
+				if 'node id=' in line:
+					graphml_final += "\n" + '      <data _key="d1">' + str(calc_metric[node_name]) + '</data>'
+			graphml_final = graphml_final.replace('>>', '>')
+			with open('graphml_test.graphml', 'w') as output_file:
+				for line in graphml_final:
+					output_file.write(line.encode('utf-8'))
+			if not output_file.closed:
+				output_file.close()
+
+			#nx.write_graphml(G, graphml_name)
+			response = make_response(graphml_final)
+			response.headers["Content-Type"] = 'text/xml'
+			response.headers["Content-Distribution"] = 'attachment; filename=%s' % (graphml_name,)
+			## >Add the influence metric to the graph
+			## >Return the file
+			return response
 
 	## >Add the query parameters
 	#TODO REMOVE - Debug only
 	if app.debug is True:
 		data_results['query'] = params
 		#data_results['stats'] =
-
 	return jsonify(result=data_results)
 
 if __name__ == '__main__':
 	app.debug = True
 	app.run(host='0.0.0.0')
+
+
+
+'''
+http://127.0.0.1:5000/metrics/centrality?
+graph_url=%27http://192.168.1.164:7474/db/data%27&
+start_date=%2720131101%27&
+end_date=%2720131107%27&
+project=%27AQ%20%28A%29%27&
+network=%27ye1.org%27&
+metric=%27pagerank%27&
+return_graph=%27true%27&
+format=%27graphml%27
+
+G=nx.path_graph(3)
+bb=nx.betweenness_centrality(G)
+nx.set_node_attributes(G,'betweenness',bb)
+
+'''
