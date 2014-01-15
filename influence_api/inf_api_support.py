@@ -44,7 +44,7 @@ def create_filename(params):
 		filename += params['subforum'] + '_'
 	if params['topic'] is not None:
 		filename += params['topic'] + '_'
-	filename += str(params['start_date']) + str(params['end_date']) + '.graphml'
+	filename += str(params['start_date']) + '_' + str(params['end_date']) + '.graphml'
 	return filename
 
 

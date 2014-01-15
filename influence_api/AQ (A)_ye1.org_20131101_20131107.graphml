@@ -1,0 +1,3168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key attr.name="weight" attr.type="int" for="edge" id="d0" />
+  <key attr.name="pagerank" attr.type="float" for="node" id="d1" />  <graph edgedefault="directed">
+    <node id="قلم ساخر" >
+      <data key="d1">0.00157395757838</data>
+    </node>
+    <node id="اسماك القرش" >
+      <data key="d1">0.00143070864981</data>
+    </node>
+    <node id="راعي البيرق" >
+      <data key="d1">0.000850787880205</data>
+    </node>
+    <node id="حمد اليمني" >
+      <data key="d1">0.00378322994069</data>
+    </node>
+    <node id="ابن سيناءء" >
+      <data key="d1">0.00228461569436</data>
+    </node>
+    <node id="الفتى الخولاني" >
+      <data key="d1">0.00331613251841</data>
+    </node>
+    <node id="الذيباني 7" >
+      <data key="d1">0.0027885644361</data>
+    </node>
+    <node id="نور الدين زنكي" >
+      <data key="d1">0.00156793692413</data>
+    </node>
+    <node id="كيرا" >
+      <data key="d1">0.0013744209003</data>
+    </node>
+    <node id="shehab212" >
+      <data key="d1">0.000850787880205</data>
+    </node>
+    <node id="ابو الأسود" >
+      <data key="d1">0.000850787880205</data>
+    </node>
+    <node id="همّــام" >
+      <data key="d1">0.00282227328134</data>
+    </node>
+    <node id="زين الصبيحه" >
+      <data key="d1">0.00112103836827</data>
+    </node>
+    <node id="الحقيقة مرة" >
+      <data key="d1">0.00115129835025</data>
+    </node>
+    <node id="رعد العروبة" >
+      <data key="d1">0.00447641260824</data>
+    </node>
+    <node id="أبو شديد" >
+      <data key="d1">0.0104080997598</data>
+    </node>
+    <node id="العراقي الحزين1" >
+      <data key="d1">0.00358173564216</data>
+    </node>
+    <node id="نقار الخشب" >
+      <data key="d1">0.00426067123764</data>
+    </node>
+    <node id="متابع اعلامي" >
+      <data key="d1">0.0287586012191</data>
+    </node>
+    <node id="ألناصر صلاح" >
+      <data key="d1">0.00168072283874</data>
+    </node>
+    <node id="فيصل الشعبي" >
+      <data key="d1">0.000850787880205</data>
+    </node>
+    <node id="ابوفريد." >
+      <data key="d1">0.00682220918082</data>
+    </node>
+    <node id="قاسم الشماري" >
+      <data key="d1">0.00116115256145</data>
+    </node>
+    <node id="زنجبار تنزف" >
+      <data key="d1">0.00112786824826</data>
+    </node>
+    <node id="شموخ الجبال" >
+      <data key="d1">0.00435543533954</data>
+    </node>
+    <node id="أبوالبراء79" >
+      <data key="d1">0.0251871928224</data>
+    </node>
+    <node id="نصير الحق" >
+      <data key="d1">0.00157395757838</data>
+    </node>
+    <node id="قلم حرر" >
+      <data key="d1">0.00243041649574</data>
+    </node>
+    <node id="صاحب الفخامه" >
+      <data key="d1">0.000850787880205</data>
+    </node>
+    <node id="أبوعارف" >
+      <data key="d1">0.00840688289067</data>
+    </node>
+    <node id="رياض" >
+      <data key="d1">0.00433720318535</data>
+    </node>
+    <node id="حلم الخلاص" >
+      <data key="d1">0.000850787880205</data>
+    </node>
+    <node id="صاروخي" >
+      <data key="d1">0.00230245618388</data>
+    </node>
+    <node id="المُناصر للحق" >
+      <data key="d1">0.00112743286638</data>
+    </node>
+    <node id="محمد العباسى" >
+      <data key="d1">0.00728530913245</data>
+    </node>
+    <node id="عطا الشامي" >
+      <data key="d1">0.000850787880205</data>
+    </node>
+    <node id="الجلنبط" >
+      <data key="d1">0.020923916803</data>
+    </node>
+    <node id="سيف بتـار" >
+      <data key="d1">0.000850787880205</data>
+    </node>
+    <node id="زئير الغضنفر" >
+      <data key="d1">0.00416811313385</data>
+    </node>
+    <node id="مهيـدان" >
+      <data key="d1">0.00350776335551</data>
+    </node>
+    <node id="النصر لليمن" >
+      <data key="d1">0.00111509792834</data>
+    </node>
+    <node id="عثمان الزهر" >
+      <data key="d1">0.00865014958096</data>
+    </node>
+    <node id="عمر همام" >
+      <data key="d1">0.00112994582822</data>
+    </node>
+    <node id="بنت اليمن22" >
+      <data key="d1">0.00945333020432</data>
+    </node>
+    <node id="عاقل المدينه" >
+      <data key="d1">0.00100104311523</data>
+    </node>
+    <node id="السعدي 3" >
+      <data key="d1">0.00803160351964</data>
+    </node>
+    <node id="عمر خلدون" >
+      <data key="d1">0.00606665483816</data>
+    </node>
+    <node id="محارب الفتن" >
+      <data key="d1">0.00264345686176</data>
+    </node>
+    <node id="سالم عوض" >
+      <data key="d1">0.00112786824826</data>
+    </node>
+    <node id="هلال شرف" >
+      <data key="d1">0.00527630188417</data>
+    </node>
+    <node id="TANGER" >
+      <data key="d1">0.000850787880205</data>
+    </node>
+    <node id="الرجوع الى الحق" >
+      <data key="d1">0.000850787880205</data>
+    </node>
+    <node id="الأطلنطي" >
+      <data key="d1">0.00427870535746</data>
+    </node>
+    <node id="صريح وواضح" >
+      <data key="d1">0.000850787880205</data>
+    </node>
+    <node id="عدن لايف" >
+      <data key="d1">0.000850787880205</data>
+    </node>
+    <node id="أبو طلحه" >
+      <data key="d1">0.0240255150396</data>
+    </node>
+    <node id="غانم سليم" >
+      <data key="d1">0.00179108024237</data>
+    </node>
+    <node id="الآمر بالمعروف" >
+      <data key="d1">0.00259801141292</data>
+    </node>
+    <node id="عبــد الله" >
+      <data key="d1">0.00193178983248</data>
+    </node>
+    <node id="متأمل بعمق" >
+      <data key="d1">0.00100949150005</data>
+    </node>
+    <node id="عدو الشيطان" >
+      <data key="d1">0.00176234768245</data>
+    </node>
+    <node id="ابو لافى" >
+      <data key="d1">0.00697818631354</data>
+    </node>
+    <node id="hero7" >
+      <data key="d1">0.00159697834813</data>
+    </node>
+    <node id="yemeni22009" >
+      <data key="d1">0.00490155474214</data>
+    </node>
+    <node id="وحي الكلام" >
+      <data key="d1">0.00421468612914</data>
+    </node>
+    <node id="ذيب الليل" >
+      <data key="d1">0.00112257007428</data>
+    </node>
+    <node id="مملكه سباء" >
+      <data key="d1">0.00313370659365</data>
+    </node>
+    <node id="iمجتهد" >
+      <data key="d1">0.00122348553273</data>
+    </node>
+    <node id="إبن القاسم" >
+      <data key="d1">0.00103713670647</data>
+    </node>
+    <node id="مهدي الهجر" >
+      <data key="d1">0.00996289178454</data>
+    </node>
+    <node id="vision" >
+      <data key="d1">0.00143070864981</data>
+    </node>
+    <node id="شافعي من يافع" >
+      <data key="d1">0.000850787880205</data>
+    </node>
+    <node id="الشدياق" >
+      <data key="d1">0.00681805332578</data>
+    </node>
+    <node id="المتحمس دائماً" >
+      <data key="d1">0.00146417809786</data>
+    </node>
+    <node id="بريكان اليافعي" >
+      <data key="d1">0.000850787880205</data>
+    </node>
+    <node id="شعفل" >
+      <data key="d1">0.00309593933793</data>
+    </node>
+    <node id="جبال حضرموت" >
+      <data key="d1">0.00133290101232</data>
+    </node>
+    <node id="الحق ظاهر" >
+      <data key="d1">0.00206399821133</data>
+    </node>
+    <node id="أبو صدام44" >
+      <data key="d1">0.00112103836827</data>
+    </node>
+    <node id="صنعاني شااان" >
+      <data key="d1">0.000850787880205</data>
+    </node>
+    <node id="زهيرسالم" >
+      <data key="d1">0.00490162613693</data>
+    </node>
+    <node id="جزائرية" >
+      <data key="d1">0.00207966211606</data>
+    </node>
+    <node id="المُغيرة" >
+      <data key="d1">0.00164371802461</data>
+    </node>
+    <node id="أدهم المُعاصر" >
+      <data key="d1">0.00112743286638</data>
+    </node>
+    <node id="الروحاني2013" >
+      <data key="d1">0.00511188886753</data>
+    </node>
+    <node id="أبووجدان" >
+      <data key="d1">0.00122348553273</data>
+    </node>
+    <node id="فريق التواصل" >
+      <data key="d1">0.00224431520829</data>
+    </node>
+    <node id="عالي المقام" >
+      <data key="d1">0.0125305194943</data>
+    </node>
+    <node id="امين وبس" >
+      <data key="d1">0.00157395757838</data>
+    </node>
+    <node id="أبوجعفر" >
+      <data key="d1">0.00307662325117</data>
+    </node>
+    <node id="المهاجر لله" >
+      <data key="d1">0.00221482931677</data>
+    </node>
+    <node id="NoOne" >
+      <data key="d1">0.000850787880205</data>
+    </node>
+    <node id="الكوكني أبومافيش" >
+      <data key="d1">0.00600996604374</data>
+    </node>
+    <node id="ابراهيم السلطان" >
+      <data key="d1">0.00311821702918</data>
+    </node>
+    <node id="فتى صعده الثائر" >
+      <data key="d1">0.0131155513232</data>
+    </node>
+    <node id="الصارم اليمني" >
+      <data key="d1">0.000850787880205</data>
+    </node>
+    <node id="سحلب مكار" >
+      <data key="d1">0.00244342644434</data>
+    </node>
+    <node id="حيدرالزيادي" >
+      <data key="d1">0.00231747654238</data>
+    </node>
+    <node id="الواحدي شبواني" >
+      <data key="d1">0.00304384023004</data>
+    </node>
+    <node id="وليد عبد الودود" >
+      <data key="d1">0.00161199698321</data>
+    </node>
+    <node id="جمال الابتسامة" >
+      <data key="d1">0.00222481030674</data>
+    </node>
+    <node id="قدامة" >
+      <data key="d1">0.0053687285746</data>
+    </node>
+    <node id="ابن حميَر" >
+      <data key="d1">0.00173819245434</data>
+    </node>
+    <node id="مسلم متعاطف" >
+      <data key="d1">0.0042429654662</data>
+    </node>
+    <node id="في الصميم" >
+      <data key="d1">0.00287263330678</data>
+    </node>
+    <node id="أبو تراب" >
+      <data key="d1">0.00205931770766</data>
+    </node>
+    <node id="صالح بن فريد" >
+      <data key="d1">0.000850787880205</data>
+    </node>
+    <node id="يوسف كامل" >
+      <data key="d1">0.00423295578038</data>
+    </node>
+    <node id="صامدون هنـا" >
+      <data key="d1">0.00112786824826</data>
+    </node>
+    <node id="أبو علي 4" >
+      <data key="d1">0.0048544636657</data>
+    </node>
+    <node id="الكوره" >
+      <data key="d1">0.00733155960959</data>
+    </node>
+    <node id="عزتي بشموخي" >
+      <data key="d1">0.000850787880205</data>
+    </node>
+    <node id="ليال92" >
+      <data key="d1">0.00298730138806</data>
+    </node>
+    <node id="فك الارتباط" >
+      <data key="d1">0.00573929440699</data>
+    </node>
+    <node id="ابورباح القحيف" >
+      <data key="d1">0.0013434064569</data>
+    </node>
+    <node id="صادق حسن" >
+      <data key="d1">0.00427368839616</data>
+    </node>
+    <node id="ابها" >
+      <data key="d1">0.00479196025867</data>
+    </node>
+    <node id="فارس الجنوب" >
+      <data key="d1">0.00164477126432</data>
+    </node>
+    <node id="أسير الكرم" >
+      <data key="d1">0.000850787880205</data>
+    </node>
+    <node id="المعتصم2" >
+      <data key="d1">0.000850787880205</data>
+    </node>
+    <node id="مجاهدة" >
+      <data key="d1">0.000850787880205</data>
+    </node>
+    <node id="نجم ريدان" >
+      <data key="d1">0.00144327110036</data>
+    </node>
+    <node id="ظاهر كريم" >
+      <data key="d1">0.00111509792834</data>
+    </node>
+    <node id="اسماعيل السلفي" >
+      <data key="d1">0.00174640868265</data>
+    </node>
+    <node id="راعي الجدعى" >
+      <data key="d1">0.00446326482338</data>
+    </node>
+    <node id="MUSLEM" >
+      <data key="d1">0.000850787880205</data>
+    </node>
+    <node id="صاعقه" >
+      <data key="d1">0.00269700965346</data>
+    </node>
+    <node id="ماداو" >
+      <data key="d1">0.0112181339409</data>
+    </node>
+    <node id="الصنعاني::" >
+      <data key="d1">0.000850787880205</data>
+    </node>
+    <node id="الحراك السلمي" >
+      <data key="d1">0.00623710242803</data>
+    </node>
+    <node id="عش حلما" >
+      <data key="d1">0.00127639074366</data>
+    </node>
+    <node id="حبر الأمة" >
+      <data key="d1">0.00237115604292</data>
+    </node>
+    <node id="أكرم المصري" >
+      <data key="d1">0.000850787880205</data>
+    </node>
+    <node id="Harry Potter" >
+      <data key="d1">0.00216117086372</data>
+    </node>
+    <node id="أخت أخوها" >
+      <data key="d1">0.00220950023989</data>
+    </node>
+    <node id="مطنش" >
+      <data key="d1">0.00408168591766</data>
+    </node>
+    <node id="ذيب الجنوب" >
+      <data key="d1">0.000850787880205</data>
+    </node>
+    <node id="عمــار" >
+      <data key="d1">0.00391581826833</data>
+    </node>
+    <node id="alhamaly" >
+      <data key="d1">0.00214484659352</data>
+    </node>
+    <node id="jemen16" >
+      <data key="d1">0.00814603255848</data>
+    </node>
+    <node id="أريد أن أفهم" >
+      <data key="d1">0.000850787880205</data>
+    </node>
+    <node id="نشوان 11" >
+      <data key="d1">0.000850787880205</data>
+    </node>
+    <node id="ارحل الان" >
+      <data key="d1">0.00911653626788</data>
+    </node>
+    <node id="اليمن في دمي" >
+      <data key="d1">0.021057073102</data>
+    </node>
+    <node id="عادل غانم" >
+      <data key="d1">0.0030977262127</data>
+    </node>
+    <node id="رضا السالمي" >
+      <data key="d1">0.00103488479361</data>
+    </node>
+    <node id="المسلم الغيور" >
+      <data key="d1">0.00138762840248</data>
+    </node>
+    <node id="عبود المطار" >
+      <data key="d1">0.00103275169423</data>
+    </node>
+    <node id="بلاحدود." >
+      <data key="d1">0.000850787880205</data>
+    </node>
+    <node id="ابو هزبر" >
+      <data key="d1">0.00231890510809</data>
+    </node>
+    <node id="short comment" >
+      <data key="d1">0.00257235642003</data>
+    </node>
+    <node id="نصيرة الحق" >
+      <data key="d1">0.00291748971287</data>
+    </node>
+    <node id="أبـو علياء" >
+      <data key="d1">0.00235482582861</data>
+    </node>
+    <node id="راجي عفو ربه" >
+      <data key="d1">0.00143070864981</data>
+    </node>
+    <node id="زهر المعاني" >
+      <data key="d1">0.00192858163641</data>
+    </node>
+    <node id="الوووليد" >
+      <data key="d1">0.00108225355889</data>
+    </node>
+    <node id="ابوخالد عبدالله" >
+      <data key="d1">0.00188371489089</data>
+    </node>
+    <node id="قرين القران" >
+      <data key="d1">0.00393639788439</data>
+    </node>
+    <node id="نسائم اليمن" >
+      <data key="d1">0.00170833585716</data>
+    </node>
+    <node id="مغترب في ارضه" >
+      <data key="d1">0.0013744209003</data>
+    </node>
+    <node id="ابو الشباب" >
+      <data key="d1">0.00230964257948</data>
+    </node>
+    <node id="بحر / الجنوب" >
+      <data key="d1">0.00264495876956</data>
+    </node>
+    <node id="المؤمن الصادق" >
+      <data key="d1">0.00889704449932</data>
+    </node>
+    <node id="أناوالقمر جيران" >
+      <data key="d1">0.00157395757838</data>
+    </node>
+    <node id="عبودى2000" >
+      <data key="d1">0.000850787880205</data>
+    </node>
+    <node id="نصح مجاني" >
+      <data key="d1">0.00138735854627</data>
+    </node>
+    <node id="غيث الصحارى" >
+      <data key="d1">0.00643770506799</data>
+    </node>
+    <node id="جلال الأربعيني" >
+      <data key="d1">0.0127176700268</data>
+    </node>
+    <node id="الناصح السياسي" >
+      <data key="d1">0.00766889482701</data>
+    </node>
+    <node id="جمال مجـلي" >
+      <data key="d1">0.000850787880205</data>
+    </node>
+    <node id="الجنوبي السلفي" >
+      <data key="d1">0.00166613446242</data>
+    </node>
+    <node id="العربي الشمري" >
+      <data key="d1">0.00503914676975</data>
+    </node>
+    <node id="No 1" >
+      <data key="d1">0.000850787880205</data>
+    </node>
+    <node id="ابو حمد الكثيري" >
+      <data key="d1">0.00322368968129</data>
+    </node>
+    <node id="النمر بن عدوان" >
+      <data key="d1">0.00319279005528</data>
+    </node>
+    <node id="حرپ التويتي" >
+      <data key="d1">0.00121898170702</data>
+    </node>
+    <node id="حاتم الطائي_11" >
+      <data key="d1">0.00230791116076</data>
+    </node>
+    <node id="عسل يمني" >
+      <data key="d1">0.000850787880205</data>
+    </node>
+    <node id="ربيع سامي" >
+      <data key="d1">0.0013744209003</data>
+    </node>
+    <node id="ابوالوفا" >
+      <data key="d1">0.00217617214616</data>
+    </node>
+    <node id="ابن الديرة" >
+      <data key="d1">0.00547989680664</data>
+    </node>
+    <node id="binarash" >
+      <data key="d1">0.0108601280779</data>
+    </node>
+    <node id="شاخوف الوائلي" >
+      <data key="d1">0.00143070864981</data>
+    </node>
+    <node id="اليمن اكبر منكم" >
+      <data key="d1">0.00125680389135</data>
+    </node>
+    <node id="فتى بني ياس" >
+      <data key="d1">0.00143070864981</data>
+    </node>
+    <node id="بارود1" >
+      <data key="d1">0.00100104311523</data>
+    </node>
+    <node id="أبو حاتم المصري" >
+      <data key="d1">0.00396461874534</data>
+    </node>
+    <node id="الصحّاف" >
+      <data key="d1">0.0100541812134</data>
+    </node>
+    <node id="أبومحمدالسلمي" >
+      <data key="d1">0.00993212044738</data>
+    </node>
+    <node id="وادي الحقيقة" >
+      <data key="d1">0.000850787880205</data>
+    </node>
+    <node id="النسر الفضي" >
+      <data key="d1">0.00112786824826</data>
+    </node>
+    <node id="فيلسوف زمانه" >
+      <data key="d1">0.00514889893862</data>
+    </node>
+    <node id="لاتسألني من أنا" >
+      <data key="d1">0.00157395757838</data>
+    </node>
+    <node id="عرين الأسد" >
+      <data key="d1">0.000850787880205</data>
+    </node>
+    <node id="ج.ي.د.ش" >
+      <data key="d1">0.000850787880205</data>
+    </node>
+    <node id="مضارب" >
+      <data key="d1">0.00233224499224</data>
+    </node>
+    <node id="طائـرمهاجـر" >
+      <data key="d1">0.00131371923758</data>
+    </node>
+    <node id="بن وليد" >
+      <data key="d1">0.00126041262549</data>
+    </node>
+    <node id="صـدى الحـق" >
+      <data key="d1">0.000850787880205</data>
+    </node>
+    <node id="طبيب العقول" >
+      <data key="d1">0.00574930867927</data>
+    </node>
+    <node id="هلل" >
+      <data key="d1">0.000850787880205</data>
+    </node>
+    <node id="البدوي11" >
+      <data key="d1">0.00332122448362</data>
+    </node>
+    <node id="إبن اليمن الحر" >
+      <data key="d1">0.000850787880205</data>
+    </node>
+    <node id="أبومعاوية" >
+      <data key="d1">0.0217530409253</data>
+    </node>
+    <node id="ثبات الناجح" >
+      <data key="d1">0.00209099501812</data>
+    </node>
+    <node id="كرت" >
+      <data key="d1">0.00607698470386</data>
+    </node>
+    <node id="phobia" >
+      <data key="d1">0.00127623120418</data>
+    </node>
+    <node id="الملياردير." >
+      <data key="d1">0.00112257007428</data>
+    </node>
+    <node id="ابوالعابدين" >
+      <data key="d1">0.00306927478552</data>
+    </node>
+    <node id="الزهراء الزهراء" >
+      <data key="d1">0.000850787880205</data>
+    </node>
+    <node id="aziznavii" >
+      <data key="d1">0.00154517480201</data>
+    </node>
+    <node id="ابوبسام اليمني" >
+      <data key="d1">0.00271008594268</data>
+    </node>
+    <node id="اليافعي 2008" >
+      <data key="d1">0.00348519541267</data>
+    </node>
+    <node id="البتـار اليماني" >
+      <data key="d1">0.00403184379156</data>
+    </node>
+    <node id="جلال بن فريد" >
+      <data key="d1">0.0156919737657</data>
+    </node>
+    <node id="احمد القديمه" >
+      <data key="d1">0.00103488479361</data>
+    </node>
+    <node id="ناصر الجهراني" >
+      <data key="d1">0.00175574227748</data>
+    </node>
+    <node id="التهامي1" >
+      <data key="d1">0.00392625066814</data>
+    </node>
+    <node id="رجال الوايلي" >
+      <data key="d1">0.000850787880205</data>
+    </node>
+    <node id="aljehafi" >
+      <data key="d1">0.0142207127817</data>
+    </node>
+    <node id="مصعب السيال" >
+      <data key="d1">0.000850787880205</data>
+    </node>
+    <node id="مصطفى العربي" >
+      <data key="d1">0.00332800451347</data>
+    </node>
+    <node id="برفسور نفساني" >
+      <data key="d1">0.000850787880205</data>
+    </node>
+    <node id="تميمي حضرموت" >
+      <data key="d1">0.00228770978747</data>
+    </node>
+    <node id="ازد الجيش" >
+      <data key="d1">0.00197336360907</data>
+    </node>
+    <node id="بساام" >
+      <data key="d1">0.00133968410093</data>
+    </node>
+    <node id="أخر الفرسان" >
+      <data key="d1">0.00262932080846</data>
+    </node>
+    <node id="معن شبوة" >
+      <data key="d1">0.0187493000169</data>
+    </node>
+    <node id="لوسيل" >
+      <data key="d1">0.00350127235501</data>
+    </node>
+    <node id="دكتور/ منصور" >
+      <data key="d1">0.00558315896036</data>
+    </node>
+    <node id="بابا مشمش" >
+      <data key="d1">0.00157395757838</data>
+    </node>
+    <node id="محب الله1" >
+      <data key="d1">0.00933082534923</data>
+    </node>
+    <node id="قلب يمني حر" >
+      <data key="d1">0.00143070864981</data>
+    </node>
+    <node id="العديني السرك" >
+      <data key="d1">0.00157395757838</data>
+    </node>
+    <node id="اليمن وبس" >
+      <data key="d1">0.00164954293617</data>
+    </node>
+    <node id="حق العودة" >
+      <data key="d1">0.00642897363058</data>
+    </node>
+    <node id="الهاشمي اليماني" >
+      <data key="d1">0.00333555004437</data>
+    </node>
+    <node id="عبد العزيز الخل" >
+      <data key="d1">0.0012322044342</data>
+    </node>
+    <node id="حركة (كفاية)" >
+      <data key="d1">0.00103488479361</data>
+    </node>
+    <node id="الضباعي" >
+      <data key="d1">0.00468815888236</data>
+    </node>
+    <node id="المتشائل الحر" >
+      <data key="d1">0.00103488479361</data>
+    </node>
+    <node id="ابوجهااد" >
+      <data key="d1">0.00231747654238</data>
+    </node>
+    <node id="الحر التهامي" >
+      <data key="d1">0.00448736537907</data>
+    </node>
+    <node id="أبومهيب" >
+      <data key="d1">0.000850787880205</data>
+    </node>
+    <node id="المعلم1" >
+      <data key="d1">0.00314272900573</data>
+    </node>
+    <node id="متعدد الخلايا" >
+      <data key="d1">0.00210257767465</data>
+    </node>
+    <node id="طيب الاسم" >
+      <data key="d1">0.00421128854321</data>
+    </node>
+    <node id="المـرادي" >
+      <data key="d1">0.00133220587071</data>
+    </node>
+    <node id="صالح الازدي" >
+      <data key="d1">0.00515334235161</data>
+    </node>
+    <node id="عبدالمتكبر" >
+      <data key="d1">0.00351637031418</data>
+    </node>
+    <node id="ابوفـارس" >
+      <data key="d1">0.00148923219509</data>
+    </node>
+    <node id="تَعكر" >
+      <data key="d1">0.00422157856319</data>
+    </node>
+    <node id="منصور عبد ربه" >
+      <data key="d1">0.00650929379245</data>
+    </node>
+    <node id="مشروع صحفي" >
+      <data key="d1">0.00455602724365</data>
+    </node>
+    <node id="أنا دماج" >
+      <data key="d1">0.00181905529567</data>
+    </node>
+    <node id="ابوبكر المصري" >
+      <data key="d1">0.00407925456032</data>
+    </node>
+    <node id="حسن عبدالرحمن" >
+      <data key="d1">0.0224515145772</data>
+    </node>
+    <node id="howbani" >
+      <data key="d1">0.00650202384563</data>
+    </node>
+    <node id="ابوالعهد" >
+      <data key="d1">0.00127623120418</data>
+    </node>
+    <node id="رياح الصحراء" >
+      <data key="d1">0.00116115256145</data>
+    </node>
+    <node id="مسلم 7" >
+      <data key="d1">0.00462427314599</data>
+    </node>
+    <node id="أسد المعركة" >
+      <data key="d1">0.00668732253648</data>
+    </node>
+    <node id="سفيرالمحبة" >
+      <data key="d1">0.00736934848316</data>
+    </node>
+    <node id="مردخاي" >
+      <data key="d1">0.00901276652027</data>
+    </node>
+    <node id="ابراهيم الغولي" >
+      <data key="d1">0.000850787880205</data>
+    </node>
+    <node id="علي ابن المشطط" >
+      <data key="d1">0.00430691721933</data>
+    </node>
+    <node id="سهيل اليماني" >
+      <data key="d1">0.00285991164414</data>
+    </node>
+    <node id="حراس الوطن" >
+      <data key="d1">0.00689459081243</data>
+    </node>
+    <node id="بسكوت مالح 2" >
+      <data key="d1">0.00133947911794</data>
+    </node>
+    <node id="عبدالرزاق الجمل" >
+      <data key="d1">0.0021114134897</data>
+    </node>
+    <node id="نظمي" >
+      <data key="d1">0.0024369889575</data>
+    </node>
+    <edge source="راعي البيرق" target="أبومعاوية">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="حمد اليمني" target="أبو طلحه">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="حمد اليمني" target="حاتم الطائي_11">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="حمد اليمني" target="المؤمن الصادق">
+      <data key="d0">3</data>
+    </edge>
+    <edge source="حمد اليمني" target="محب الله1">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="نور الدين زنكي" target="متابع اعلامي">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="نور الدين زنكي" target="أبومحمدالسلمي">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="كيرا" target="أبو طلحه">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="shehab212" target="بنت اليمن22">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="ابو الأسود" target="امين وبس">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="همّــام" target="الضباعي">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="همّــام" target="الشدياق">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="الحقيقة مرة" target="ابن الديرة">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="رعد العروبة" target="عثمان الزهر">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="رعد العروبة" target="الملياردير.">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="رعد العروبة" target="اليافعي 2008">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="رعد العروبة" target="السعدي 3">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="رعد العروبة" target="مردخاي">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="رعد العروبة" target="زهيرسالم">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="رعد العروبة" target="الجنوبي السلفي">
+      <data key="d0">3</data>
+    </edge>
+    <edge source="رعد العروبة" target="ذيب الليل">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="رعد العروبة" target="ابو حمد الكثيري">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="رعد العروبة" target="الكوره">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="أبو شديد" target="أبو طلحه">
+      <data key="d0">3</data>
+    </edge>
+    <edge source="أبو شديد" target="الآمر بالمعروف">
+      <data key="d0">3</data>
+    </edge>
+    <edge source="أبو شديد" target="حسن عبدالرحمن">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="أبو شديد" target="ابن سيناءء">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="أبو شديد" target="ثبات الناجح">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="أبو شديد" target="المؤمن الصادق">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="أبو شديد" target="أبوالبراء79">
+      <data key="d0">8</data>
+    </edge>
+    <edge source="أبو شديد" target="مردخاي">
+      <data key="d0">4</data>
+    </edge>
+    <edge source="أبو شديد" target="جلال الأربعيني">
+      <data key="d0">4</data>
+    </edge>
+    <edge source="أبو شديد" target="ابوالعابدين">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="أبو شديد" target="مصطفى العربي">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="العراقي الحزين1" target="أبو شديد">
+      <data key="d0">3</data>
+    </edge>
+    <edge source="العراقي الحزين1" target="ابن سيناءء">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="العراقي الحزين1" target="جلال الأربعيني">
+      <data key="d0">3</data>
+    </edge>
+    <edge source="العراقي الحزين1" target="التهامي1">
+      <data key="d0">6</data>
+    </edge>
+    <edge source="العراقي الحزين1" target="أبو حاتم المصري">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="العراقي الحزين1" target="الجلنبط">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="العراقي الحزين1" target="أبومعاوية">
+      <data key="d0">13</data>
+    </edge>
+    <edge source="نقار الخشب" target="الذيباني 7">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="نقار الخشب" target="جلال بن فريد">
+      <data key="d0">5</data>
+    </edge>
+    <edge source="نقار الخشب" target="الحق ظاهر">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="نقار الخشب" target="متابع اعلامي">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="متابع اعلامي" target="الحق ظاهر">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="متابع اعلامي" target="زهيرسالم">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="متابع اعلامي" target="ابوالعابدين">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="متابع اعلامي" target="short comment">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="متابع اعلامي" target="نقار الخشب">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="متابع اعلامي" target="قرين القران">
+      <data key="d0">3</data>
+    </edge>
+    <edge source="متابع اعلامي" target="أبوجعفر">
+      <data key="d0">4</data>
+    </edge>
+    <edge source="متابع اعلامي" target="ابراهيم السلطان">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="متابع اعلامي" target="غيث الصحارى">
+      <data key="d0">3</data>
+    </edge>
+    <edge source="متابع اعلامي" target="yemeni22009">
+      <data key="d0">3</data>
+    </edge>
+    <edge source="متابع اعلامي" target="حق العودة">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="متابع اعلامي" target="محمد العباسى">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="متابع اعلامي" target="ابوجهااد">
+      <data key="d0">3</data>
+    </edge>
+    <edge source="متابع اعلامي" target="أبو علي 4">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="متابع اعلامي" target="binarash">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="متابع اعلامي" target="الحر التهامي">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="متابع اعلامي" target="howbani">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="متابع اعلامي" target="مسلم 7">
+      <data key="d0">4</data>
+    </edge>
+    <edge source="متابع اعلامي" target="مردخاي">
+      <data key="d0">6</data>
+    </edge>
+    <edge source="متابع اعلامي" target="حيدرالزيادي">
+      <data key="d0">3</data>
+    </edge>
+    <edge source="متابع اعلامي" target="بساام">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="متابع اعلامي" target="سهيل اليماني">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="متابع اعلامي" target="مهدي الهجر">
+      <data key="d0">4</data>
+    </edge>
+    <edge source="ألناصر صلاح" target="منصور عبد ربه">
+      <data key="d0">3</data>
+    </edge>
+    <edge source="فيصل الشعبي" target="حسن عبدالرحمن">
+      <data key="d0">3</data>
+    </edge>
+    <edge source="ابوفريد." target="ارحل الان">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="ابوفريد." target="الروحاني2013">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="ابوفريد." target="الذيباني 7">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="ابوفريد." target="أبوعارف">
+      <data key="d0">4</data>
+    </edge>
+    <edge source="ابوفريد." target="قلم حرر">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="ابوفريد." target="مردخاي">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="ابوفريد." target="مضارب">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="ابوفريد." target="ابن الديرة">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="ابوفريد." target="صالح الازدي">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="ابوفريد." target="الجلنبط">
+      <data key="d0">3</data>
+    </edge>
+    <edge source="ابوفريد." target="عبدالرزاق الجمل">
+      <data key="d0">5</data>
+    </edge>
+    <edge source="ابوفريد." target="دكتور/ منصور">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="زنجبار تنزف" target="بنت اليمن22">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="زنجبار تنزف" target="أبومعاوية">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="شموخ الجبال" target="أسد المعركة">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="شموخ الجبال" target="زهيرسالم">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="شموخ الجبال" target="أبوعارف">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="شموخ الجبال" target="محارب الفتن">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="شموخ الجبال" target="صالح الازدي">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="شموخ الجبال" target="أبومحمدالسلمي">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="شموخ الجبال" target="نظمي">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="أبوالبراء79" target="Harry Potter">
+      <data key="d0">3</data>
+    </edge>
+    <edge source="أبوالبراء79" target="النصر لليمن">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="أبوالبراء79" target="المسلم الغيور">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="أبوالبراء79" target="زهيرسالم">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="أبوالبراء79" target="المُغيرة">
+      <data key="d0">3</data>
+    </edge>
+    <edge source="أبوالبراء79" target="مصطفى العربي">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="أبوالبراء79" target="أبـو علياء">
+      <data key="d0">4</data>
+    </edge>
+    <edge source="أبوالبراء79" target="أبو شديد">
+      <data key="d0">8</data>
+    </edge>
+    <edge source="أبوالبراء79" target="قدامة">
+      <data key="d0">15</data>
+    </edge>
+    <edge source="أبوالبراء79" target="محب الله1">
+      <data key="d0">14</data>
+    </edge>
+    <edge source="أبوالبراء79" target="قلم حرر">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="أبوالبراء79" target="العربي الشمري">
+      <data key="d0">3</data>
+    </edge>
+    <edge source="أبوالبراء79" target="عمر خلدون">
+      <data key="d0">3</data>
+    </edge>
+    <edge source="أبوالبراء79" target="متعدد الخلايا">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="أبوالبراء79" target="ظاهر كريم">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="أبوالبراء79" target="أبومحمدالسلمي">
+      <data key="d0">5</data>
+    </edge>
+    <edge source="أبوالبراء79" target="ابوبكر المصري">
+      <data key="d0">3</data>
+    </edge>
+    <edge source="أبوالبراء79" target="الآمر بالمعروف">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="أبوالبراء79" target="صادق حسن">
+      <data key="d0">3</data>
+    </edge>
+    <edge source="أبوالبراء79" target="مسلم 7">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="أبوالبراء79" target="yemeni22009">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="أبوالبراء79" target="منصور عبد ربه">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="أبوالبراء79" target="أبومعاوية">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="نصير الحق" target="أبوالبراء79">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="نصير الحق" target="محب الله1">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="قلم حرر" target="ابوخالد عبدالله">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="قلم حرر" target="ابوفريد.">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="صاحب الفخامه" target="أبو طلحه">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="صاحب الفخامه" target="مردخاي">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="أبوعارف" target="متابع اعلامي">
+      <data key="d0">3</data>
+    </edge>
+    <edge source="أبوعارف" target="ابن سيناءء">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="أبوعارف" target="ابوفريد.">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="أبوعارف" target="طبيب العقول">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="أبوعارف" target="نصح مجاني">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="أبوعارف" target="جلال الأربعيني">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="أبوعارف" target="مضارب">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="أبوعارف" target="فارس الجنوب">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="أبوعارف" target="صاروخي">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="أبوعارف" target="أبومحمدالسلمي">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="أبوعارف" target="الجلنبط">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="رياض" target="بن وليد">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="رياض" target="جزائرية">
+      <data key="d0">3</data>
+    </edge>
+    <edge source="رياض" target="jemen16">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="رياض" target="مهدي الهجر">
+      <data key="d0">4</data>
+    </edge>
+    <edge source="حلم الخلاص" target="راعي الجدعى">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="صاروخي" target="ابو حمد الكثيري">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="صاروخي" target="الحراك السلمي">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="المُناصر للحق" target="أسد المعركة">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="محمد العباسى" target="أبو طلحه">
+      <data key="d0">21</data>
+    </edge>
+    <edge source="محمد العباسى" target="متابع اعلامي">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="محمد العباسى" target="حمد اليمني">
+      <data key="d0">5</data>
+    </edge>
+    <edge source="محمد العباسى" target="نور الدين زنكي">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="محمد العباسى" target="محب الله1">
+      <data key="d0">3</data>
+    </edge>
+    <edge source="عطا الشامي" target="فيلسوف زمانه">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="عطا الشامي" target="محب الله1">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="عطا الشامي" target="صادق حسن">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="الجلنبط" target="مسلم متعاطف">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="الجلنبط" target="ابوفريد.">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="الجلنبط" target="الكوره">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="الجلنبط" target="بنت اليمن22">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="الجلنبط" target="ابراهيم السلطان">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="الجلنبط" target="غيث الصحارى">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="الجلنبط" target="جلال الأربعيني">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="الجلنبط" target="أخر الفرسان">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="سيف بتـار" target="يوسف كامل">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="زئير الغضنفر" target="alhamaly">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="زئير الغضنفر" target="مهيـدان">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="زئير الغضنفر" target="ماداو">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="زئير الغضنفر" target="المسلم الغيور">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="زئير الغضنفر" target="الحراك السلمي">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="زئير الغضنفر" target="ابها">
+      <data key="d0">4</data>
+    </edge>
+    <edge source="زئير الغضنفر" target="مهدي الهجر">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="زئير الغضنفر" target="مشروع صحفي">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="النصر لليمن" target="جلال الأربعيني">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="النصر لليمن" target="الجلنبط">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="عثمان الزهر" target="منصور عبد ربه">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="عثمان الزهر" target="الكوكني أبومافيش">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="بنت اليمن22" target="النسر الفضي">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="بنت اليمن22" target="صامدون هنـا">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="بنت اليمن22" target="حسن عبدالرحمن">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="بنت اليمن22" target="الشدياق">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="بنت اليمن22" target="ابوفريد.">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="بنت اليمن22" target="غانم سليم">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="بنت اليمن22" target="زنجبار تنزف">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="بنت اليمن22" target="أبو تراب">
+      <data key="d0">3</data>
+    </edge>
+    <edge source="بنت اليمن22" target="تميمي حضرموت">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="بنت اليمن22" target="جلال الأربعيني">
+      <data key="d0">5</data>
+    </edge>
+    <edge source="بنت اليمن22" target="الناصح السياسي">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="بنت اليمن22" target="سالم عوض">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="بنت اليمن22" target="صاروخي">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="بنت اليمن22" target="الهاشمي اليماني">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="بنت اليمن22" target="زهر المعاني">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="بنت اليمن22" target="الصحّاف">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="بنت اليمن22" target="الجلنبط">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="بنت اليمن22" target="أبومعاوية">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="بنت اليمن22" target="دكتور/ منصور">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="عاقل المدينه" target="ابوالعهد">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="عاقل المدينه" target="phobia">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="السعدي 3" target="الضباعي">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="السعدي 3" target="مطنش">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="السعدي 3" target="حسن عبدالرحمن">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="السعدي 3" target="binarash">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="عمر خلدون" target="سهيل اليماني">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="عمر خلدون" target="المؤمن الصادق">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="عمر خلدون" target="أبو شديد">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="عمر خلدون" target="جلال بن فريد">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="محارب الفتن" target="عادل غانم">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="سالم عوض" target="بنت اليمن22">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="هلال شرف" target="howbani">
+      <data key="d0">3</data>
+    </edge>
+    <edge source="TANGER" target="صادق حسن">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="الرجوع الى الحق" target="قلم ساخر">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="الأطلنطي" target="aljehafi">
+      <data key="d0">3</data>
+    </edge>
+    <edge source="صريح وواضح" target="بابا مشمش">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="عدن لايف" target="أبومعاوية">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="أبو طلحه" target="أبوالبراء79">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="أبو طلحه" target="كيرا">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="أبو طلحه" target="نور الدين زنكي">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="أبو طلحه" target="زهيرسالم">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="أبو طلحه" target="التهامي1">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="أبو طلحه" target="أبو شديد">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="أبو طلحه" target="زهر المعاني">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="أبو طلحه" target="نسائم اليمن">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="أبو طلحه" target="المؤمن الصادق">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="أبو طلحه" target="مسلم 7">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="أبو طلحه" target="محب الله1">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="أبو طلحه" target="فتى صعده الثائر">
+      <data key="d0">4</data>
+    </edge>
+    <edge source="أبو طلحه" target="سحلب مكار">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="أبو طلحه" target="ربيع سامي">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="أبو طلحه" target="العربي الشمري">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="أبو طلحه" target="محمد العباسى">
+      <data key="d0">5</data>
+    </edge>
+    <edge source="أبو طلحه" target="الحر التهامي">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="أبو طلحه" target="مغترب في ارضه">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="أبو طلحه" target="أبومحمدالسلمي">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="أبو طلحه" target="ابوبكر المصري">
+      <data key="d0">3</data>
+    </edge>
+    <edge source="أبو طلحه" target="غانم سليم">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="أبو طلحه" target="صادق حسن">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="أبو طلحه" target="ابوبسام اليمني">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="غانم سليم" target="صاروخي">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="غانم سليم" target="الواحدي شبواني">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="غانم سليم" target="وليد عبد الودود">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="الآمر بالمعروف" target="المعلم1">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="الآمر بالمعروف" target="أبوالبراء79">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="عبــد الله" target="جلال الأربعيني">
+      <data key="d0">3</data>
+    </edge>
+    <edge source="عدو الشيطان" target="alhamaly">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="عدو الشيطان" target="قرين القران">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="عدو الشيطان" target="يوسف كامل">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="ابو لافى" target="الكوكني أبومافيش">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="ابو لافى" target="السعدي 3">
+      <data key="d0">3</data>
+    </edge>
+    <edge source="hero7" target="طبيب العقول">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="hero7" target="ناصر الجهراني">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="yemeni22009" target="حق العودة">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="yemeni22009" target="aziznavii">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="yemeni22009" target="عبدالمتكبر">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="yemeni22009" target="جلال بن فريد">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="وحي الكلام" target="اسماعيل السلفي">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="وحي الكلام" target="النمر بن عدوان">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="وحي الكلام" target="مهدي الهجر">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="وحي الكلام" target="دكتور/ منصور">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="مهدي الهجر" target="زئير الغضنفر">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="مهدي الهجر" target="متابع اعلامي">
+      <data key="d0">10</data>
+    </edge>
+    <edge source="مهدي الهجر" target="كرت">
+      <data key="d0">3</data>
+    </edge>
+    <edge source="مهدي الهجر" target="دكتور/ منصور">
+      <data key="d0">4</data>
+    </edge>
+    <edge source="مهدي الهجر" target="أبو علي 4">
+      <data key="d0">4</data>
+    </edge>
+    <edge source="مهدي الهجر" target="شموخ الجبال">
+      <data key="d0">3</data>
+    </edge>
+    <edge source="مهدي الهجر" target="رضا السالمي">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="مهدي الهجر" target="احمد القديمه">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="مهدي الهجر" target="المتشائل الحر">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="مهدي الهجر" target="ابو هزبر">
+      <data key="d0">4</data>
+    </edge>
+    <edge source="مهدي الهجر" target="حرپ التويتي">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="مهدي الهجر" target="الواحدي شبواني">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="مهدي الهجر" target="رياض">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="مهدي الهجر" target="حركة (كفاية)">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="مهدي الهجر" target="نصيرة الحق">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="مهدي الهجر" target="ابوفـارس">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="مهدي الهجر" target="مشروع صحفي">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="مهدي الهجر" target="وحي الكلام">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="vision" target="جلال بن فريد">
+      <data key="d0">3</data>
+    </edge>
+    <edge source="vision" target="نقار الخشب">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="شافعي من يافع" target="البتـار اليماني">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="الشدياق" target="جلال بن فريد">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="الشدياق" target="الجلنبط">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="بريكان اليافعي" target="النمر بن عدوان">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="بريكان اليافعي" target="اليمن وبس">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="شعفل" target="حسن عبدالرحمن">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="جبال حضرموت" target="جمال الابتسامة">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="الحق ظاهر" target="متابع اعلامي">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="الحق ظاهر" target="نقار الخشب">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="أبو صدام44" target="جلال الأربعيني">
+      <data key="d0">3</data>
+    </edge>
+    <edge source="أبو صدام44" target="الجلنبط">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="صنعاني شااان" target="سحلب مكار">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="صنعاني شااان" target="جلال الأربعيني">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="زهيرسالم" target="الوووليد">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="زهيرسالم" target="متابع اعلامي">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="زهيرسالم" target="ابن سيناءء">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="زهيرسالم" target="ارحل الان">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="زهيرسالم" target="أبوالبراء79">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="زهيرسالم" target="الكوره">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="زهيرسالم" target="جلال بن فريد">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="زهيرسالم" target="طائـرمهاجـر">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="زهيرسالم" target="العربي الشمري">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="زهيرسالم" target="رعد العروبة">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="زهيرسالم" target="الجلنبط">
+      <data key="d0">3</data>
+    </edge>
+    <edge source="زهيرسالم" target="دكتور/ منصور">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="جزائرية" target="رياض">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="المُغيرة" target="أبو طلحه">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="المُغيرة" target="أبوالبراء79">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="الروحاني2013" target="ارحل الان">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="الروحاني2013" target="ابوفريد.">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="الروحاني2013" target="رياح الصحراء">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="الروحاني2013" target="شموخ الجبال">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="الروحاني2013" target="جلال الأربعيني">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="الروحاني2013" target="صالح الازدي">
+      <data key="d0">5</data>
+    </edge>
+    <edge source="الروحاني2013" target="الجلنبط">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="الروحاني2013" target="قاسم الشماري">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="فريق التواصل" target="كرت">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="فريق التواصل" target="فتى صعده الثائر">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="عالي المقام" target="فك الارتباط">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="عالي المقام" target="حسن عبدالرحمن">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="عالي المقام" target="ارحل الان">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="عالي المقام" target="اليافعي 2008">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="عالي المقام" target="طبيب العقول">
+      <data key="d0">3</data>
+    </edge>
+    <edge source="عالي المقام" target="أبومعاوية">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="عالي المقام" target="أنا دماج">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="امين وبس" target="السعدي 3">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="أبوجعفر" target="متابع اعلامي">
+      <data key="d0">3</data>
+    </edge>
+    <edge source="المهاجر لله" target="نصيرة الحق">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="NoOne" target="اليمن في دمي">
+      <data key="d0">4</data>
+    </edge>
+    <edge source="الكوكني أبومافيش" target="عثمان الزهر">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="ابراهيم السلطان" target="لوسيل">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="فتى صعده الثائر" target="العربي الشمري">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="فتى صعده الثائر" target="كرت">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="فتى صعده الثائر" target="jemen16">
+      <data key="d0">4</data>
+    </edge>
+    <edge source="فتى صعده الثائر" target="فريق التواصل">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="فتى صعده الثائر" target="أبو علي 4">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="الصارم اليمني" target="نصير الحق">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="سحلب مكار" target="ابوبكر المصري">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="سحلب مكار" target="الجلنبط">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="حيدرالزيادي" target="متابع اعلامي">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="الواحدي شبواني" target="أبو حاتم المصري">
+      <data key="d0">4</data>
+    </edge>
+    <edge source="الواحدي شبواني" target="Harry Potter">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="وليد عبد الودود" target="أبوعارف">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="قدامة" target="أبوالبراء79">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="مسلم متعاطف" target="في الصميم">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="مسلم متعاطف" target="الجلنبط">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="مسلم متعاطف" target="ارحل الان">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="في الصميم" target="حق العودة">
+      <data key="d0">3</data>
+    </edge>
+    <edge source="في الصميم" target="مسلم متعاطف">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="في الصميم" target="حسن عبدالرحمن">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="في الصميم" target="الجلنبط">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="أبو تراب" target="كرت">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="أبو تراب" target="متابع اعلامي">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="أبو تراب" target="أبو علي 4">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="أبو تراب" target="بنت اليمن22">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="أبو تراب" target="ابوالعابدين">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="أبو تراب" target="مهدي الهجر">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="صالح بن فريد" target="أبومعاوية">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="أبو علي 4" target="أبو طلحه">
+      <data key="d0">3</data>
+    </edge>
+    <edge source="أبو علي 4" target="متابع اعلامي">
+      <data key="d0">5</data>
+    </edge>
+    <edge source="أبو علي 4" target="ابورباح القحيف">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="أبو علي 4" target="أبو تراب">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="أبو علي 4" target="الحر التهامي">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="أبو علي 4" target="الحراك السلمي">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="أبو علي 4" target="جلال الأربعيني">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="أبو علي 4" target="مضارب">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="أبو علي 4" target="ابو هزبر">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="أبو علي 4" target="متأمل بعمق">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="أبو علي 4" target="مهدي الهجر">
+      <data key="d0">5</data>
+    </edge>
+    <edge source="أبو علي 4" target="الجلنبط">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="أبو علي 4" target="أبومعاوية">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="الكوره" target="راعي الجدعى">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="الكوره" target="ارحل الان">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="الكوره" target="البدوي11">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="عزتي بشموخي" target="binarash">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="ليال92" target="الجلنبط">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="فك الارتباط" target="عالي المقام">
+      <data key="d0">3</data>
+    </edge>
+    <edge source="فك الارتباط" target="الصحّاف">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="صادق حسن" target="أبو طلحه">
+      <data key="d0">3</data>
+    </edge>
+    <edge source="صادق حسن" target="مهيـدان">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="صادق حسن" target="أبوعارف">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="صادق حسن" target="قرين القران">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="صادق حسن" target="أبوالبراء79">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="ابها" target="زئير الغضنفر">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="ابها" target="ماداو">
+      <data key="d0">3</data>
+    </edge>
+    <edge source="ابها" target="الحراك السلمي">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="أسير الكرم" target="متابع اعلامي">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="المعتصم2" target="صادق حسن">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="المعتصم2" target="منصور عبد ربه">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="المعتصم2" target="بنت اليمن22">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="مجاهدة" target="العديني السرك">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="نجم ريدان" target="حسن عبدالرحمن">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="نجم ريدان" target="المتحمس دائماً">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="ظاهر كريم" target="ابوبكر المصري">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="ظاهر كريم" target="أبو علي 4">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="ظاهر كريم" target="المؤمن الصادق">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="ظاهر كريم" target="أبوالبراء79">
+      <data key="d0">4</data>
+    </edge>
+    <edge source="ظاهر كريم" target="ابو هزبر">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="ظاهر كريم" target="أبومعاوية">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="راعي الجدعى" target="وحي الكلام">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="راعي الجدعى" target="أسد المعركة">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="MUSLEM" target="بنت اليمن22">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="ماداو" target="زئير الغضنفر">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="ماداو" target="عمــار">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="ماداو" target="ارحل الان">
+      <data key="d0">4</data>
+    </edge>
+    <edge source="ماداو" target="الذيباني 7">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="ماداو" target="جلال بن فريد">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="ماداو" target="الصحّاف">
+      <data key="d0">4</data>
+    </edge>
+    <edge source="ماداو" target="طبيب العقول">
+      <data key="d0">3</data>
+    </edge>
+    <edge source="ماداو" target="ابها">
+      <data key="d0">4</data>
+    </edge>
+    <edge source="ماداو" target="عبد العزيز الخل">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="ماداو" target="نظمي">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="الصنعاني::" target="متابع اعلامي">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="الحراك السلمي" target="binarash">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="الحراك السلمي" target="ابها">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="الحراك السلمي" target="فك الارتباط">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="الحراك السلمي" target="ابوالوفا">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="حبر الأمة" target="المعلم1">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="حبر الأمة" target="أخت أخوها">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="حبر الأمة" target="الجلنبط">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="أكرم المصري" target="متعدد الخلايا">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="أخت أخوها" target="المؤمن الصادق">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="أخت أخوها" target="أبو حاتم المصري">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="مطنش" target="أبوعارف">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="مطنش" target="البتـار اليماني">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="ذيب الجنوب" target="أناوالقمر جيران">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="عمــار" target="حسن عبدالرحمن">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="عمــار" target="جلال بن فريد">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="عمــار" target="هلال شرف">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="alhamaly" target="عدو الشيطان">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="alhamaly" target="يوسف كامل">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="jemen16" target="فتى صعده الثائر">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="أريد أن أفهم" target="لاتسألني من أنا">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="نشوان 11" target="ماداو">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="نشوان 11" target="جلال بن فريد">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="ارحل الان" target="مسلم متعاطف">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="ارحل الان" target="عالي المقام">
+      <data key="d0">4</data>
+    </edge>
+    <edge source="ارحل الان" target="ماداو">
+      <data key="d0">3</data>
+    </edge>
+    <edge source="ارحل الان" target="زهيرسالم">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="ارحل الان" target="الجلنبط">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="ارحل الان" target="أبومعاوية">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="اليمن في دمي" target="معن شبوة">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="عادل غانم" target="جلال الأربعيني">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="عادل غانم" target="محارب الفتن">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="رضا السالمي" target="أبوالبراء79">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="رضا السالمي" target="محب الله1">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="رضا السالمي" target="yemeni22009">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="رضا السالمي" target="مصطفى العربي">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="رضا السالمي" target="أبو شديد">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="رضا السالمي" target="مهدي الهجر">
+      <data key="d0">3</data>
+    </edge>
+    <edge source="المسلم الغيور" target="أبوالبراء79">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="المسلم الغيور" target="البدوي11">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="عبود المطار" target="الحراك السلمي">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="بلاحدود." target="جمال الابتسامة">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="بلاحدود." target="جبال حضرموت">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="ابو هزبر" target="غيث الصحارى">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="ابو هزبر" target="متابع اعلامي">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="ابو هزبر" target="ابوالعابدين">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="ابو هزبر" target="ابن الديرة">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="ابو هزبر" target="أبو علي 4">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="نصيرة الحق" target="أبومحمدالسلمي">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="نصيرة الحق" target="أسد المعركة">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="أبـو علياء" target="جلال الأربعيني">
+      <data key="d0">3</data>
+    </edge>
+    <edge source="أبـو علياء" target="أبوالبراء79">
+      <data key="d0">5</data>
+    </edge>
+    <edge source="أبـو علياء" target="عبود المطار">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="أبـو علياء" target="همّــام">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="راجي عفو ربه" target="جلال بن فريد">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="الوووليد" target="أبو طلحه">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="نسائم اليمن" target="أبو طلحه">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="نسائم اليمن" target="المعلم1">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="نسائم اليمن" target="ابوالعابدين">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="نسائم اليمن" target="مسلم 7">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="نسائم اليمن" target="الجلنبط">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="ابو الشباب" target="الضباعي">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="ابو الشباب" target="فيلسوف زمانه">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="بحر / الجنوب" target="تَعكر">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="المؤمن الصادق" target="أبو طلحه">
+      <data key="d0">5</data>
+    </edge>
+    <edge source="المؤمن الصادق" target="حمد اليمني">
+      <data key="d0">3</data>
+    </edge>
+    <edge source="المؤمن الصادق" target="ثبات الناجح">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="المؤمن الصادق" target="عمر خلدون">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="المؤمن الصادق" target="الجلنبط">
+      <data key="d0">3</data>
+    </edge>
+    <edge source="المؤمن الصادق" target="أبومعاوية">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="عبودى2000" target="حسن عبدالرحمن">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="نصح مجاني" target="دكتور/ منصور">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="جلال الأربعيني" target="الضباعي">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="جلال الأربعيني" target="مسلم متعاطف">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="جلال الأربعيني" target="بنت اليمن22">
+      <data key="d0">5</data>
+    </edge>
+    <edge source="جلال الأربعيني" target="حمد اليمني">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="جلال الأربعيني" target="عبــد الله">
+      <data key="d0">4</data>
+    </edge>
+    <edge source="جلال الأربعيني" target="زين الصبيحه">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="جلال الأربعيني" target="الروحاني2013">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="جلال الأربعيني" target="المهاجر لله">
+      <data key="d0">3</data>
+    </edge>
+    <edge source="جلال الأربعيني" target="أبوجعفر">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="جلال الأربعيني" target="أبو صدام44">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="جلال الأربعيني" target="أبو شديد">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="جلال الأربعيني" target="سحلب مكار">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="جلال الأربعيني" target="أبوعارف">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="جلال الأربعيني" target="مصطفى العربي">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="جلال الأربعيني" target="وحي الكلام">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="جلال الأربعيني" target="العراقي الحزين1">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="جلال الأربعيني" target="صالح الازدي">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="جلال الأربعيني" target="ابوفـارس">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="جلال الأربعيني" target="الجلنبط">
+      <data key="d0">6</data>
+    </edge>
+    <edge source="جلال الأربعيني" target="دكتور/ منصور">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="الناصح السياسي" target="سفيرالمحبة">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="جمال مجـلي" target="الشدياق">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="الجنوبي السلفي" target="رعد العروبة">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="العربي الشمري" target="أبو طلحه">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="العربي الشمري" target="متابع اعلامي">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="العربي الشمري" target="أبوالبراء79">
+      <data key="d0">3</data>
+    </edge>
+    <edge source="العربي الشمري" target="فتى صعده الثائر">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="No 1" target="مطنش">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="ابو حمد الكثيري" target="الكوره">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="النمر بن عدوان" target="فيلسوف زمانه">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="حاتم الطائي_11" target="الروحاني2013">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="حاتم الطائي_11" target="صالح الازدي">
+      <data key="d0">3</data>
+    </edge>
+    <edge source="عسل يمني" target="حسن عبدالرحمن">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="ابوالوفا" target="binarash">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="ابن الديرة" target="الضباعي">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="ابن الديرة" target="حاتم الطائي_11">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="ابن الديرة" target="عاقل المدينه">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="ابن الديرة" target="نظمي">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="ابن الديرة" target="ابن سيناءء">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="ابن الديرة" target="ارحل الان">
+      <data key="d0">3</data>
+    </edge>
+    <edge source="ابن الديرة" target="صادق حسن">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="ابن الديرة" target="المؤمن الصادق">
+      <data key="d0">4</data>
+    </edge>
+    <edge source="ابن الديرة" target="مملكه سباء">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="ابن الديرة" target="الجلنبط">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="ابن الديرة" target="عمر خلدون">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="ابن الديرة" target="ابو هزبر">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="ابن الديرة" target="بارود1">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="ابن الديرة" target="الحقيقة مرة">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="ابن الديرة" target="صالح الازدي">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="ابن الديرة" target="أخت أخوها">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="ابن الديرة" target="أبومحمدالسلمي">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="ابن الديرة" target="دكتور/ منصور">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="binarash" target="ابو لافى">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="binarash" target="صاعقه">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="binarash" target="حسن عبدالرحمن">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="binarash" target="عثمان الزهر">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="binarash" target="الصحّاف">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="اليمن اكبر منكم" target="أسد المعركة">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="فتى بني ياس" target="جلال بن فريد">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="بارود1" target="أبومعاوية">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="أبو حاتم المصري" target="العراقي الحزين1">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="أبو حاتم المصري" target="المـرادي">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="أبو حاتم المصري" target="جلال بن فريد">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="أبو حاتم المصري" target="الواحدي شبواني">
+      <data key="d0">3</data>
+    </edge>
+    <edge source="الصحّاف" target="binarash">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="الصحّاف" target="ماداو">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="الصحّاف" target="ليال92">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="الصحّاف" target="فك الارتباط">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="الصحّاف" target="أبومعاوية">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="أبومحمدالسلمي" target="أبو طلحه">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="أبومحمدالسلمي" target="ماداو">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="أبومحمدالسلمي" target="أبوالبراء79">
+      <data key="d0">16</data>
+    </edge>
+    <edge source="أبومحمدالسلمي" target="فتى صعده الثائر">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="أبومحمدالسلمي" target="زهيرسالم">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="أبومحمدالسلمي" target="رعد العروبة">
+      <data key="d0">4</data>
+    </edge>
+    <edge source="أبومحمدالسلمي" target="أبومعاوية">
+      <data key="d0">6</data>
+    </edge>
+    <edge source="وادي الحقيقة" target="متابع اعلامي">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="النسر الفضي" target="الهاشمي اليماني">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="النسر الفضي" target="يوسف كامل">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="فيلسوف زمانه" target="متابع اعلامي">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="فيلسوف زمانه" target="الكوره">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="فيلسوف زمانه" target="ابو الشباب">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="عرين الأسد" target="مهيـدان">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="عرين الأسد" target="ماداو">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="عرين الأسد" target="مهدي الهجر">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="ج.ي.د.ش" target="binarash">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="مضارب" target="مملكه سباء">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="طائـرمهاجـر" target="فك الارتباط">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="طائـرمهاجـر" target="حسن عبدالرحمن">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="بن وليد" target="رياض">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="صـدى الحـق" target="حسن عبدالرحمن">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="طبيب العقول" target="حق العودة">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="طبيب العقول" target="عالي المقام">
+      <data key="d0">4</data>
+    </edge>
+    <edge source="طبيب العقول" target="أبوعارف">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="طبيب العقول" target="جلال الأربعيني">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="طبيب العقول" target="بسكوت مالح 2">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="هلل" target="همّــام">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="البدوي11" target="اليمن في دمي">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="إبن اليمن الحر" target="البتـار اليماني">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="أبومعاوية" target="الفتى الخولاني">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="أبومعاوية" target="binarash">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="أبومعاوية" target="الحر التهامي">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="أبومعاوية" target="الصحّاف">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="أبومعاوية" target="التهامي1">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="أبومعاوية" target="short comment">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="أبومعاوية" target="علي ابن المشطط">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="أبومعاوية" target="طيب الاسم">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="أبومعاوية" target="الهاشمي اليماني">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="أبومعاوية" target="أبومحمدالسلمي">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="كرت" target="محمد العباسى">
+      <data key="d0">3</data>
+    </edge>
+    <edge source="كرت" target="طيب الاسم">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="كرت" target="فتى صعده الثائر">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="ابوالعابدين" target="حاتم الطائي_11">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="ابوالعابدين" target="أبووجدان">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="ابوالعابدين" target="ابو هزبر">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="ابوالعابدين" target="iمجتهد">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="ابوالعابدين" target="همّــام">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="ابوالعابدين" target="إبن القاسم">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="ابوالعابدين" target="مهدي الهجر">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="ابوالعابدين" target="الجلنبط">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="ابوالعابدين" target="ابن حميَر">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="الزهراء الزهراء" target="العربي الشمري">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="aziznavii" target="أبو طلحه">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="aziznavii" target="yemeni22009">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="aziznavii" target="أبومعاوية">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="ابوبسام اليمني" target="أبو طلحه">
+      <data key="d0">3</data>
+    </edge>
+    <edge source="ابوبسام اليمني" target="حبر الأمة">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="اليافعي 2008" target="عالي المقام">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="اليافعي 2008" target="حسن عبدالرحمن">
+      <data key="d0">3</data>
+    </edge>
+    <edge source="اليافعي 2008" target="عثمان الزهر">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="اليافعي 2008" target="قلم حرر">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="اليافعي 2008" target="ابو لافى">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="اليافعي 2008" target="نجم ريدان">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="البتـار اليماني" target="عمــار">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="البتـار اليماني" target="مطنش">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="البتـار اليماني" target="حسن عبدالرحمن">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="جلال بن فريد" target="اسماك القرش">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="جلال بن فريد" target="عمــار">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="جلال بن فريد" target="ارحل الان">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="جلال بن فريد" target="مهيـدان">
+      <data key="d0">3</data>
+    </edge>
+    <edge source="جلال بن فريد" target="الذيباني 7">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="جلال بن فريد" target="ماداو">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="جلال بن فريد" target="شاخوف الوائلي">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="جلال بن فريد" target="تميمي حضرموت">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="جلال بن فريد" target="قلب يمني حر">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="جلال بن فريد" target="فتى بني ياس">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="جلال بن فريد" target="حق العودة">
+      <data key="d0">3</data>
+    </edge>
+    <edge source="جلال بن فريد" target="راجي عفو ربه">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="جلال بن فريد" target="الصحّاف">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="جلال بن فريد" target="vision">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="جلال بن فريد" target="نقار الخشب">
+      <data key="d0">3</data>
+    </edge>
+    <edge source="ناصر الجهراني" target="عمر خلدون">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="ناصر الجهراني" target="hero7">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="التهامي1" target="العراقي الحزين1">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="التهامي1" target="المؤمن الصادق">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="التهامي1" target="أبومعاوية">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="رجال الوايلي" target="رعد العروبة">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="aljehafi" target="حراس الوطن">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="aljehafi" target="حسن عبدالرحمن">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="aljehafi" target="الأطلنطي">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="مصعب السيال" target="حسن عبدالرحمن">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="مصعب السيال" target="فيلسوف زمانه">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="مصطفى العربي" target="أبو طلحه">
+      <data key="d0">4</data>
+    </edge>
+    <edge source="مصطفى العربي" target="howbani">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="مصطفى العربي" target="محب الله1">
+      <data key="d0">3</data>
+    </edge>
+    <edge source="مصطفى العربي" target="فتى صعده الثائر">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="مصطفى العربي" target="أبوعارف">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="مصطفى العربي" target="أبو شديد">
+      <data key="d0">4</data>
+    </edge>
+    <edge source="مصطفى العربي" target="الجلنبط">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="برفسور نفساني" target="اليمن في دمي">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="بساام" target="أبو علي 4">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="بساام" target="متابع اعلامي">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="أخر الفرسان" target="الجلنبط">
+      <data key="d0">3</data>
+    </edge>
+    <edge source="معن شبوة" target="اليمن في دمي">
+      <data key="d0">3</data>
+    </edge>
+    <edge source="لوسيل" target="مشروع صحفي">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="دكتور/ منصور" target="أبو طلحه">
+      <data key="d0">7</data>
+    </edge>
+    <edge source="دكتور/ منصور" target="غانم سليم">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="دكتور/ منصور" target="المعلم1">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="دكتور/ منصور" target="متابع اعلامي">
+      <data key="d0">3</data>
+    </edge>
+    <edge source="دكتور/ منصور" target="أبو علي 4">
+      <data key="d0">3</data>
+    </edge>
+    <edge source="دكتور/ منصور" target="بنت اليمن22">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="دكتور/ منصور" target="نصح مجاني">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="دكتور/ منصور" target="زهيرسالم">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="دكتور/ منصور" target="ابوالعابدين">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="دكتور/ منصور" target="محارب الفتن">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="دكتور/ منصور" target="وحي الكلام">
+      <data key="d0">4</data>
+    </edge>
+    <edge source="دكتور/ منصور" target="رياض">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="دكتور/ منصور" target="عمر همام">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="دكتور/ منصور" target="مصطفى العربي">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="دكتور/ منصور" target="علي ابن المشطط">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="دكتور/ منصور" target="مهدي الهجر">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="دكتور/ منصور" target="الجلنبط">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="دكتور/ منصور" target="أبومعاوية">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="محب الله1" target="أبو طلحه">
+      <data key="d0">6</data>
+    </edge>
+    <edge source="محب الله1" target="أبوالبراء79">
+      <data key="d0">10</data>
+    </edge>
+    <edge source="محب الله1" target="مردخاي">
+      <data key="d0">3</data>
+    </edge>
+    <edge source="محب الله1" target="أبوعارف">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="محب الله1" target="yemeni22009">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="محب الله1" target="همّــام">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="محب الله1" target="التهامي1">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="محب الله1" target="محمد العباسى">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="محب الله1" target="أبومعاوية">
+      <data key="d0">6</data>
+    </edge>
+    <edge source="اليمن وبس" target="متابع اعلامي">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="اليمن وبس" target="ابن حميَر">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="حق العودة" target="متابع اعلامي">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="حق العودة" target="في الصميم">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="حق العودة" target="jemen16">
+      <data key="d0">6</data>
+    </edge>
+    <edge source="حق العودة" target="عالي المقام">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="حق العودة" target="أبو تراب">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="حق العودة" target="جلال بن فريد">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="حق العودة" target="فتى صعده الثائر">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="حق العودة" target="قلم حرر">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="حق العودة" target="سحلب مكار">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="حق العودة" target="قرين القران">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="حق العودة" target="اليمن وبس">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="حق العودة" target="الهاشمي اليماني">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="حق العودة" target="الجلنبط">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="الهاشمي اليماني" target="ابن الديرة">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="عبد العزيز الخل" target="ماداو">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="حركة (كفاية)" target="متابع اعلامي">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="الضباعي" target="ابو لافى">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="المتشائل الحر" target="مهدي الهجر">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="ابوجهااد" target="متابع اعلامي">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="الحر التهامي" target="متابع اعلامي">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="الحر التهامي" target="أبومعاوية">
+      <data key="d0">3</data>
+    </edge>
+    <edge source="الحر التهامي" target="صادق حسن">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="أبومهيب" target="عالي المقام">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="المعلم1" target="الآمر بالمعروف">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="المعلم1" target="نسائم اليمن">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="المعلم1" target="ابورباح القحيف">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="المعلم1" target="ابوالعابدين">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="المعلم1" target="حبر الأمة">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="المعلم1" target="أبومعاوية">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="المعلم1" target="دكتور/ منصور">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="متعدد الخلايا" target="أبوالبراء79">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="متعدد الخلايا" target="أبـو علياء">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="متعدد الخلايا" target="يوسف كامل">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="طيب الاسم" target="كرت">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="طيب الاسم" target="أبومعاوية">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="صالح الازدي" target="مصطفى العربي">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="صالح الازدي" target="حاتم الطائي_11">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="صالح الازدي" target="الروحاني2013">
+      <data key="d0">5</data>
+    </edge>
+    <edge source="صالح الازدي" target="شموخ الجبال">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="صالح الازدي" target="الجلنبط">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="عبدالمتكبر" target="مردخاي">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="عبدالمتكبر" target="yemeni22009">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="ابوفـارس" target="مهدي الهجر">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="تَعكر" target="بحر / الجنوب">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="تَعكر" target="حسن عبدالرحمن">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="منصور عبد ربه" target="ألناصر صلاح">
+      <data key="d0">3</data>
+    </edge>
+    <edge source="منصور عبد ربه" target="حمد اليمني">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="منصور عبد ربه" target="عثمان الزهر">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="منصور عبد ربه" target="المهاجر لله">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="منصور عبد ربه" target="أبوالبراء79">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="منصور عبد ربه" target="مضارب">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="منصور عبد ربه" target="حبر الأمة">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="منصور عبد ربه" target="أدهم المُعاصر">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="منصور عبد ربه" target="المُناصر للحق">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="منصور عبد ربه" target="أبو شديد">
+      <data key="d0">5</data>
+    </edge>
+    <edge source="منصور عبد ربه" target="قدامة">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="مشروع صحفي" target="aljehafi">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="ابوبكر المصري" target="أبو طلحه">
+      <data key="d0">4</data>
+    </edge>
+    <edge source="ابوبكر المصري" target="العراقي الحزين1">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="ابوبكر المصري" target="التهامي1">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="ابوبكر المصري" target="أبوالبراء79">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="حسن عبدالرحمن" target="عالي المقام">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="حسن عبدالرحمن" target="ابو حمد الكثيري">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="حسن عبدالرحمن" target="الشدياق">
+      <data key="d0">3</data>
+    </edge>
+    <edge source="حسن عبدالرحمن" target="اليافعي 2008">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="حسن عبدالرحمن" target="بنت اليمن22">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="حسن عبدالرحمن" target="السعدي 3">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="حسن عبدالرحمن" target="الحراك السلمي">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="حسن عبدالرحمن" target="ازد الجيش">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="حسن عبدالرحمن" target="الصحّاف">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="حسن عبدالرحمن" target="تَعكر">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="حسن عبدالرحمن" target="شعفل">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="howbani" target="متابع اعلامي">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="howbani" target="هلال شرف">
+      <data key="d0">3</data>
+    </edge>
+    <edge source="ابوالعهد" target="النمر بن عدوان">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="رياح الصحراء" target="الروحاني2013">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="مسلم 7" target="أبو طلحه">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="مسلم 7" target="أخت أخوها">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="مسلم 7" target="أبوالبراء79">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="مسلم 7" target="متابع اعلامي">
+      <data key="d0">3</data>
+    </edge>
+    <edge source="أسد المعركة" target="راعي الجدعى">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="أسد المعركة" target="اليمن اكبر منكم">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="أسد المعركة" target="أبوالبراء79">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="أسد المعركة" target="شموخ الجبال">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="أسد المعركة" target="ابوبسام اليمني">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="أسد المعركة" target="طيب الاسم">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="أسد المعركة" target="الأطلنطي">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="أسد المعركة" target="أبو شديد">
+      <data key="d0">3</data>
+    </edge>
+    <edge source="أسد المعركة" target="دكتور/ منصور">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="سفيرالمحبة" target="الناصح السياسي">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="مردخاي" target="متابع اعلامي">
+      <data key="d0">5</data>
+    </edge>
+    <edge source="مردخاي" target="عش حلما">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="مردخاي" target="محب الله1">
+      <data key="d0">3</data>
+    </edge>
+    <edge source="مردخاي" target="حق العودة">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="مردخاي" target="علي ابن المشطط">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="مردخاي" target="عبدالمتكبر">
+      <data key="d0">3</data>
+    </edge>
+    <edge source="مردخاي" target="أبو شديد">
+      <data key="d0">3</data>
+    </edge>
+    <edge source="ابراهيم الغولي" target="شموخ الجبال">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="علي ابن المشطط" target="أبو طلحه">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="علي ابن المشطط" target="أبومحمدالسلمي">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="علي ابن المشطط" target="أبومعاوية">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="سهيل اليماني" target="عمر خلدون">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="حراس الوطن" target="aljehafi">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="بسكوت مالح 2" target="الحراك السلمي">
+      <data key="d0">1</data>
+    </edge>
+    <edge source="نظمي" target="زئير الغضنفر">
+      <data key="d0">2</data>
+    </edge>
+    <edge source="نظمي" target="ماداو">
+      <data key="d0">3</data>
+    </edge>
+  </graph>
+</graphml>

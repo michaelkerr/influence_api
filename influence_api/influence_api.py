@@ -150,8 +150,6 @@ def centrality():
 		if params['metric'] in metric_list:
 			## >Run the requested metric, on the graph 'G'
 			calc_metric, stats = inf.run_metric(params['metric'], G, 'weight', True)
-			#TODO REMOVE THIS - DUBUG ONLY
-			inf_sup.append_to_file('test.txt', calc_metric, params['project'], params['network'], params['subforum'], params['topic'])
 		else:
 			return jsonify(result='Invalid metric requested')
 	else:
@@ -176,36 +174,35 @@ def centrality():
 			graphml_data = '\n'.join(nx.generate_graphml(G))
 			graphml_final = '<?xml version="1.0" encoding="UTF-8"?>' + "\n"
 			h = HTMLParser.HTMLParser()
-			for line in graphml_data.split('>'):
+
+			for line in graphml_data.split("\n"):
 				line = h.unescape(line)
-				graphml_final += line + '>'
-				## >Get the node name
-				if 'node id' in line:
+				if '<node id="' in line:
+					graphml_final += (line.replace('/>', '>') + "\n")
 					node_name = line.partition('"')[-1].rpartition('"')[0]
-					print node_name
-				if '<key' in line:
-					graphml_final += '\n' + '  <key attr.name="' + params['metric'] + '" attr.type="double" for="node" id="d1" />'
-				if 'node id=' in line:
-					graphml_final += "\n" + '      <data _key="d1">' + str(calc_metric[node_name]) + '</data>'
-			graphml_final = graphml_final.replace('>>', '>')
-			with open('graphml_test.graphml', 'w') as output_file:
+					graphml_final += '      <data key="d1">' + str(calc_metric[node_name]) + '</data>' + "\n"
+					graphml_final += '    </node>' + "\n"
+				else:
+					graphml_final += line + "\n"
+					if '<key' in line:
+						graphml_final += '  <key attr.name="' + params['metric'] + '" attr.type="float" for="node" id="d1" />'
+
+			with open(graphml_name, 'w') as output_file:
 				for line in graphml_final:
 					output_file.write(line.encode('utf-8'))
 			if not output_file.closed:
 				output_file.close()
 
-			#nx.write_graphml(G, graphml_name)
 			response = make_response(graphml_final)
 			response.headers["Content-Type"] = 'text/xml'
 			response.headers["Content-Distribution"] = 'attachment; filename=%s' % (graphml_name,)
-			## >Add the influence metric to the graph
-			## >Return the file
 			return response
 
 	## >Add the query parameters
 	#TODO REMOVE - Debug only
 	if app.debug is True:
 		data_results['query'] = params
+		#TODO add runtime statistics to the degub output JSON
 		#data_results['stats'] =
 	return jsonify(result=data_results)
 

@@ -1,0 +1,6 @@
+Default edge type set as DIRECTED
+Unknown node id, creates node from id='دكتور/ منصور'
+Unknown node id, creates node from id='بحر / الجنوب'
+Edge property found: weight
+Node attribute found 'pagerank' (DOUBLE)
+ 
