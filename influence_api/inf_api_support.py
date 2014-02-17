@@ -35,16 +35,12 @@ def check_if_none(req_params):
 
 
 def create_filename(params):
-	filename = ''
-	if params['project'] is not None:
-		filename += params['project'] + '_'
-	if params['network'] is not None:
-		filename += params['network'] + '_'
-	if params['subforum'] is not None:
-		filename += params['subforum'] + '_'
-	if params['topic'] is not None:
-		filename += params['topic'] + '_'
-	filename += str(params['start_date']) + '_' + str(params['end_date']) + '.graphml'
+	filename = str(params['start_date']) + '_' + str(params['end_date']) + '_' + params['network']
+	for key, value in params.iteritems():
+		if (value is not params['start_date']) and (value is not params['end_date']) and (value is not params['network']):
+			if value is not None:
+				filename += '_' + value
+	filename += '.graphml'
 	return filename
 
 
