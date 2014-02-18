@@ -32,13 +32,11 @@ def run_metric(metric_name, G, metric_weight, use_norm):
 	elif metric_name == 'eigenvector':
 		graph_metric = nx.eigenvector_centrality_numpy(G)
 	elif metric_name == 'pagerank':
-		graph_metric = nx.pagerank_numpy(G, weight=metric_weight)
-	elif metric_name == 'pagerank_1':
-		graph_metric = nx.pagerank(G, weight=metric_weight)
-	elif metric_name == 'pagerank_scipy':
 		graph_metric = nx.pagerank_scipy(G, weight=metric_weight)
-	elif metric_name == 'pagerank_gm':
-		graph_metric = nx.google_matrix(G, weight=metric_weight)
+	elif metric_name == 'pagerank_norm':
+		graph_metric = nx.pagerank(G, weight=metric_weight)
+	elif metric_name == 'pagerank_numpy':
+		graph_metric = nx.pagerank_numpy(G, weight=metric_weight)
 	end_time = datetime.now()
 	stats = end_time - start_time
 	#print "Calculation completed in: " + str(stats)

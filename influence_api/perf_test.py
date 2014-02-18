@@ -39,31 +39,34 @@ metric_list = ['betweenness', 'closeness', 'degree', 'eigenvector', 'in_degree',
 ## >Get the REQUIRED parameters
 req_params = {
 		'metric': 'pagerank',
-		'start_date': '20140101',
+		'start_date': '20130101',
 		'end_date': '20140131',
 		'network': 'twitter.com'
 		}
 
 ## >Get the OPTIONAL parameters
 opt_params = {
-		'matched_project': 'GL AFG'
+		'matched_project': ''
 		}
 
 ## >Get the FORMAT parameters
 for_params = {
-	'return_graph': 'true',
-	'format': 'graphml'
+	#'return_graph': 'true',
+	#'format': 'graphml'
 		}
 
 params = dict(req_params.items() + opt_params.items() + for_params.items())
 
-test_metric_list = ['pagerank_1', 'pagerank_scipy', 'pagerank_gm', 'pagerank']
-test_project_list = ['GL AFG', 'Temp project', 'CBW', 'Penguin-1']
+test_metric_list = ['pagerank']#, 'pagerank_numpy', 'pagerank_norm']
+test_project_list = ['GL AFG', 'CBW', 'Temp Project', 'Penguin-1']
 
 for test_project in test_project_list:
 	opt_params['matched_project'] = test_project
 	for test_metric in test_metric_list:
 		start_time = datetime.now()
+		author_list = []
+		calc_metric = []
+		test = 'pass'
 		req_params['metric'] = test_metric
 		params = dict(req_params.items() + opt_params.items() + for_params.items())
 
@@ -116,7 +119,11 @@ for test_project in test_project_list:
 		## >Build the author list
 		author_list = []
 		for a2a_count in a2a_result:
-			author_list.append((a2a_count['_id']['author'].replace('&', '/x26'), a2a_count['_id']['connection'].replace('&', '/x26'), int(a2a_count['value']['count'])))
+			#TODO handle all spcial characters with re
+			con_author = a2a_count['_id']['author'].replace('&', '&amp;')
+			con_connect = a2a_count['_id']['connection'].replace('&', '&amp;')
+			if (con_author is not '') and (con_connect is not ''):
+				author_list.append((con_author, con_connect, int(a2a_count['value']['count'])))
 
 		## >Influence Calculations
 		if len(author_list) > 0:
@@ -134,6 +141,7 @@ for test_project in test_project_list:
 				calc_metric = {}
 				stats = '0.00'
 		else:
+			test = 'failed'
 			print 'no authors in graph'
 
 		## >Build the dictionary to return
@@ -171,7 +179,7 @@ for test_project in test_project_list:
 				## >If format = graphml
 				elif for_params['format'].lower() == 'graphml':
 					## >Create the graphml filename
-					graphml_name = opt_params['matched_project'] + '_' + req_params['metric'] + '.graphml'
+					graphml_name = req_params['start_date'] + '_' + req_params['end_date'] + '_' + opt_params['matched_project'] + '_' + req_params['metric'] + '.graphml'
 					## >Get the graphml data
 					graphml_data = '\n'.join(nx.generate_graphml(G))
 					## >Add the versioning
@@ -199,9 +207,12 @@ for test_project in test_project_list:
 							output_file.write(line.encode('utf-8'))
 					if not output_file.closed:
 						output_file.close()
-		## >Write out the graphml for testing
-		json_filename = opt_params['matched_project'] + '_' + req_params['metric'] + '.txt'
-		with open(json_filename, 'w') as output_file:
-			output_file.write(str(data_results).encode('utf-8'))
+		### >Write out the influence for testing
+		influence_file = req_params['start_date'] + '_' + req_params['end_date'] + '_' + opt_params['matched_project'] + '_' + req_params['metric'] + '.txt'
+		with open(influence_file, 'w') as output_file:
+			graph_list = calc_metric.items()
+			for item in graph_list:
+				output_file.write(item[0].encode('utf_8') + "," + str(item[1]) + '\n')
 		if not output_file.closed:
 			output_file.close()
+#

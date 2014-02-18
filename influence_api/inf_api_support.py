@@ -6,6 +6,7 @@
 # Last Updated: 2013/12/19
 
 ### Resources ###
+from datetime import datetime
 import urllib2
 
 ### Classes ###
@@ -22,6 +23,14 @@ def append_to_file(fileout, graph_metric, proj_name, net_name, sub_name, top_nam
 	return
 
 
+def append_to_log(filename, input_string):
+	with open(filename, 'a') as output_file:
+		output_string = str(datetime.now()) + ' >>> ' + input_string
+		output_file.write(output_string.encode('utf-8'))
+	if not output_file.closed:
+		output_file.close()
+
+
 def check_if_none(req_params):
 	## >Remove optional params
 	del req_params['subforum']
@@ -35,11 +44,19 @@ def check_if_none(req_params):
 
 
 def create_filename(params):
-	filename = str(params['start_date']) + '_' + str(params['end_date']) + '_' + params['network']
-	for key, value in params.iteritems():
-		if (value is not params['start_date']) and (value is not params['end_date']) and (value is not params['network']):
-			if value is not None:
-				filename += '_' + value
+	filename = str(params['start_date']) + '_' + str(params['end_date']) + '_' + params['network'] + '_' + params['metric']
+	if ('type' in params.keys()) and (params['type'] is not None):
+		filename == '_' + params['type']
+	if ('twit_collect' in params.keys()) and (params['twit_collect'] is not None):
+		filename == '_' + params['twit_collect']
+	if ('matched_project' in params.keys()) and (params['matched_project'] is not None):
+		filename += '_' + params['matched_project']
+	if ('scored_project' in params.keys()) and (params['scored_project'] is not None):
+		filename += '_' + params['scored_project']
+	if ('matched_topic' in params.keys()) and (params['matched_topic'] is not None):
+		filename += '_' + params['matched_topic']
+	if ('scored_topic' in params.keys()) and (params['scored_topic'] is not None):
+		filename += '_' + params['scored_topic']
 	filename += '.graphml'
 	return filename
 
