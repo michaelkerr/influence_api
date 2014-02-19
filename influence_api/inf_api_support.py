@@ -25,7 +25,7 @@ def append_to_file(fileout, graph_metric, proj_name, net_name, sub_name, top_nam
 
 def append_to_log(filename, input_string):
 	with open(filename, 'a') as output_file:
-		output_string = str(datetime.now()) + ' >>> ' + input_string
+		output_string = str(datetime.now()) + ' >>> ' + input_string + '\n'
 		output_file.write(output_string.encode('utf-8'))
 	if not output_file.closed:
 		output_file.close()

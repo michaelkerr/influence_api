@@ -39,7 +39,7 @@ metric_list = ['betweenness', 'closeness', 'degree', 'eigenvector', 'in_degree',
 ## >Get the REQUIRED parameters
 req_params = {
 		'metric': 'pagerank',
-		'start_date': '20130101',
+		'start_date': '20140101',
 		'end_date': '20140131',
 		'network': 'twitter.com'
 		}
@@ -51,8 +51,8 @@ opt_params = {
 
 ## >Get the FORMAT parameters
 for_params = {
-	#'return_graph': 'true',
-	#'format': 'graphml'
+	'return_graph': 'true',
+	'format': 'graphml'
 		}
 
 params = dict(req_params.items() + opt_params.items() + for_params.items())

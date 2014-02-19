@@ -4,27 +4,44 @@
 
 # V0.2
 # Created Date: 2013/12/17
-# Last Updated: 2013/12/19
+# Last Updated: 2013/02/18
 
 ### Resources ###
-from flask import Flask, jsonify, request, make_response
-import urllib2
-
-#from datetime import datetime
+from datetime import datetime
+from flask import Flask, jsonify, request, make_response, send_file
 import HTMLParser
 import inf_api_support as inf_sup
 import influence as inf
 import networkx as nx
-from py2neo import neo4j
+from pymongo import MongoClient
+import urllib2
+from bson.code import Code
+
+
+## >Config related
+log_filename = 'influence_api.txt'
+
+## >MongoDB related
+mongoclient = MongoClient('192.168.1.152', 27017)
+mongo_db = mongoclient['connections']
+author_collection = mongo_db['authorcons']
+
 
 app = Flask(__name__)
 
+
 #TODO put these in a configuration file
 #TODO TEST graphml support
-req_param_list = ['graph_url', 'start_date', 'end_date', 'project', 'network', 'metric', 'return_graph']
-opt_param_list = ['subforum', 'topic', 'format']
+req_param_list = ['start_date', 'end_date', 'network', 'metric']
+opt_param_list = [	'subforum',
+		'matched_project',
+		'matched_topic',
+		'scored_project',
+		'scored_topic',
+		'twit_collect',
+		'type']
+format_param_list = ['return_graph', 'format']
 metric_list = ['betweenness', 'closeness', 'degree', 'eigenvector', 'in_degree', 'out_degree', 'pagerank']
-valid_urls = ['http://192.168.1.164:7474/db/data']
 
 #TODO add browsable api in root
 
@@ -35,8 +52,23 @@ def info():
 	return available
 
 
+#@app.route('/graph')
+#def graph():
+	## >Get the REQUIRED parameters
+	## >Verify the metric is valid
+	## >Verify the start date is before the end date
+	## >Get the OPTIONAL parameters
+	## >Get the FORMAT parameters
+	## >Build the mongo query
+	## >Check if there are any matches
+	## >Build the author list
+	## >If JSON requested
+	## >If graph requested
+	## >return the graph
+
 @app.route('/metrics/centrality')
 def centrality():
+	start_time = datetime.now()
 	#TODO add config file read
 	#TODO support cross network calculations (author_node --is--> author_node)
 	## >Get the REQUIRED parameters
@@ -45,8 +77,21 @@ def centrality():
 		if request.args.get(entry) is not None:
 			req_params[entry] = urllib2.unquote(request.args.get(entry)).replace('\'', '')
 		else:
-			ret_string = 'Required parameter missing: ' + entry
-			return jsonify(result=ret_string)
+			ret_string = {'error': 'Required parameter missing: ' + entry}
+			inf_sup.append_to_log(log_filename, str(ret_string))
+			return jsonify(ret_string)
+	#TODO Validate start_date, end_date
+	## >Verify the metric is valid
+	if req_params['metric'] not in metric_list:
+		ret_string = {'error': 'Invalid metric requested'}
+		inf_sup.append_to_log(log_filename, str(ret_string))
+		return jsonify(ret_string)
+
+	## >Verify the start date is before the end date
+	if int(req_params['start_date']) > int(req_params['end_date']):
+		ret_string = {'error': 'End data before start date'}
+		inf_sup.append_to_log(log_filename, str(ret_string))
+		return jsonify(ret_string)
 
 	## >Get the OPTIONAL parameters
 	opt_params = {}
@@ -55,88 +100,72 @@ def centrality():
 			opt_params[entry] = urllib2.unquote(request.args.get(entry)).replace('\'', '')
 		else:
 			opt_params[entry] = None
+	#TODO validate the optional parameters
 
+	## >Get the FORMAT parameters
+	for_params = {}
+	for entry in format_param_list:
+		if request.args.get(entry) is not None:
+			for_params[entry] = urllib2.unquote(request.args.get(entry)).replace('\'', '')
+		else:
+			for_params[entry] = None
 	params = dict(req_params.items() + opt_params.items())
-	params['start_date'] = int(params['start_date'])
-	params['end_date'] = int(params['end_date'])
 
-	## >Create DB connection
-	if req_params['graph_url'].replace('\'', '') not in valid_urls:
-		ret_string = 'Invalid graph URL'
-		return jsonify(result=ret_string)
+	## >Build the mongo query
+	mongo_query = {}
+	mongo_query['PostDate'] = {'$gte': params['start_date'], '$lte': params['end_date']}
+	mongo_query['Network'] = params['network']
 
-	graph_db = neo4j.GraphDatabaseService(params['graph_url'])
+	for param, value in opt_params.iteritems():
+		if value is not None:
+			if param is 'type':
+				mongo_query['Type'] = opt_params['type']
+			if param is 'twit_collect':
+				mongo_query['Meta.sources'] = {'$in': [opt_params['twit_collect']]}
+			if param is 'matched_project':
+				mongo_query['Matching'] = {'$elemMatch': {'ProjectId': opt_params['matched_project']}}
+			if param is 'matched_topic':
+				#TODO
+				pass
+			if param is 'scored_project':
+				#TODO
+				pass
+			if param is 'scored_topic':
+				#TODO
+				pass
 
-	## >Get the node index
-	node_index = graph_db.get_index(neo4j.Node, "node_auto_index")
+	## >Check if there are any matches
+	if author_collection.find(mongo_query).count == 0:
+		ret_string = {'error': 'No connections found matching the criteria'}
+		inf_sup.append_to_log(log_filename, str(ret_string))
+		return jsonify(ret_string)
+	else:
+		## >Map/reduce the A-->A connections
+		a2a_map = Code("""
+				function () {
+					emit({"author": this.Author, "connection": this.Connection},
+						{"count": 1}
+						);
+					}
+				""")
+		a2a_reduce = Code("""
+				function (key, values) {
+					var count = 0;
+					values.forEach(function(v) {
+						count += v['count'];
+						});
+					return {"count": count};
+				}
+				""")
+		a2a_result = author_collection.map_reduce(a2a_map, a2a_reduce, "a2a_results", query=mongo_query).find()
 
-	## >Get the project node
-	#TODO handle 'no project' and 'ALL' projects
-	project_node, = node_index.get("name", params['project'])
-	if project_node is None:
-		return jsonify(result='Project not in graph')
-
-	## >Get the network node
-	#TODO handle 'ALL' networks
-	network_node, = node_index.get("name", params['network'])
-	if network_node is None:
-		return jsonify(result='Network not in graph')
-
-	elif not (network_node.match_outgoing(rel_type="belongs_to", end_node=params['project'], limit=1)):
-			return jsonify(result='No valid Network-->Project relationship')
-
-	## >Get all the network-->author relationships in the graph
-	network_author_rels = network_node.match_outgoing(rel_type="contains", end_node=None, limit=None)
-
-	## >For each author in the network
+	## >Build the author list
 	author_list = []
-	for author in network_author_rels:
-		## >Get the author's node data
-		author_node = author.end_node
-
-		## >Get the connection relationships for the author
-		auth_con_rels = graph_db.match(start_node=author_node,
-							rel_type="talks_to",
-							end_node=None,
-							limit=None,
-							bidirectional=False)
-
-		## >Author-Connection dictionary
-		con_dict = {}
-
-		## >For each relationship
-		for con_rel in auth_con_rels:
-			#TODO thread this
-			## >If the relationship meets the required criteria
-
-			if (int((con_rel['date']) >= int(params['start_date'])) and
-				(int(con_rel['date']) <= int(params['end_date'])) and
-				(con_rel['scored_project'] == params['project'])):
-				#con_name = con_rel.end_node['name']
-
-				## >Network level graph
-				if (params['subforum'] is None) and (params['topic'] is None):
-					con_dict = inf_sup.update_weights(con_rel, con_dict)
-
-				## >If a subforum is specified (but not a topic)
-				elif (params['subforum'] is not None) and (params['topic'] is None):
-					if (con_rel['subforum'].encode('utf_8') == params['subforum']):
-						con_dict = inf_sup.update_weights(con_rel, con_dict)
-
-				## >If a topic is specified (but not a subforum)
-				elif (params['subforum'] is None) and (params['topic'] is not None):
-					if (con_rel['topic'] == params['topic']):
-						con_dict = inf_sup.update_weights(con_rel, con_dict)
-
-				## >If both a subforum and topic are specified
-				elif ((params['subforum'] is not None) and (params['topic'] is not None)):
-					if ((con_rel['subforum'].encode('utf_8') == params['subforum']) and
-						(con_rel['topic'] == params['topic'])):
-						con_dict = inf_sup.update_weights(con_rel, con_dict)
-
-		## >Update the master list of (author, connection, weight) meeting the specified criteria for an author
-		for k, v in con_dict.iteritems():
-			author_list.append((author_node['name'], k, v))
+	for a2a_count in a2a_result:
+		con_author = a2a_count['_id']['author'].replace('&', '&amp;')
+		con_connect = a2a_count['_id']['connection'].replace('&', '&amp;')
+		if (len(con_author) > 0) and (len(con_connect) > 0):
+			author_list.append((con_author, con_connect, int(a2a_count['value']['count'])))
 
 	## >Influence Calculations
 	if len(author_list) > 0:
@@ -146,14 +175,18 @@ def centrality():
 		## >Add the endges to the graph
 		G.add_weighted_edges_from(author_list)
 
-		## >Check for a valid metric name
-		if params['metric'] in metric_list:
-			## >Run the requested metric, on the graph 'G'
+		## >Run the requested metric, on the graph 'G'
+		try:
 			calc_metric, stats = inf.run_metric(params['metric'], G, 'weight', True)
-		else:
-			return jsonify(result='Invalid metric requested')
+		except:
+			if params['metric'] is 'pagerank':
+				calc_metric, stats = inf.run_metric('pagerank_norm', G, 'weight', True)
+				if '>calc_error<' in calc_metric.keys():
+					return jsonify({'error': 'Pagerank did not converge'})
 	else:
-		return jsonify(result='Parameters produced no graph/metrics')
+		ret_string = {'error': 'No connections found matching the criteria'}
+		inf_sup.append_to_log(log_filename, str(ret_string))
+		return jsonify(ret_string)
 
 	## >Build the dictionary to return
 	data_results = {}
@@ -162,69 +195,86 @@ def centrality():
 	data_results['metrics'] = calc_metric
 
 	## >If graph requested
-	if params['return_graph'].lower() == 'true':
-		## >If format = data
-		if params['format'] is None:
-			## >Append the graph data
-			data_results['graph'] = nx.to_edgelist(G, nodelist=None)
-		## >If format = graphml
-		elif params['format'].lower() == 'graphml':
-			## >Create the graphml
-			graphml_name = inf_sup.create_filename(params)
-			graphml_data = '\n'.join(nx.generate_graphml(G))
-			graphml_final = '<?xml version="1.0" encoding="UTF-8"?>' + "\n"
-			h = HTMLParser.HTMLParser()
+	if for_params['return_graph'] is not None:
+		if for_params['return_graph'].lower() == 'true':
+			## >If format = data
+			if for_params['format'] is None:
+				## >Append the graph data
+				data_results['graph'] = nx.to_edgelist(G, nodelist=None)
+			## >If format = graphml
+			elif for_params['format'].lower() == 'graphml':
+				## >Create the graphml filename
+				graphml_name = inf_sup.create_filename(params)
+				## >Get the graphml data
+				graphml_data = '\n'.join(nx.generate_graphml(G))
+				## >Add the versioning
+				graphml_final = '<?xml version="1.0" encoding="UTF-8"?>' + "\n" + '<!--'
+				for key, value in params.iteritems():
+					if value is not None:
+						graphml_final += key + ': ' + value + ', '
+				graphml_final += '-->'
+				h = HTMLParser.HTMLParser()
 
-			for line in graphml_data.split("\n"):
-				line = h.unescape(line)
-				if '<node id="' in line:
-					graphml_final += (line.replace('/>', '>') + "\n")
-					node_name = line.partition('"')[-1].rpartition('"')[0]
-					graphml_final += '      <data key="d1">' + str(calc_metric[node_name]) + '</data>' + "\n"
-					graphml_final += '    </node>' + "\n"
-				else:
-					graphml_final += line + "\n"
-					if '<key' in line:
-						graphml_final += '  <key attr.name="' + params['metric'] + '" attr.type="float" for="node" id="d1" />'
+				for line in graphml_data.split("\n"):
+					## >Escape the html content
+					line = h.unescape(line)
+					## >For each node add appropriate metric data into the graphml
+					if '<node id="' in line:
+						graphml_final += (line.replace('/>', '>') + "\n")
+						node_name = line.partition('"')[-1].rpartition('"')[0]
+						if (node_name is None) or(node_name is ''):
+							graphml_final += '      <data key="d1">' + 'NODE NAME ERROR' + '</data>' + "\n"
+						else:
+							graphml_final += '      <data key="d1">' + str(calc_metric[node_name]) + '</data>' + "\n"
+						graphml_final += '    </node>' + "\n"
+					else:
+						graphml_final += line + "\n"
+						## >Add the key for the metric attribute
+						if '<key' in line:
+							graphml_final += '  <key attr.name="' + params['metric'] + '" attr.type="float" for="node" id="d1" />'
 
-			with open(graphml_name, 'w') as output_file:
-				for line in graphml_final:
-					output_file.write(line.encode('utf-8'))
-			if not output_file.closed:
-				output_file.close()
+				if app.debug is True:
+					## >Write out the graphml for testing
+					graphml_name = inf_sup.create_filename(params)
+					with open(graphml_name, 'w') as output_file:
+						for line in graphml_final:
+							output_file.write(line.encode('utf-8'))
+					if not output_file.closed:
+						output_file.close()
 
-			response = make_response(graphml_final)
-			response.headers["Content-Type"] = 'text/xml'
-			response.headers["Content-Distribution"] = 'attachment; filename=%s' % (graphml_name,)
-			return response
+				## >Create the appropriate response to return the graphml
+				response = make_response(graphml_final)
+				response.headers["Content-Type"] = 'text/xml'
+				response.headers["Content-Disposition"] = 'attachment; filename=' + graphml_name
+				return response
+				#return send_file(response, attachment_filename=graphml_name, as_attachment=True)
 
-	## >Add the query parameters
-	#TODO REMOVE - Debug only
+	## >To the log
+	#TODO app.logger.debug('A value for debugging')
+	statistics = {}
+	statistics['api_query'] = params
+	statistics['mongo_query'] = mongo_query
+	statistics['influence_metric'] = params['metric']
+	statistics['metric_runtime'] = stats
+	statistics['full_runtime'] = str(datetime.now() - start_time)
+	statistics['graph_nodes'] = G.order()
+	statistics['graph_edges'] = G.size()
+	inf_sup.append_to_log(log_filename, str(statistics))
+
 	if app.debug is True:
-		data_results['query'] = params
-		#TODO add runtime statistics to the degub output JSON
-		#data_results['stats'] =
+		print statistics['metric_runtime']
+		### >Write out the influence for testing
+		graphml_name = inf_sup.create_filename(params)
+		influence_file = graphml_name.replace('.graphml', '.txt')
+		with open(influence_file, 'w') as output_file:
+			graph_list = calc_metric.items()
+			for item in graph_list:
+				output_file.write(item[0].encode('utf_8') + "," + str(item[1]) + '\n')
+		if not output_file.closed:
+			output_file.close()
+
 	return jsonify(result=data_results)
 
 if __name__ == '__main__':
 	app.debug = True
 	app.run(host='0.0.0.0')
-
-
-
-'''
-http://127.0.0.1:5000/metrics/centrality?
-graph_url=%27http://192.168.1.164:7474/db/data%27&
-start_date=%2720131101%27&
-end_date=%2720131107%27&
-project=%27AQ%20%28A%29%27&
-network=%27ye1.org%27&
-metric=%27pagerank%27&
-return_graph=%27true%27&
-format=%27graphml%27
-
-G=nx.path_graph(3)
-bb=nx.betweenness_centrality(G)
-nx.set_node_attributes(G,'betweenness',bb)
-
-'''
