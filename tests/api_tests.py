@@ -16,8 +16,6 @@ def test_basic():
 #
 # query
 #
-# ?graph_url='http://192.168.1.164:7474/db/data'
-# this should be checked for none, empty string, a valid link and an invalid link, random string
 #
 # &start_date='YYYYMMDD'
 # this should be checked for a valid/invalid date, a different date format (valid/invalid), None, empty string, random string
@@ -38,4 +36,6 @@ def test_basic():
 #
 # test the graphml format for validity
 #
-#
+#Test the server
+#Ensure path is present in all header files
+#test for inverted datess

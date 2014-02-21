@@ -3,13 +3,11 @@
 #################
 
 # Created Date: 2013/12/18
-# Last Updated: 2013/12/19
+# Last Updated: 2013/12/20
 
 ### Resources ###
 from datetime import datetime
-import urllib2
-
-### Classes ###
+from uuid import uuid4
 
 
 ### Functions ###
@@ -43,43 +41,9 @@ def check_if_none(req_params):
 	return True
 
 
-def create_filename(params):
-	filename = str(params['start_date']) + '_' + str(params['end_date']) + '_' + params['network'] + '_' + params['metric']
-	if ('type' in params.keys()) and (params['type'] is not None):
-		filename == '_' + params['type']
-	if ('twit_collect' in params.keys()) and (params['twit_collect'] is not None):
-		filename == '_' + params['twit_collect']
-	if ('matched_project' in params.keys()) and (params['matched_project'] is not None):
-		filename += '_' + params['matched_project']
-	if ('scored_project' in params.keys()) and (params['scored_project'] is not None):
-		filename += '_' + params['scored_project']
-	if ('matched_topic' in params.keys()) and (params['matched_topic'] is not None):
-		filename += '_' + params['matched_topic']
-	if ('scored_topic' in params.keys()) and (params['scored_topic'] is not None):
-		filename += '_' + params['scored_topic']
-	filename += '.graphml'
-	return filename
-
-
-def get_parameters(request):
-	## >Get the REQUIRED parameters
-	param_dict = {}
-	param_dict['graph_url'] = urllib2.unquote(request.args.get('graph_url'))
-	param_dict['start_date'] = urllib2.unquote(request.args.get('start_date'))
-	param_dict['end_date'] = urllib2.unquote(request.args.get('end_date'))
-	param_dict['project'] = urllib2.unquote(request.args.get('project'))
-	param_dict['network'] = urllib2.unquote(request.args.get('network'))
-
-	## >Get the OPTIONAL parameters
-	param_dict = {}
-	param_dict['subforum'] = urllib2.unquote(request.args.get('subforum'))
-	param_dict['topic'] = urllib2.unquote(request.args.get('topic'))
-	return param_dict
-
-
-def update_weights(connect_rel, updated_dict):
-	if connect_rel.end_node['name'] in updated_dict:
-		updated_dict[connect_rel.end_node['name']] += 1
-	else:
-		updated_dict[connect_rel.end_node['name']] = 1
-	return updated_dict
+def generate_api_key():
+	#TODO generate based on other TBD principles
+	new_key = uuid4()
+	print new_key
+	#TODO check if key exists
+	return new_key

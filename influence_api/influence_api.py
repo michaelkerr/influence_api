@@ -4,30 +4,29 @@
 
 # V0.2
 # Created Date: 2013/12/17
-# Last Updated: 2013/02/18
+# Last Updated: 2013/02/20
 
 ### Resources ###
+from bson.code import Code
+
 from datetime import datetime
-from flask import Flask, jsonify, request, make_response, send_file
+from flask import abort, Flask, jsonify, make_response, request
+from functools import wraps
 import HTMLParser
 import inf_api_support as inf_sup
 import influence as inf
 import networkx as nx
 from pymongo import MongoClient
 import urllib2
-from bson.code import Code
 
 
-## >Config related
-log_filename = 'influence_api.txt'
+## >Config
+log_filename = 'influence_api.log'
 
-## >MongoDB related
+## >MongoDB
 mongoclient = MongoClient('192.168.1.152', 27017)
 mongo_db = mongoclient['connections']
 author_collection = mongo_db['authorcons']
-
-
-app = Flask(__name__)
 
 
 #TODO put these in a configuration file
@@ -42,10 +41,119 @@ opt_param_list = [	'subforum',
 		'type']
 format_param_list = ['return_graph', 'format']
 metric_list = ['betweenness', 'closeness', 'degree', 'eigenvector', 'in_degree', 'out_degree', 'pagerank']
+user_api_keys = {
+		'0376e15a-c0a1-4647-ae98-88ab510c16da': {'name': 'Michael', 'group': 'admin'},
+		'1ec0afaa-6f41-464c-abd2-5445e006d454': {'name': 'Matthew', 'group': 'vendorx'},
+		'66c18bd0-de7d-43af-aca9-c0dfa99cff5d': {'name': 'Laura', 'group': 'vendorx'},
+		'85554f77-9cc4-4812-abbc-dfbdf8dccf3a': {'name': 'Ross', 'group': 'vk'},
+		'7eb6aba5-43e1-424b-af67-ee827b29c84d': {'name': 'Brent', 'group': 'vendorx'},
+		'38bb8f3c-0b46-480c-b6d4-a27e461d5f2d': {'name': 'Dan', 'group': 'vendorx'},
+		'd91b2fa4-1474-4e76-a807-d824fd39905d': {'name': 'Chris', 'group': 'vendorx'},
+		'bdc0baa4-1923-42cc-8755-4c0fb54da200': {'name': 'Viktor', 'group': 'other'},
+		'c166c55b-4125-4e1a-bd5c-23a92f6642f1': {'name': 'Aaron', 'group': 'vk'},
+		'ee9f3fc1-dfe5-4f8e-af91-58f517c843d3': {'name': 'Nasir', 'group': 'vendorx'},
+		'c452288e-690f-4c6b-9f9e-03dec28dc1c4': {'name': 'Min', 'group': 'vendorx'},
+		'b04e097c-2653-4858-ad48-758d40880d34': {'name': 'Dwayne', 'group': 'other'}
+		}
+
+
+### Functions ###
+
+## >Apikey required decorator function
+def require_apikey(generic_function):
+	# the new, post-decoration function. Note *args and **kwargs here.
+	def decorated_function(*args, **kwargs):
+		#TODO store this somewhere else, generate for others
+		if request.args.get('key') and request.args.get('key') in user_api_keys.keys():
+			return generic_function(*args, **kwargs)
+		else:
+			abort(401)
+	return decorated_function
+
+
+## >Build the mongo query
+def build_mongo_query(required_params, optional_params):
+	new_query = {}
+	new_query['PostDate'] = {'$gte': required_params['start_date'], '$lte': required_params['end_date']}
+	new_query['Network'] = required_params['network']
+
+	for param, value in optional_params.iteritems():
+		if value is not None:
+			if param is 'type':
+				new_query['Type'] = optional_params['type']
+			if param is 'twit_collect':
+				new_query['Meta.sources'] = {'$in': [optional_params['twit_collect']]}
+			if param is 'matched_project':
+				new_query['Matching'] = {'$elemMatch': {'ProjectId': optional_params['matched_project']}}
+			if param is 'matched_topic':
+				#TODO
+				pass
+			if param is 'scored_project':
+				#TODO
+				pass
+			if param is 'scored_topic':
+				#TODO
+				pass
+	return new_query
+
+
+def create_filename(file_params):
+	filename = str(file_params['start_date']) + '_' + str(file_params['end_date']) + '_' + file_params['network'] + '_' + file_params['metric']
+	if ('type' in file_params.keys()) and (file_params['type'] is not None):
+		filename == '_' + file_params['type']
+	if ('twit_collect' in file_params.keys()) and (file_params['twit_collect'] is not None):
+		filename == '_' + file_params['twit_collect']
+	if ('matched_project' in file_params.keys()) and (file_params['matched_project'] is not None):
+		filename += '_' + file_params['matched_project']
+	if ('scored_project' in file_params.keys()) and (file_params['scored_project'] is not None):
+		filename += '_' + file_params['scored_project']
+	if ('matched_topic' in file_params.keys()) and (file_params['matched_topic'] is not None):
+		filename += '_' + file_params['matched_topic']
+	if ('scored_topic' in file_params.keys()) and (file_params['scored_topic'] is not None):
+		filename += '_' + file_params['scored_topic']
+	filename += '.graphml'
+	return filename
+
+
+## >Get the optional/format parameters
+def get_params(param_request, param_list):
+	new_params = {}
+	for entry in param_list:
+		if request.args.get(entry) is not None:
+			new_params[entry] = urllib2.unquote(request.args.get(entry)).replace('\'', '')
+		else:
+			new_params[entry] = None
+	return new_params
+
+
+## >Validate required parameters
+def validate_required(validate_request):
+	#TODO add config file read
+	validated_params = {}
+	for entry in req_param_list:
+		if validate_request.args.get(entry) is not None:
+			validated_params[entry] = urllib2.unquote(request.args.get(entry)).replace('\'', '')
+		else:
+			ret_string = {'error': 'Required parameter missing: ' + entry}
+			inf_sup.append_to_log(log_filename, str(ret_string))
+			return ret_string
+	## >Verify the metric is valid
+	if validated_params['metric'] not in metric_list:
+		ret_string = {'error': 'Invalid metric requested'}
+		inf_sup.append_to_log(log_filename, str(ret_string))
+		return ret_string
+	## >Verify the start date is before the end date
+	if int(validated_params['start_date']) > int(validated_params['end_date']):
+		ret_string = {'error': 'End data before start date'}
+		inf_sup.append_to_log(log_filename, str(ret_string))
+		return ret_string
+	return validated_params
+
+### Main ###
+app = Flask(__name__)
+
 
 #TODO add browsable api in root
-
-
 @app.route('/')
 def info():
 	available = 'Available Centrality Metrics: /metrics/centrality\n'
@@ -66,73 +174,28 @@ def info():
 	## >If graph requested
 	## >return the graph
 
+
 @app.route('/metrics/centrality')
+@require_apikey
 def centrality():
 	start_time = datetime.now()
 	#TODO add config file read
 	#TODO support cross network calculations (author_node --is--> author_node)
 	## >Get the REQUIRED parameters
-	req_params = {}
-	for entry in req_param_list:
-		if request.args.get(entry) is not None:
-			req_params[entry] = urllib2.unquote(request.args.get(entry)).replace('\'', '')
-		else:
-			ret_string = {'error': 'Required parameter missing: ' + entry}
-			inf_sup.append_to_log(log_filename, str(ret_string))
-			return jsonify(ret_string)
-	#TODO Validate start_date, end_date
-	## >Verify the metric is valid
-	if req_params['metric'] not in metric_list:
-		ret_string = {'error': 'Invalid metric requested'}
-		inf_sup.append_to_log(log_filename, str(ret_string))
-		return jsonify(ret_string)
-
-	## >Verify the start date is before the end date
-	if int(req_params['start_date']) > int(req_params['end_date']):
-		ret_string = {'error': 'End data before start date'}
-		inf_sup.append_to_log(log_filename, str(ret_string))
-		return jsonify(ret_string)
+	req_params = validate_required(request)
+	if 'error' in req_params.keys():
+		return jsonify(req_params)
 
 	## >Get the OPTIONAL parameters
-	opt_params = {}
-	for entry in opt_param_list:
-		if request.args.get(entry) is not None:
-			opt_params[entry] = urllib2.unquote(request.args.get(entry)).replace('\'', '')
-		else:
-			opt_params[entry] = None
-	#TODO validate the optional parameters
+	opt_params = get_params(request, opt_param_list)
 
 	## >Get the FORMAT parameters
-	for_params = {}
-	for entry in format_param_list:
-		if request.args.get(entry) is not None:
-			for_params[entry] = urllib2.unquote(request.args.get(entry)).replace('\'', '')
-		else:
-			for_params[entry] = None
+	for_params = get_params(request, format_param_list)
+
 	params = dict(req_params.items() + opt_params.items())
 
 	## >Build the mongo query
-	mongo_query = {}
-	mongo_query['PostDate'] = {'$gte': params['start_date'], '$lte': params['end_date']}
-	mongo_query['Network'] = params['network']
-
-	for param, value in opt_params.iteritems():
-		if value is not None:
-			if param is 'type':
-				mongo_query['Type'] = opt_params['type']
-			if param is 'twit_collect':
-				mongo_query['Meta.sources'] = {'$in': [opt_params['twit_collect']]}
-			if param is 'matched_project':
-				mongo_query['Matching'] = {'$elemMatch': {'ProjectId': opt_params['matched_project']}}
-			if param is 'matched_topic':
-				#TODO
-				pass
-			if param is 'scored_project':
-				#TODO
-				pass
-			if param is 'scored_topic':
-				#TODO
-				pass
+	mongo_query = build_mongo_query(req_params, opt_params)
 
 	## >Check if there are any matches
 	if author_collection.find(mongo_query).count == 0:
@@ -204,7 +267,7 @@ def centrality():
 			## >If format = graphml
 			elif for_params['format'].lower() == 'graphml':
 				## >Create the graphml filename
-				graphml_name = inf_sup.create_filename(params)
+				graphml_name = create_filename(params)
 				## >Get the graphml data
 				graphml_data = '\n'.join(nx.generate_graphml(G))
 				## >Add the versioning
@@ -264,7 +327,7 @@ def centrality():
 	if app.debug is True:
 		print statistics['metric_runtime']
 		### >Write out the influence for testing
-		graphml_name = inf_sup.create_filename(params)
+		graphml_name = create_filename(params)
 		influence_file = graphml_name.replace('.graphml', '.txt')
 		with open(influence_file, 'w') as output_file:
 			graph_list = calc_metric.items()
@@ -277,4 +340,4 @@ def centrality():
 
 if __name__ == '__main__':
 	app.debug = True
-	app.run(host='0.0.0.0')
+	app.run(processes=6, host='0.0.0.0')
