@@ -2,13 +2,13 @@
 # influence api #
 #################
 
-# V0.2
+# V0.4
 # Created Date: 2013/12/17
 # Last Updated: 2013/02/20
 
 ### Resources ###
 from bson.code import Code
-
+import ConfigParser
 from datetime import datetime
 from flask import abort, Flask, jsonify, make_response, request
 from functools import wraps
@@ -18,7 +18,7 @@ import influence as inf
 import networkx as nx
 from pymongo import MongoClient
 import urllib2
-
+from uuid import uuid4
 
 ## >Config
 log_filename = 'influence_api.log'
@@ -53,7 +53,9 @@ user_api_keys = {
 		'c166c55b-4125-4e1a-bd5c-23a92f6642f1': {'name': 'Aaron', 'group': 'vk'},
 		'ee9f3fc1-dfe5-4f8e-af91-58f517c843d3': {'name': 'Nasir', 'group': 'vendorx'},
 		'c452288e-690f-4c6b-9f9e-03dec28dc1c4': {'name': 'Min', 'group': 'vendorx'},
-		'b04e097c-2653-4858-ad48-758d40880d34': {'name': 'Dwayne', 'group': 'other'}
+		'b04e097c-2653-4858-ad48-758d40880d34': {'name': 'Dwayne', 'group': 'other'},
+		'02f22bd5-4b3b-413c-bf51-cbcd374d76ab': {'name': 'David', 'group': 'vendorx'},
+		'e9f04a64-8487-472e-a315-a07d00010686': {'name': 'John', 'group': 'vk'}
 		}
 
 
@@ -220,7 +222,9 @@ def centrality():
 					return {"count": count};
 				}
 				""")
-		a2a_result = author_collection.map_reduce(a2a_map, a2a_reduce, "a2a_results", query=mongo_query).find()
+		## >Create a unique collection based on this query
+		query_collection = str(uuid4())
+		a2a_result = author_collection.map_reduce(a2a_map, a2a_reduce, query_collection, query=mongo_query).find()
 
 	## >Build the author list
 	author_list = []
@@ -229,6 +233,9 @@ def centrality():
 		con_connect = a2a_count['_id']['connection'].replace('&', '&amp;')
 		if (len(con_author) > 0) and (len(con_connect) > 0):
 			author_list.append((con_author, con_connect, int(a2a_count['value']['count'])))
+
+	## >Delete the collection based on this query
+	mongo_db[query_collection].drop()
 
 	## >Influence Calculations
 	if len(author_list) > 0:
@@ -298,7 +305,7 @@ def centrality():
 
 				if app.debug is True:
 					## >Write out the graphml for testing
-					graphml_name = inf_sup.create_filename(params)
+					graphml_name = create_filename(params)
 					with open(graphml_name, 'w') as output_file:
 						for line in graphml_final:
 							output_file.write(line.encode('utf-8'))

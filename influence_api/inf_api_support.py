@@ -8,7 +8,7 @@
 ### Resources ###
 from datetime import datetime
 from uuid import uuid4
-
+import os
 
 ### Functions ###
 def append_to_file(fileout, graph_metric, proj_name, net_name, sub_name, top_name):
@@ -39,6 +39,25 @@ def check_if_none(req_params):
 		if value is None:
 			return False
 	return True
+
+
+def detectCPUs():
+	##> Linux, Unix and MacOS:
+	if hasattr(os, "sysconf"):
+		if "SC_NPROCESSORS_ONLN" in os.sysconf_names.keys():
+			##> Linux & Unix:
+			ncpus = os.sysconf("SC_NPROCESSORS_ONLN")
+			if isinstance(ncpus, int) and ncpus > 0:
+				return ncpus
+		else:
+			##> OSX
+			return int(os.popen2("sysctl -n hw.ncpu")[1].read())
+	###> Windows:
+	#if "NUMBER_OF_PROCESSORS" in os.environ.keys():
+		#ncpus = int(os.environ["NUMBER_OF_PROCESSORS"]);
+		#if ncpus > 0:
+			#return ncpus
+	return 1
 
 
 def generate_api_key():
