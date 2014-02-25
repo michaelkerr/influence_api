@@ -20,29 +20,10 @@ from pymongo import MongoClient
 import urllib2
 from uuid import uuid4
 
-## >Config
 log_filename = 'influence_api.log'
 
-## >MongoDB
-mongoclient = MongoClient('192.168.1.152', 27017)
-mongo_db = mongoclient['connections']
-author_collection = mongo_db['authorcons']
-
-
-#TODO put these in a configuration file
-#TODO TEST graphml support
-req_param_list = ['start_date', 'end_date', 'network', 'metric']
-opt_param_list = [	'subforum',
-		'matched_project',
-		'matched_topic',
-		'scored_project',
-		'scored_topic',
-		'twit_collect',
-		'type']
-format_param_list = ['return_graph', 'format']
-metric_list = ['betweenness', 'closeness', 'degree', 'eigenvector', 'in_degree', 'out_degree', 'pagerank']
 user_api_keys = {
-		'0376e15a-c0a1-4647-ae98-88ab510c16da': {'name': 'Michael', 'group': 'admin'},
+		'02f22bd5-4b3b-413c-bf51-cbcd374d76ab': {'name': 'Michael', 'group': 'admin'},
 		'1ec0afaa-6f41-464c-abd2-5445e006d454': {'name': 'Matthew', 'group': 'vendorx'},
 		'66c18bd0-de7d-43af-aca9-c0dfa99cff5d': {'name': 'Laura', 'group': 'vendorx'},
 		'85554f77-9cc4-4812-abbc-dfbdf8dccf3a': {'name': 'Ross', 'group': 'vk'},
@@ -54,7 +35,7 @@ user_api_keys = {
 		'ee9f3fc1-dfe5-4f8e-af91-58f517c843d3': {'name': 'Nasir', 'group': 'vendorx'},
 		'c452288e-690f-4c6b-9f9e-03dec28dc1c4': {'name': 'Min', 'group': 'vendorx'},
 		'b04e097c-2653-4858-ad48-758d40880d34': {'name': 'Dwayne', 'group': 'other'},
-		'02f22bd5-4b3b-413c-bf51-cbcd374d76ab': {'name': 'David', 'group': 'vendorx'},
+		'0376e15a-c0a1-4647-ae98-88ab510c16da': {'name': 'David', 'group': 'vendorx'},
 		'e9f04a64-8487-472e-a315-a07d00010686': {'name': 'John', 'group': 'vk'}
 		}
 
@@ -128,6 +109,22 @@ def get_params(param_request, param_list):
 	return new_params
 
 
+def read_config(section):
+	config_dict = {}
+	options = config.options(section)
+	for option in options:
+		config_dict[option] = config.get(section, option)
+	return config_dict
+
+
+def read_config_list(section):
+	config_dict = {}
+	options = config.options(section)
+	for option in options:
+		config_dict[option] = config.get(section, option).split(',')
+	return config_dict
+
+
 ## >Validate required parameters
 def validate_required(validate_request):
 	#TODO add config file read
@@ -140,7 +137,7 @@ def validate_required(validate_request):
 			inf_sup.append_to_log(log_filename, str(ret_string))
 			return ret_string
 	## >Verify the metric is valid
-	if validated_params['metric'] not in metric_list:
+	if validated_params['metric'].lower() not in metric_list:
 		ret_string = {'error': 'Invalid metric requested'}
 		inf_sup.append_to_log(log_filename, str(ret_string))
 		return ret_string
@@ -151,7 +148,29 @@ def validate_required(validate_request):
 		return ret_string
 	return validated_params
 
+
 ### Main ###
+## >Config related
+config = ConfigParser.ConfigParser()
+config.read("inf_config.ini")
+config_sections = config.sections()
+
+### >MongoDB
+mongo_ip = read_config('Database')['mongoip']
+mongo_port = int(read_config('Database')['mongoport'])
+mongoclient = MongoClient(mongo_ip, mongo_port)
+mongoclient = MongoClient('192.168.1.152', 27017)
+mongo_db = mongoclient['connections']
+author_collection = mongo_db['authorcons']
+
+### >Parameters
+req_param_list = read_config_list('Parameters')['req_param_list']
+opt_param_list = read_config_list('Parameters')['opt_param_list']
+format_param_list = read_config_list('Parameters')['format_param_list']
+metric_list = read_config_list('Parameters')['metric_list']
+
+
+## >Start Flask App
 app = Flask(__name__)
 
 
