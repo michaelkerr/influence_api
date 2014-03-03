@@ -366,4 +366,4 @@ def centrality():
 
 if __name__ == '__main__':
 	app.debug = True
-	app.run(processes=6, host='0.0.0.0')
+	app.run(processes=1, host='0.0.0.0')
