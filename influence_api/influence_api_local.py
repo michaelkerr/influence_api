@@ -4,7 +4,7 @@
 
 # V0.4
 # Created Date: 2013/12/17
-# Last Updated: 2013/03/06
+# Last Updated: 2013/02/25
 
 ### Resources ###
 from bson.code import Code
@@ -22,16 +22,6 @@ from uuid import uuid4
 
 log_filename = 'influence_api.log'
 
-req_param_list = ['start_date', 'end_date', 'network', 'metric']
-opt_param_list = ['subforum',
-		'matched_project',
-		'matched_topic',
-		'scored_project',
-		'scored_topic',
-		'twit_collect',
-		'type']
-format_param_list = ['return_graph', 'format']
-metric_list = ['betweenness', 'closeness', 'degree', 'eigenvector', 'in_degree', 'out_degree', 'pagerank']
 user_api_keys = {
 		'02f22bd5-4b3b-413c-bf51-cbcd374d76ab': {'name': 'Michael', 'group': 'admin'},
 		'1ec0afaa-6f41-464c-abd2-5445e006d454': {'name': 'Matthew', 'group': 'vendorx'},
@@ -78,8 +68,6 @@ def build_mongo_query(required_params, optional_params):
 				new_query['Meta.sources'] = {'$in': [optional_params['twit_collect']]}
 			if param is 'matched_project':
 				new_query['Matching'] = {'$elemMatch': {'ProjectId': optional_params['matched_project']}}
-			if param is 'subforum':
-				new_query['SubForum'] = optional_params['subforum']
 			if param is 'matched_topic':
 				#TODO
 				pass
@@ -121,20 +109,20 @@ def get_params(param_request, param_list):
 	return new_params
 
 
-#def read_config(section):
-	#config_dict = {}
-	#options = config.options(section)
-	#for option in options:
-		#config_dict[option] = config.get(section, option)
-	#return config_dict
+def read_config(section):
+	config_dict = {}
+	options = config.options(section)
+	for option in options:
+		config_dict[option] = config.get(section, option)
+	return config_dict
 
 
-#def read_config_list(section):
-	#config_dict = {}
-	#options = config.options(section)
-	#for option in options:
-		#config_dict[option] = config.get(section, option).split(',')
-	#return config_dict
+def read_config_list(section):
+	config_dict = {}
+	options = config.options(section)
+	for option in options:
+		config_dict[option] = config.get(section, option).split(',')
+	return config_dict
 
 
 ## >Validate required parameters
@@ -163,26 +151,23 @@ def validate_required(validate_request):
 
 ### Main ###
 ## >Config related
-#TODO - errors with supervisord and/or centos
-#config = ConfigParser.ConfigParser()
-#config.read("/etc/inf_config.conf")
-#config_sections = config.sections()
+config = ConfigParser.ConfigParser()
+config.read("inf_config.ini")
+config_sections = config.sections()
 
 ### >MongoDB
-#TODO - errors with supervisord and/or centos
-#mongo_ip = read_config('Config')['mongoip']
-#mongo_port = int(read_config('Config')['mongoport'])
-mongoclient = MongoClient('192.168.1.152', 27017)
+mongo_ip = read_config('Config')['mongoip']
+mongo_port = int(read_config('Config')['mongoport'])
+mongoclient = MongoClient(mongo_ip, mongo_port)
+#mongoclient = MongoClient('192.168.1.152', 27017)
 mongo_db = mongoclient['connections']
 author_collection = mongo_db['authorcons']
 
 ### >Parameters
-#TODO - errors with supervisord and/or centos
-#req_param_list = read_config_list('Config')['req_param_list']
-#opt_param_list = read_config_list('Config')['opt_param_list']
-#format_param_list = read_config_list('Config')['format_param_list']
-#metric_list = read_config_list('Config')['metric_list']
-
+req_param_list = read_config_list('Config')['req_param_list']
+opt_param_list = read_config_list('Config')['opt_param_list']
+format_param_list = read_config_list('Config')['format_param_list']
+metric_list = read_config_list('Config')['metric_list']
 
 ## >Start Flask App
 app = Flask(__name__)
@@ -380,4 +365,4 @@ def centrality():
 
 if __name__ == '__main__':
 	#app.debug = True
-	app.run(processes=1, host='0.0.0.0')
+	app.run(debug=True, host='0.0.0.0', port=9000)
