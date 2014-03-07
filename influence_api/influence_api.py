@@ -99,13 +99,13 @@ def create_filename(file_params):
 	if ('twit_collect' in file_params.keys()) and (file_params['twit_collect'] is not None):
 		filename == '_' + file_params['twit_collect']
 	if ('matched_project' in file_params.keys()) and (file_params['matched_project'] is not None):
-		filename += '_' + file_params['matched_project']
+		filename += '_' + file_params['matched_project'].replace(' ', '_')
 	if ('scored_project' in file_params.keys()) and (file_params['scored_project'] is not None):
-		filename += '_' + file_params['scored_project']
+		filename += '_' + file_params['scored_project'].replace(' ', '_')
 	if ('matched_topic' in file_params.keys()) and (file_params['matched_topic'] is not None):
-		filename += '_' + file_params['matched_topic']
+		filename += '_' + file_params['matched_topic'].replace(' ', '_')
 	if ('scored_topic' in file_params.keys()) and (file_params['scored_topic'] is not None):
-		filename += '_' + file_params['scored_topic']
+		filename += '_' + file_params['scored_topic'].replace(' ', '_')
 	filename += '.graphml'
 	return filename
 

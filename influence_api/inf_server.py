@@ -14,34 +14,43 @@ from tornado.httpserver import HTTPServer
 from tornado.ioloop import IOLoop
 from tornado.options import define, options
 import socket
+from time import sleep
 
-host_ip = '127.0.0.1'
-tornado_port = 8080
-define("port", default=tornado_port, help="Port to listen on", type=int)
+default_port = 8080
+define("port", default=default_port, help="Port to listen on", type=int)
 
 
 ### Functions ###
-def is_port_free(port_check):
-	try:
-		s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-		s.connect((host_ip, tornado_port))
-		s.shutdown(2)
-	except:
-		return False
-	return True
+def get_open_port(test_port):
+	port_occupied = True
+	while port_occupied is True:
+		try:
+			sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+			result = sock.connect_ex(('localhost', test_port))
+			sock.close()
+		except Exception as e:
+			#TODO LOG THIS
+			print str(e)
+		if result != 0:
+			## >Port is open
+			port_occupied = False
+			#TODO LOG THIS
+			print "port open: " + str(test_port)
+		else:
+			## >Port is closed
+			print "port closed: " + str(test_port)
+			#TODO LOG THIS
+			test_port += 1
+			sleep(2)
+		return test_port
 
 
 ### Main ###
 if __name__ == '__main__':
-	#options.parse_command_line()
-
+	options.parse_command_line()
 	http_server = HTTPServer(WSGIContainer(app))
-	port_free = False
-	while port_free is False:
-		if is_port_free(tornado_port):
-			port_free = True
-			define("port", default=tornado_port, help="Port to listen on", type=int)
-			http_server.listen(options.port)
-		else:
-			tornado_port += 1
+	## >Spawn o first open port above the default_port - useful when spawning multiple instances of the server
+	#tornado_port = get_open_port(default_port)
+	#define("port", default=tornado_port, help="Port to listen on", type=int)
+	http_server.listen(options.port)
 	IOLoop.instance().start()
