@@ -34,14 +34,15 @@ def run_metric(metric_name, G, metric_weight, use_norm):
 	elif metric_name == 'pagerank':
 		try:
 			graph_metric = nx.pagerank_scipy(G, weight=metric_weight)
-		except:
-			try:
-				graph_metric = nx.pagerank(G, weight=metric_weight)
-			except:
-				try:
-					graph_metric = nx.pagerank_numpy(G, weight=metric_weight)
-				except:
-					graph_metric = {'>calc_error<': 'did not converge'}
+		except Exception as e:
+			graph_metric = {'>calc_error<': 'did not converge', 'exception': str(e)}
+			#try:
+				#graph_metric = nx.pagerank(G, weight=metric_weight)
+			#except:
+				#try:
+					#graph_metric = nx.pagerank_numpy(G, weight=metric_weight)
+				#except:
+					#graph_metric = {'>calc_error<': 'did not converge'}
 	end_time = datetime.now()
 	stats = end_time - start_time
 	#print "Calculation completed in: " + str(stats)

@@ -2,23 +2,28 @@
 # influence api #
 #################
 
-# V0.4
+# V0.2
 # Created Date: 2013/12/17
 # Last Updated: 2013/03/06
 
 ### Resources ###
 from bson.code import Code
-import ConfigParser
 from datetime import datetime
 from flask import abort, Flask, jsonify, make_response, request
 from functools import wraps
-import HTMLParser
 import inf_api_support as inf_sup
 import influence as inf
 import networkx as nx
 from pymongo import MongoClient
+import StringIO
 import urllib2
 from uuid import uuid4
+
+
+""" MongoDB Related """
+mongoclient = MongoClient('192.168.1.152', 27017)
+mongo_db = mongoclient['connections']
+author_collection = mongo_db['authorcons']
 
 log_filename = 'influence_api.log'
 
@@ -30,7 +35,7 @@ opt_param_list = ['subforum',
 		'scored_topic',
 		'twit_collect',
 		'type']
-format_param_list = ['return_graph', 'format']
+graph_param_list = ['graph_format']
 metric_list = ['betweenness', 'closeness', 'degree', 'eigenvector', 'in_degree', 'out_degree', 'pagerank']
 user_api_keys = {
 		'02f22bd5-4b3b-413c-bf51-cbcd374d76ab': {'name': 'Michael', 'group': 'admin'},
@@ -46,22 +51,47 @@ user_api_keys = {
 		'c452288e-690f-4c6b-9f9e-03dec28dc1c4': {'name': 'Min', 'group': 'vendorx'},
 		'b04e097c-2653-4858-ad48-758d40880d34': {'name': 'Dwayne', 'group': 'other'},
 		'0376e15a-c0a1-4647-ae98-88ab510c16da': {'name': 'David', 'group': 'vendorx'},
-		'e9f04a64-8487-472e-a315-a07d00010686': {'name': 'John', 'group': 'vk'}
+		'e9f04a64-8487-472e-a315-a07d00010686': {'name': 'Tim', 'group': 'other'},
 		}
 
 
 ### Functions ###
-
-## >Apikey required decorator function
 def require_apikey(generic_function):
+	""" Apikey required  - decorator function """
 	# the new, post-decoration function. Note *args and **kwargs here.
+	@wraps(generic_function)
 	def decorated_function(*args, **kwargs):
-		#TODO store this somewhere else, generate for others
 		if request.args.get('key') and request.args.get('key') in user_api_keys.keys():
 			return generic_function(*args, **kwargs)
 		else:
 			abort(401)
 	return decorated_function
+
+
+def validate_required(generic_function):
+	""" Validate required parameters - decorator function """
+	@wraps(generic_function)
+	def validated_function(*args, **kwargs):
+		for entry in req_param_list:
+			if not request.args.get(entry):
+				#TODO return whats missing in the 400 header
+				abort(400)
+		if request.args.get('metric').lower() not in metric_list:
+			#TODO return whats missing in the 400 header
+			abort(400)
+		if int(request.args.get('start_date')) > int(request.args.get('end_date')):
+			#TODO return whats missing in the 400 header
+			abort(400)
+		return generic_function(*args, **kwargs)
+	return validated_function
+
+
+def check_retired(generic_function):
+	""" Checks for retired endpoints """
+	@wraps(generic_function)
+	def active_function(*args, **kwargs):
+		return generic_function(*args, **kwargs)
+	return active_function
 
 
 ## >Build the mongo query
@@ -73,9 +103,9 @@ def build_mongo_query(required_params, optional_params):
 	for param, value in optional_params.iteritems():
 		if value is not None:
 			if param is 'type':
-				new_query['Type'] = optional_params['type']
+				new_query['Type'] = optional_params['type'].capitalize()
 			if param is 'twit_collect':
-				new_query['Meta.sources'] = {'$in': [optional_params['twit_collect']]}
+				new_query['Meta.sources'] = optional_params['twit_collect']
 			if param is 'matched_project':
 				new_query['Matching'] = {'$elemMatch': {'ProjectId': optional_params['matched_project']}}
 			if param is 'subforum':
@@ -92,153 +122,78 @@ def build_mongo_query(required_params, optional_params):
 	return new_query
 
 
-def create_filename(file_params):
-	filename = str(file_params['start_date']) + '_' + str(file_params['end_date']) + '_' + file_params['network'] + '_' + file_params['metric']
-	if ('type' in file_params.keys()) and (file_params['type'] is not None):
-		filename == '_' + file_params['type']
-	if ('twit_collect' in file_params.keys()) and (file_params['twit_collect'] is not None):
-		filename == '_' + file_params['twit_collect']
-	if ('matched_project' in file_params.keys()) and (file_params['matched_project'] is not None):
-		filename += '_' + file_params['matched_project'].replace(' ', '_')
-	if ('scored_project' in file_params.keys()) and (file_params['scored_project'] is not None):
-		filename += '_' + file_params['scored_project'].replace(' ', '_')
-	if ('matched_topic' in file_params.keys()) and (file_params['matched_topic'] is not None):
-		filename += '_' + file_params['matched_topic'].replace(' ', '_')
-	if ('scored_topic' in file_params.keys()) and (file_params['scored_topic'] is not None):
-		filename += '_' + file_params['scored_topic'].replace(' ', '_')
-	filename += '.graphml'
-	return filename
-
-
-## >Get the optional/format parameters
 def get_params(param_request, param_list):
+	""" Get the optional/format parameters """
 	new_params = {}
 	for entry in param_list:
 		if request.args.get(entry) is not None:
-			new_params[entry] = urllib2.unquote(request.args.get(entry)).replace('\'', '')
+			new_params[entry] = urllib2.unquote(request.args.get(entry)).replace('\'', '').lower()
 		else:
 			new_params[entry] = None
 	return new_params
 
 
-#def read_config(section):
-	#config_dict = {}
-	#options = config.options(section)
-	#for option in options:
-		#config_dict[option] = config.get(section, option)
-	#return config_dict
+def netx_to_csv(func_graph):
+	out_string = '<p>'
+	for line in nx.generate_edgelist(func_graph, delimiter=','):
+		""" source, target, weight """
+		edge = line.replace('\'', '').replace('{weight:', '').replace('}', '').replace(' ', '')
+		out_string += edge + '<br>'
+	out_string += '<\p>'
+	return out_string
 
 
-#def read_config_list(section):
-	#config_dict = {}
-	#options = config.options(section)
-	#for option in options:
-		#config_dict[option] = config.get(section, option).split(',')
-	#return config_dict
-
-
-## >Validate required parameters
-def validate_required(validate_request):
-	#TODO add config file read
-	validated_params = {}
-	for entry in req_param_list:
-		if validate_request.args.get(entry) is not None:
-			validated_params[entry] = urllib2.unquote(request.args.get(entry)).replace('\'', '')
-		else:
-			ret_string = {'error': 'Required parameter missing: ' + entry}
-			inf_sup.append_to_log(log_filename, str(ret_string))
-			return ret_string
-	## >Verify the metric is valid
-	if validated_params['metric'].lower() not in metric_list:
-		ret_string = {'error': 'Invalid metric requested'}
-		inf_sup.append_to_log(log_filename, str(ret_string))
-		return ret_string
-	## >Verify the start date is before the end date
-	if int(validated_params['start_date']) > int(validated_params['end_date']):
-		ret_string = {'error': 'End data before start date'}
-		inf_sup.append_to_log(log_filename, str(ret_string))
-		return ret_string
-	return validated_params
+def netx_to_json(func_graph):
+	func_edge_list = []
+	for line in nx.generate_edgelist(func_graph, delimiter=','):
+		""" {'source':string, 'target': string, 'weight': integer} """
+		edge_entry = {}
+		edge = line.replace('\'', '').replace('{weight:', '').replace('}', '').replace(' ', '').split(',')
+		edge_entry['source'] = edge[0]
+		edge_entry['target'] = edge[1]
+		edge_entry['weight'] = edge[2]
+		func_edge_list.append(edge_entry)
+	return func_edge_list
 
 
 ### Main ###
-## >Config related
-#TODO - errors with supervisord and/or centos
-#config = ConfigParser.ConfigParser()
-#config.read("/etc/inf_config.conf")
-#config_sections = config.sections()
-
-### >MongoDB
-#TODO - errors with supervisord and/or centos
-#mongo_ip = read_config('Config')['mongoip']
-#mongo_port = int(read_config('Config')['mongoport'])
-mongoclient = MongoClient('192.168.1.152', 27017)
-mongo_db = mongoclient['connections']
-author_collection = mongo_db['authorcons']
-
-### >Parameters
-#TODO - errors with supervisord and/or centos
-#req_param_list = read_config_list('Config')['req_param_list']
-#opt_param_list = read_config_list('Config')['opt_param_list']
-#format_param_list = read_config_list('Config')['format_param_list']
-#metric_list = read_config_list('Config')['metric_list']
-
-
-## >Start Flask App
+""" Start Flask App """
 app = Flask(__name__)
 
 
-#TODO add browsable api in root
 @app.route('/')
+#TODO add browsable api in root
 def info():
 	available = 'Available Centrality Metrics: /metrics/centrality\n'
 	return available
 
 
-#@app.route('/graph')
-#def graph():
-	## >Get the REQUIRED parameters
-	## >Verify the metric is valid
-	## >Verify the start date is before the end date
-	## >Get the OPTIONAL parameters
-	## >Get the FORMAT parameters
-	## >Build the mongo query
-	## >Check if there are any matches
-	## >Build the author list
-	## >If JSON requested
-	## >If graph requested
-	## >return the graph
-
-
 @app.route('/metrics/centrality')
 @require_apikey
+@validate_required
 def centrality():
-	start_time = datetime.now()
-	#TODO add config file read
-	#TODO support cross network calculations (author_node --is--> author_node)
-	## >Get the REQUIRED parameters
-	req_params = validate_required(request)
-	if 'error' in req_params.keys():
-		return jsonify(req_params)
+	"""
+	Centrality metric endpoint.
+	Custome error code(s):
+		557: 'Calculation did not converge'
+	"""
+	#start_time = datetime.now()
 
-	## >Get the OPTIONAL parameters
+	# Get the REQUIRED parameters
+	req_params = get_params(request, req_param_list)
+
+	# Get the OPTIONAL parameters
 	opt_params = get_params(request, opt_param_list)
 
-	## >Get the FORMAT parameters
-	for_params = get_params(request, format_param_list)
-
-	params = dict(req_params.items() + opt_params.items())
-
-	## >Build the mongo query
+	# Build the mongo query
 	mongo_query = build_mongo_query(req_params, opt_params)
 
-	## >Check if there are any matches
+	# Check if there are any matches
 	if author_collection.find(mongo_query).count == 0:
-		ret_string = {'error': 'No connections found matching the criteria'}
-		inf_sup.append_to_log(log_filename, str(ret_string))
-		return jsonify(ret_string)
+		inf_sup.append_to_log(log_filename, str({'error': 'No connections found matching the criteria'}))
+		abort(204)
 	else:
-		## >Map/reduce the A-->A connections
+		# Map/reduce the A-->A connections
 		a2a_map = Code("""
 				function () {
 					emit({"author": this.Author, "connection": this.Connection},
@@ -255,11 +210,18 @@ def centrality():
 					return {"count": count};
 				}
 				""")
-		## >Create a unique collection based on this query
+		# Create a unique collection based on this query
 		query_collection = str(uuid4())
-		a2a_result = author_collection.map_reduce(a2a_map, a2a_reduce, query_collection, query=mongo_query).find()
+		try:
+			a2a_result = author_collection.map_reduce(a2a_map, a2a_reduce, query_collection, query=mongo_query).find()
+		except Exception as e:
+			#TODO Log the error
+			print e
+			#TODO add to header
+			#TODO is this valid?
+			abort(500)
 
-	## >Build the author list
+	# Build the author list
 	author_list = []
 	for a2a_count in a2a_result:
 		con_author = a2a_count['_id']['author'].replace('&', '&amp;')
@@ -267,117 +229,164 @@ def centrality():
 		if (len(con_author) > 0) and (len(con_connect) > 0):
 			author_list.append((con_author, con_connect, int(a2a_count['value']['count'])))
 
-	## >Delete the collection based on this query
+	# Delete the collection based on this query
 	mongo_db[query_collection].drop()
 
-	## >Influence Calculations
+	# Influence Calculations
 	if len(author_list) > 0:
-		## >Create a black graph
+		# Create a blank graph
 		G = nx.DiGraph()
 
-		## >Add the endges to the graph
+		# Add the edges to the graph
 		G.add_weighted_edges_from(author_list)
 
-		## >Run the requested metric, on the graph 'G'
-		try:
-			calc_metric, stats = inf.run_metric(params['metric'], G, 'weight', True)
-		except:
-			if params['metric'] is 'pagerank':
-				calc_metric, stats = inf.run_metric('pagerank_norm', G, 'weight', True)
-				if '>calc_error<' in calc_metric.keys():
-					return jsonify({'error': 'Pagerank did not converge'})
-	else:
-		ret_string = {'error': 'No connections found matching the criteria'}
-		inf_sup.append_to_log(log_filename, str(ret_string))
-		return jsonify(ret_string)
+		# Run the requested metric, on the graph 'G'
+		calc_metric, stats = inf.run_metric(req_params['metric'], G, 'weight', True)
 
-	## >Build the dictionary to return
+		if '>calc_error<' in calc_metric.keys():
+			#TODO add more information to the header
+			# Raise custom error code - calculation did not converge
+			abort(557)
+	else:
+		inf_sup.append_to_log(log_filename, str({'error': 'No connections found matching the criteria'}))
+		abort(204)
+
+	# Build the dictionary to return
 	data_results = {}
 
-	## >Append the metric data
+	# Append the metric data
 	data_results['metrics'] = calc_metric
 
-	## >If graph requested
-	if for_params['return_graph'] is not None:
-		if for_params['return_graph'].lower() == 'true':
-			## >If format = data
-			if for_params['format'] is None:
-				## >Append the graph data
-				data_results['graph'] = nx.to_edgelist(G, nodelist=None)
-			## >If format = graphml
-			elif for_params['format'].lower() == 'graphml':
-				## >Create the graphml filename
-				graphml_name = create_filename(params)
-				## >Get the graphml data
-				graphml_data = '\n'.join(nx.generate_graphml(G))
-				## >Add the versioning
-				graphml_final = '<?xml version="1.0" encoding="UTF-8"?>' + "\n" + '<!--'
-				for key, value in params.iteritems():
-					if value is not None:
-						graphml_final += key + ': ' + value + ', '
-				graphml_final += '-->'
-				h = HTMLParser.HTMLParser()
-
-				for line in graphml_data.split("\n"):
-					## >Escape the html content
-					line = h.unescape(line)
-					## >For each node add appropriate metric data into the graphml
-					if '<node id="' in line:
-						graphml_final += (line.replace('/>', '>') + "\n")
-						node_name = line.partition('"')[-1].rpartition('"')[0]
-						if (node_name is None) or(node_name is ''):
-							graphml_final += '      <data key="d1">' + 'NODE NAME ERROR' + '</data>' + "\n"
-						else:
-							graphml_final += '      <data key="d1">' + str(calc_metric[node_name]) + '</data>' + "\n"
-						graphml_final += '    </node>' + "\n"
-					else:
-						graphml_final += line + "\n"
-						## >Add the key for the metric attribute
-						if '<key' in line:
-							graphml_final += '  <key attr.name="' + params['metric'] + '" attr.type="float" for="node" id="d1" />'
-
-				if app.debug is True:
-					## >Write out the graphml for testing
-					graphml_name = create_filename(params)
-					with open(graphml_name, 'w') as output_file:
-						for line in graphml_final:
-							output_file.write(line.encode('utf-8'))
-					if not output_file.closed:
-						output_file.close()
-
-				## >Create the appropriate response to return the graphml
-				response = make_response(graphml_final)
-				response.headers["Content-Type"] = 'text/xml'
-				response.headers["Content-Disposition"] = 'attachment; filename=' + graphml_name
-				return response
-				#return send_file(response, attachment_filename=graphml_name, as_attachment=True)
-
-	## >To the log
+	# To the log
 	#TODO app.logger.debug('A value for debugging')
-	statistics = {}
-	statistics['api_query'] = params
-	statistics['mongo_query'] = mongo_query
-	statistics['influence_metric'] = params['metric']
-	statistics['metric_runtime'] = stats
-	statistics['full_runtime'] = str(datetime.now() - start_time)
-	statistics['graph_nodes'] = G.order()
-	statistics['graph_edges'] = G.size()
-	inf_sup.append_to_log(log_filename, str(statistics))
-
-	if app.debug is True:
-		print statistics['metric_runtime']
-		### >Write out the influence for testing
-		graphml_name = create_filename(params)
-		influence_file = graphml_name.replace('.graphml', '.txt')
-		with open(influence_file, 'w') as output_file:
-			graph_list = calc_metric.items()
-			for item in graph_list:
-				output_file.write(item[0].encode('utf_8') + "," + str(item[1]) + '\n')
-		if not output_file.closed:
-			output_file.close()
+	#TODO Log the stats
+	#statistics = {}
+	#statistics['api_query'] = req_params + opt_params
+	#statistics['mongo_query'] = mongo_query
+	#statistics['influence_metric'] = req_params['metric']
+	#statistics['metric_runtime'] = stats
+	#statistics['full_runtime'] = str(datetime.now() - start_time)
+	#statistics['graph_nodes'] = G.order()
+	#statistics['graph_edges'] = G.size()
+	#inf_sup.append_to_log(log_filename, str(statistics))
 
 	return jsonify(result=data_results)
 
+
+@app.route('/graph')
+@require_apikey
+@validate_required
+def graph():
+	"""
+	Graph endpoint.
+	"""
+	#start_time = datetime.now()
+	graph_results = {}
+
+	# Get the required parameters
+	req_params = get_params(request, req_param_list)
+
+	#Get the OPTIONAL parameters
+	opt_params = get_params(request, opt_param_list)
+
+	# Get the GRAPH parameters
+	graph_params = get_params(request, graph_param_list)
+
+	#Build the mongo query
+	mongo_query = build_mongo_query(req_params, opt_params)
+
+	# Check if there are any matches
+	if author_collection.find(mongo_query).count == 0:
+		inf_sup.append_to_log(log_filename, str({'error': 'No connections found matching the criteria'}))
+		#TODO better code
+		abort(416)
+	else:
+		# Map/reduce the A-->A connections
+		a2a_map = Code("""
+				function () {
+					emit({"author": this.Author, "connection": this.Connection},
+						{"count": 1}
+						);
+					}
+				""")
+		a2a_reduce = Code("""
+				function (key, values) {
+					var count = 0;
+					values.forEach(function(v) {
+						count += v['count'];
+						});
+					return {"count": count};
+				}
+				""")
+		# Create a unique collection based on this query
+		query_collection = str(uuid4())
+		try:
+			a2a_result = author_collection.map_reduce(a2a_map, a2a_reduce, query_collection, query=mongo_query).find()
+		except Exception as e:
+			#TODO Log the error
+			print e
+			#TODO add to header
+			#TODO is this valid
+			abort(503)
+
+	# Build the author list
+	author_list = []
+	for a2a_count in a2a_result:
+		con_author = a2a_count['_id']['author'].replace('&', '&amp;')
+		con_connect = a2a_count['_id']['connection'].replace('&', '&amp;')
+		if (len(con_author) > 0) and (len(con_connect) > 0):
+			author_list.append((con_author, con_connect, int(a2a_count['value']['count'])))
+
+	# Delete the collection based on this query
+	mongo_db[query_collection].drop()
+
+	if len(author_list) > 0:
+		# Create a blank graph
+		G = nx.DiGraph()
+
+		# Add the edges to the graph
+		G.add_weighted_edges_from(author_list)
+
+		future_formats = ['geoff', 'gxl']
+		""" To Consider: 'gml', 'XGMML', 'RDF', 'graphxml'"""
+		if (graph_params['graph_format'] is None) or (graph_params['graph_format'] == 'json'):
+			graph_results['graph'] = netx_to_json(G)
+		elif graph_params['graph_format'] == 'gexf':
+			output = StringIO.StringIO()
+			nx.write_gexf(G, output)
+			response = make_response(output.getvalue())
+			response.headers["Content-Type"] = 'text/xml'
+			return response
+		elif graph_params['graph_format'] == 'graphml':
+			output = StringIO.StringIO()
+			nx.write_graphml(G, output)
+			response = make_response(output.getvalue())
+			response.headers["Content-Type"] = 'text/xml'
+			return response
+		elif graph_params['graph_format'] == 'csv':
+			output = StringIO.StringIO()
+			output.write(netx_to_csv(G))
+			response = make_response(output.getvalue())
+			#response.headers["Content-Type"] = 'text/txt'
+			return response
+		elif graph_params['graph_format'] in future_formats:
+			#TODO add in template
+			abort(501)
+		else:
+			abort(406)
+	else:
+		#TODO better code
+		abort(416)
+
+	return jsonify(graph_results)
+
+
+#@app.route('/authors')
+#@require_apikey
+
+#@app.route('/posts')
+#@require_apikey
+
 if __name__ == '__main__':
-	#app.debug = True
+	app.debug = True
 	app.run(processes=1, host='0.0.0.0')

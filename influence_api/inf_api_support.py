@@ -66,3 +66,14 @@ def generate_api_key():
 	print new_key
 	#TODO check if key exists
 	return new_key
+
+
+def require_apikey(generic_function):
+	# the new, post-decoration function. Note *args and **kwargs here.
+	def decorated_function(*args, **kwargs):
+		#TODO store this somewhere else, generate for others
+		if request.args.get('key') and request.args.get('key') in user_api_keys.keys():
+			return generic_function(*args, **kwargs)
+		else:
+			abort(401)
+	return decorated_function
