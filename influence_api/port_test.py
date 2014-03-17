@@ -7,17 +7,11 @@
 # Last Updated: 2014/03/06
 
 ### Resources ###
-import networkx as nx
-import StringIO
+
+
+""" http://search.de.vendorx.com:9200/demo/_search """
 
 ### FUNCTIONS ###
 
 
 ### MAIN ###
-G = nx.DiGraph()
-author_list = [('A', 'B', 2), ('B', 'A', 1), ('A', 'C', 4)]
-G.add_weighted_edges_from(author_list)
-
-with StringIO.StringIO() as output:
-	nx.write_gexf(G, output)
-	print output.getvalue()

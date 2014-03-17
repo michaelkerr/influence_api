@@ -478,3 +478,22 @@
 2014-03-10 12:46:12.235754 >>> {'error': 'Required parameter missing: start_date'}
 2014-03-10 13:01:29.909999 >>> {'graph_edges': 18843, 'graph_nodes': 25988, 'mongo_query': {'PostDate': {'$lte': u'20140228', '$gte': u'20140225'}, 'Network': u'twitter.com'}, 'metric_runtime': datetime.timedelta(0, 0, 220990), 'influence_metric': u'pagerank', 'full_runtime': '0:00:02.034777', 'api_query': {'matched_topic': None, 'scored_project': None, 'twit_collect': None, 'network': u'twitter.com', 'end_date': u'20140228', 'metric': u'pagerank', 'scored_topic': None, 'matched_project': None, 'subforum': None, 'type': None, 'start_date': u'20140225'}}
 2014-03-11 13:26:16.746802 >>> {'error': 'No connections found matching the criteria'}
+2014-03-12 09:36:27.820581 >>> {'error': 'No connections found matching the criteria'}
+2014-03-12 09:38:28.623254 >>> {'error': 'No connections found matching the criteria'}
+2014-03-12 09:38:59.908179 >>> {'error': 'No connections found matching the criteria'}
+2014-03-12 09:39:47.670467 >>> {'error': 'No connections found matching the criteria'}
+2014-03-12 10:39:31.968285 >>> {'error': 'No connections found matching the criteria'}
+2014-03-12 10:40:27.210380 >>> {'error': 'No connections found matching the criteria'}
+2014-03-12 10:41:00.509925 >>> {'error': 'No connections found matching the criteria'}
+2014-03-12 10:58:38.950651 >>> {'error': 'No connections found matching the criteria'}
+2014-03-12 10:59:05.277250 >>> {'error': 'No connections found matching the criteria'}
+2014-03-12 10:59:16.458103 >>> {'error': 'Unknown graph format'}
+2014-03-12 11:01:22.691403 >>> {'error': 'Unknown graph format'}
+2014-03-12 11:01:51.770757 >>> {'error': 'Unknown graph format'}
+2014-03-12 11:02:12.931803 >>> {'error': 'Unknown graph format'}
+2014-03-12 11:02:26.954157 >>> {'error': 'No connections found matching the criteria'}
+2014-03-12 11:02:56.118537 >>> {'error': 'Unknown graph format'}
+2014-03-12 11:03:29.515559 >>> {'error': 'Unknown graph format'}
+2014-03-12 11:12:30.241880 >>> {'error': 'No connections found matching the criteria'}
+2014-03-12 11:12:49.046790 >>> {'error': 'Format not currently supported'}
+2014-03-12 11:13:03.547123 >>> {'error': 'Format not currently supported, will be in the future'}

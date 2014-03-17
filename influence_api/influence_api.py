@@ -55,6 +55,7 @@ user_api_keys = {
 		}
 
 
+
 ### Functions ###
 def require_apikey(generic_function):
 	""" Apikey required  - decorator function """
@@ -87,7 +88,7 @@ def validate_required(generic_function):
 
 
 def check_retired(generic_function):
-	""" Checks for retired endpoints """
+	""" Checks for retired endpoints - decorator function"""
 	@wraps(generic_function)
 	def active_function(*args, **kwargs):
 		return generic_function(*args, **kwargs)
@@ -156,6 +157,14 @@ def netx_to_json(func_graph):
 	return func_edge_list
 
 
+def raise_error(error_message, error_code):
+	error_dict = {'error_message': error_message}
+	error_dict['status'] = str(error_code)
+	#error_dict['more_info'] = 'http://LINK_TO_DOCUMENTATION'
+	inf_sup.append_to_log(log_filename, str(error_dict))
+	abort(make_response(str(error_dict), error_code))
+	return
+
 ### Main ###
 """ Start Flask App """
 app = Flask(__name__)
@@ -190,8 +199,7 @@ def centrality():
 
 	# Check if there are any matches
 	if author_collection.find(mongo_query).count == 0:
-		inf_sup.append_to_log(log_filename, str({'error': 'No connections found matching the criteria'}))
-		abort(204)
+		raise_error('No connections found matching the criteria', 416)
 	else:
 		# Map/reduce the A-->A connections
 		a2a_map = Code("""
@@ -215,11 +223,7 @@ def centrality():
 		try:
 			a2a_result = author_collection.map_reduce(a2a_map, a2a_reduce, query_collection, query=mongo_query).find()
 		except Exception as e:
-			#TODO Log the error
-			print e
-			#TODO add to header
-			#TODO is this valid?
-			abort(500)
+			raise_error(str(e), 503)
 
 	# Build the author list
 	author_list = []
@@ -241,15 +245,20 @@ def centrality():
 		G.add_weighted_edges_from(author_list)
 
 		# Run the requested metric, on the graph 'G'
+		#TODO fix eigenvector formatting
+		if req_params['metric'] == 'eigenvector':
+			raise_error('No connections found matching the criteria', 501)
+
 		calc_metric, stats = inf.run_metric(req_params['metric'], G, 'weight', True)
 
 		if '>calc_error<' in calc_metric.keys():
-			#TODO add more information to the header
-			# Raise custom error code - calculation did not converge
-			abort(557)
+			if req_params['metric'] == 'pagerank':
+				# Raise custom error code - calculation did not converge
+				raise_error('Pagerank did not converge', 557)
+			else:
+				raise_error('General calculation error', 557)
 	else:
-		inf_sup.append_to_log(log_filename, str({'error': 'No connections found matching the criteria'}))
-		abort(204)
+		raise_error('No connections found matching the criteria', 416)
 
 	# Build the dictionary to return
 	data_results = {}
@@ -296,10 +305,8 @@ def graph():
 	mongo_query = build_mongo_query(req_params, opt_params)
 
 	# Check if there are any matches
-	if author_collection.find(mongo_query).count == 0:
-		inf_sup.append_to_log(log_filename, str({'error': 'No connections found matching the criteria'}))
-		#TODO better code
-		abort(416)
+	if author_collection.find(mongo_query).count() == 0:
+		raise_error('No connections found matching the criteria', 416)
 	else:
 		# Map/reduce the A-->A connections
 		a2a_map = Code("""
@@ -323,11 +330,7 @@ def graph():
 		try:
 			a2a_result = author_collection.map_reduce(a2a_map, a2a_reduce, query_collection, query=mongo_query).find()
 		except Exception as e:
-			#TODO Log the error
-			print e
-			#TODO add to header
-			#TODO is this valid
-			abort(503)
+			raise_error(str(e), 503)
 
 	# Build the author list
 	author_list = []
@@ -367,16 +370,14 @@ def graph():
 			output = StringIO.StringIO()
 			output.write(netx_to_csv(G))
 			response = make_response(output.getvalue())
-			#response.headers["Content-Type"] = 'text/txt'
+			#response.headers["Content-Type"] = 'text/txt'author_collection.find(mongo_query).count
 			return response
 		elif graph_params['graph_format'] in future_formats:
-			#TODO add in template
-			abort(501)
+			raise_error('Format not currently supported, but will be in the future', 501)
 		else:
-			abort(406)
+			raise_error('Format not currently supported', 406)
 	else:
-		#TODO better code
-		abort(416)
+		raise_error('Unknown graph format', 416)
 
 	return jsonify(graph_results)
 
