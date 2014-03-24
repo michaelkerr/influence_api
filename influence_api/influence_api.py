@@ -52,8 +52,8 @@ user_api_keys = {
 		'b04e097c-2653-4858-ad48-758d40880d34': {'name': 'Dwayne', 'group': 'other'},
 		'0376e15a-c0a1-4647-ae98-88ab510c16da': {'name': 'David', 'group': 'vendorx'},
 		'e9f04a64-8487-472e-a315-a07d00010686': {'name': 'Tim', 'group': 'other'},
+		'45fd499-07be-4d92-93b3-d47f4607506d': {'name': 'Test', 'group': 'test'}
 		}
-
 
 
 ### Functions ###
@@ -95,8 +95,8 @@ def check_retired(generic_function):
 	return active_function
 
 
-## >Build the mongo query
 def build_mongo_query(required_params, optional_params):
+	""" Build the mongo query """
 	new_query = {}
 	new_query['PostDate'] = {'$gte': required_params['start_date'], '$lte': required_params['end_date']}
 	new_query['Network'] = required_params['network']
@@ -108,7 +108,8 @@ def build_mongo_query(required_params, optional_params):
 			if param is 'twit_collect':
 				new_query['Meta.sources'] = optional_params['twit_collect']
 			if param is 'matched_project':
-				new_query['Matching'] = {'$elemMatch': {'ProjectId': optional_params['matched_project']}}
+				new_query['Matching.ProjectId'] = optional_params['matched_project']
+				#new_query['Matching'] = {'$elemMatch': {'ProjectId': optional_params['matched_project']}}
 			if param is 'subforum':
 				new_query['SubForum'] = optional_params['subforum']
 			if param is 'matched_topic':
@@ -127,14 +128,19 @@ def get_params(param_request, param_list):
 	""" Get the optional/format parameters """
 	new_params = {}
 	for entry in param_list:
-		if request.args.get(entry) is not None:
-			new_params[entry] = urllib2.unquote(request.args.get(entry)).replace('\'', '').lower()
+		request_entry = request.args.get(entry)
+		if request_entry is not None:
+			if ('project' in entry) or ('topic' in entry):
+				new_params[entry] = urllib2.unquote(request_entry)
+			else:
+				new_params[entry] = urllib2.unquote(request_entry).replace('\'', '').lower()
 		else:
 			new_params[entry] = None
 	return new_params
 
 
 def netx_to_csv(func_graph):
+	""" Convert a networkx graph to csv """
 	out_string = '<p>'
 	for line in nx.generate_edgelist(func_graph, delimiter=','):
 		""" source, target, weight """
@@ -145,6 +151,7 @@ def netx_to_csv(func_graph):
 
 
 def netx_to_json(func_graph):
+	""" Convert a networkx graph to json """
 	func_edge_list = []
 	for line in nx.generate_edgelist(func_graph, delimiter=','):
 		""" {'source':string, 'target': string, 'weight': integer} """
@@ -158,6 +165,7 @@ def netx_to_json(func_graph):
 
 
 def raise_error(error_message, error_code):
+	""" Generic error handler for adding json error messages to HTTP error codes"""
 	error_dict = {'error_message': error_message}
 	error_dict['status'] = str(error_code)
 	#error_dict['more_info'] = 'http://LINK_TO_DOCUMENTATION'

@@ -11,31 +11,139 @@ def test_basic():
 	print "I RAN!"
 
 #TODO
-#
-# http://127.0.0.1:5000/metrics/influence
-#
-# query
-#
-#
-# &start_date='YYYYMMDD'
-# this should be checked for a valid/invalid date, a different date format (valid/invalid), None, empty string, random string
-#
-#&end_date='YYYYMMDD'
-#same as start date
-#
-# check if the start data is before the end date
-#
-#&project='AQ%20%28A%29'
-#Check for valid IO project names, Penguin name, None, empty string, All, random strings - should be based on hashes for project, topic etc
-#
-#&network='ye1.org'
-#Check for valid IO subforum names, Penguin name, None, empty string, random strings
-#
-#&metric='pagerank'
-#check for valid metrics, None, Empty, random strings
-#
-# test the graphml format for validity
-#
-#Test the server
-#Ensure path is present in all header files
-#test for inverted datess
+"""
+	Common tests to all endpoints
+"""
+""" test require api key """
+"""
+key=<KEY>
+Check:
+none
+empty
+valid
+invalid
+"""
+
+""" test required paramaters """
+"""
+test start_date = 'YYYYMMDD'
+check:
+none
+empty
+a valid/invalid date (should only be in the past),
+date format (valid/invalid),
+"""
+
+"""
+test end_date = 'YYYYMMDD'
+check:
+none
+empty
+a valid/invalid date (should only be in the past),
+date format (valid/invalid),
+"""
+
+"""
+start date before end date,
+start date after end date,
+"""
+
+"""
+test network
+check:
+none given
+empty,
+valid (in connections)
+invalid (not in connections)
+"""
+
+"""
+test metric
+check:
+none given,
+empty,
+valid/invalid (in list)
+"""
+
+""" Test optional paramaters """
+"""
+Test subforum
+check:
+empty
+valid/invalid
+"""
+
+"""
+Test matched_project
+check:
+empty
+valid/invalid
+"""
+
+"""
+Test matched_topic
+check:
+empty
+valid/invalid
+"""
+
+"""
+Test scored_project
+check:
+empty
+valid/invalid
+"""
+
+"""
+Test scored_topic
+check:
+empty
+valid/invalid
+"""
+
+"""
+Test twit_collect
+check:
+empty
+valid/invalid
+"""
+
+"""
+Test type
+check:
+empty
+valid/invalid
+"""
+
+""" check retired endpoints """
+
+"""
+	Test metrics/centrality
+"""
+""" Check valid json response """
+
+"""
+	Test graph
+"""
+"""
+Test graph_format parameter
+check:
+none
+empty
+valid
+invalid, but future
+invalid
+"""
+
+"""
+Test csv format
+"""
+
+"""
+Test graphml format
+"""
+
+"""
+Test gexf format
+"""
+

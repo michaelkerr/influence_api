@@ -497,3 +497,21 @@
 2014-03-12 11:12:30.241880 >>> {'error': 'No connections found matching the criteria'}
 2014-03-12 11:12:49.046790 >>> {'error': 'Format not currently supported'}
 2014-03-12 11:13:03.547123 >>> {'error': 'Format not currently supported, will be in the future'}
+2014-03-24 12:46:11.588969 >>> {'status': '501', 'error_message': 'Format not currently supported, but will be in the future'}
+2014-03-24 12:46:11.931724 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-24 12:47:44.314179 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-24 12:54:41.680930 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-24 12:55:04.174011 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-24 12:57:03.778242 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-24 13:25:54.001752 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-24 15:24:46.524624 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-24 15:25:12.414017 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-24 15:40:28.657155 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-24 16:33:07.163413 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-24 16:34:44.636411 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-24 16:34:49.566500 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-24 16:35:31.331926 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-24 16:43:58.667407 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-24 16:44:34.149889 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-24 16:44:53.466690 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-24 16:46:02.781905 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}

@@ -10,6 +10,7 @@ from datetime import datetime
 from uuid import uuid4
 import os
 
+
 ### Functions ###
 def append_to_file(fileout, graph_metric, proj_name, net_name, sub_name, top_name):
 	with open(fileout, 'a') as output_file:
