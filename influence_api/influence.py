@@ -13,20 +13,22 @@ from datetime import datetime
 
 # Functions
 def run_metric(metric_name, G, metric_weight, use_norm):
-	#print '\n>> ' + "Calculating " + metric_name
 	start_time = datetime.now()
 	if metric_name == 'degree':
 		graph_metric = G.degree(nbunch=None, weight=metric_weight)
-		normalize_metric(G, graph_metric, metric_weight)
+		if use_norm is True:
+			graph_metric = normalize_metric(G, graph_metric, metric_weight)
 	elif metric_name == 'in_degree':
 		graph_metric = G.in_degree(nbunch=None, weight=metric_weight)
-		normalize_metric(G, graph_metric, metric_weight)
+		if use_norm is True:
+			normalize_metric(G, graph_metric, metric_weight)
 	elif metric_name == 'out_degree':
 		graph_metric = G.out_degree(nbunch=None, weight=metric_weight)
-		normalize_metric(G, graph_metric, metric_weight)
+		if use_norm is True:
+			normalize_metric(G, graph_metric, metric_weight)
 	elif metric_name == 'closeness':
 		graph_metric = nx.closeness_centrality(G, distance=None, normalized=use_norm)
-		# use distance as weight? to increase importance as weight increase distance = 1/weight
+		#use distance as weight? to increase importance as weight increase distance = 1/weight
 	elif metric_name == 'betweenness':
 		graph_metric = nx.betweenness_centrality(G, normalized=use_norm, weight=metric_weight)
 	elif metric_name == 'eigenvector':
@@ -45,7 +47,6 @@ def run_metric(metric_name, G, metric_weight, use_norm):
 					#graph_metric = {'>calc_error<': 'did not converge'}
 	end_time = datetime.now()
 	stats = end_time - start_time
-	#print "Calculation completed in: " + str(stats)
 	return graph_metric, stats
 
 
@@ -65,4 +66,3 @@ def normalize_metric(G, graph_metric, metric_weight):
 		# divide by len(G)
 		graph_metric[k] = str(format((float(graph_metric[k]) / norm_base), '0.5f'))
 	return graph_metric
-

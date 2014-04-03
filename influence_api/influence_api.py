@@ -1,24 +1,31 @@
 # -*- coding: utf-8 -*-
-# influence api #
-#################
+""" influence api """
 
-# V0.2
-# Created Date: 2013/12/17
-# Last Updated: 2013/03/06
+"""
+V0.4
+Created Date: 2013/12/17
+Last Updated: 2013/03/25
+"""
 
 ### Resources ###
 from bson.code import Code
-from datetime import datetime
 from flask import abort, Flask, jsonify, make_response, request
 from functools import wraps
 import inf_api_support as inf_sup
 import influence as inf
+import MySQLdb
 import networkx as nx
 from pymongo import MongoClient
 import StringIO
 import urllib2
 from uuid import uuid4
+from json import dumps
 
+""" SQL Related """
+db = MySQLdb.connect(host="ingest.cudb3djsmyrc.us-west-2.rds.amazonaws.com",
+			user="influence",
+			passwd="8RiV3wDYV6BWpKRt",
+			db="ingestdb")
 
 """ MongoDB Related """
 mongoclient = MongoClient('192.168.1.152', 27017)
@@ -34,7 +41,8 @@ opt_param_list = ['subforum',
 		'scored_project',
 		'scored_topic',
 		'twit_collect',
-		'type']
+		'type',
+		'normalized']
 graph_param_list = ['graph_format']
 metric_list = ['betweenness', 'closeness', 'degree', 'eigenvector', 'in_degree', 'out_degree', 'pagerank']
 user_api_keys = {
@@ -65,7 +73,7 @@ def require_apikey(generic_function):
 		if request.args.get('key') and request.args.get('key') in user_api_keys.keys():
 			return generic_function(*args, **kwargs)
 		else:
-			abort(401)
+			raise_error('Not Authorized - check your API key', 401)
 	return decorated_function
 
 
@@ -75,14 +83,11 @@ def validate_required(generic_function):
 	def validated_function(*args, **kwargs):
 		for entry in req_param_list:
 			if not request.args.get(entry):
-				#TODO return whats missing in the 400 header
-				abort(400)
+				raise_error('Missing required parameter ' + entry, 400)
 		if request.args.get('metric').lower() not in metric_list:
-			#TODO return whats missing in the 400 header
-			abort(400)
+			raise_error('Invalid metric parameter ' + request.args.get('metric'), 400)
 		if int(request.args.get('start_date')) > int(request.args.get('end_date')):
-			#TODO return whats missing in the 400 header
-			abort(400)
+			raise_error('End date is before start date.', 400)
 		return generic_function(*args, **kwargs)
 	return validated_function
 
@@ -106,10 +111,10 @@ def build_mongo_query(required_params, optional_params):
 			if param is 'type':
 				new_query['Type'] = optional_params['type'].capitalize()
 			if param is 'twit_collect':
+				#TODO add eror checking
 				new_query['Meta.sources'] = optional_params['twit_collect']
 			if param is 'matched_project':
 				new_query['Matching.ProjectId'] = optional_params['matched_project']
-				#new_query['Matching'] = {'$elemMatch': {'ProjectId': optional_params['matched_project']}}
 			if param is 'subforum':
 				new_query['SubForum'] = optional_params['subforum']
 			if param is 'matched_topic':
@@ -121,7 +126,18 @@ def build_mongo_query(required_params, optional_params):
 			if param is 'scored_topic':
 				#TODO
 				pass
+
 	return new_query
+
+
+def update_ids():
+	project_dict = {}
+	cur = db.cursor()
+	query = 'SELECT * FROM topics'
+	cur.execute(query)
+	for entry in cur.fetchall():
+		project_dict[entry[1]] = entry[0]
+	return project_dict
 
 
 def get_params(param_request, param_list):
@@ -131,9 +147,10 @@ def get_params(param_request, param_list):
 		request_entry = request.args.get(entry)
 		if request_entry is not None:
 			if ('project' in entry) or ('topic' in entry):
-				new_params[entry] = urllib2.unquote(request_entry)
+				print request_entry.replace('\'', '')
+				new_params[entry] = urllib2.unquote(request_entry).replace('\'', '').replace('"', '')
 			else:
-				new_params[entry] = urllib2.unquote(request_entry).replace('\'', '').lower()
+				new_params[entry] = urllib2.unquote(request_entry).replace('\'', '').replace('"', '').lower()
 		else:
 			new_params[entry] = None
 	return new_params
@@ -173,6 +190,7 @@ def raise_error(error_message, error_code):
 	abort(make_response(str(error_dict), error_code))
 	return
 
+
 ### Main ###
 """ Start Flask App """
 app = Flask(__name__)
@@ -194,13 +212,13 @@ def centrality():
 	Custome error code(s):
 		557: 'Calculation did not converge'
 	"""
-	#start_time = datetime.now()
-
 	# Get the REQUIRED parameters
 	req_params = get_params(request, req_param_list)
 
 	# Get the OPTIONAL parameters
 	opt_params = get_params(request, opt_param_list)
+
+	print opt_params
 
 	# Build the mongo query
 	mongo_query = build_mongo_query(req_params, opt_params)
@@ -245,6 +263,7 @@ def centrality():
 	mongo_db[query_collection].drop()
 
 	# Influence Calculations
+	#TODO need to break this out into a function
 	if len(author_list) > 0:
 		# Create a blank graph
 		G = nx.DiGraph()
@@ -255,9 +274,21 @@ def centrality():
 		# Run the requested metric, on the graph 'G'
 		#TODO fix eigenvector formatting
 		if req_params['metric'] == 'eigenvector':
-			raise_error('No connections found matching the criteria', 501)
+			raise_error('Eigenvector currently not available', 501)
 
-		calc_metric, stats = inf.run_metric(req_params['metric'], G, 'weight', True)
+		if opt_params['normalized'] is not None:
+			if opt_params['normalized'] == 'true':
+				make_normal = True
+			elif opt_params['normalized'] == 'false':
+				make_normal = False
+			else:
+				raise_error('Invalid normalized parameter: ' + opt_params['normalized'], 400)
+		elif 'degree' in req_params['metric']:
+			make_normal = False
+		else:
+			make_normal = True
+
+		calc_metric, stats = inf.run_metric(req_params['metric'], G, 'weight', make_normal)
 
 		if '>calc_error<' in calc_metric.keys():
 			if req_params['metric'] == 'pagerank':
@@ -277,15 +308,6 @@ def centrality():
 	# To the log
 	#TODO app.logger.debug('A value for debugging')
 	#TODO Log the stats
-	#statistics = {}
-	#statistics['api_query'] = req_params + opt_params
-	#statistics['mongo_query'] = mongo_query
-	#statistics['influence_metric'] = req_params['metric']
-	#statistics['metric_runtime'] = stats
-	#statistics['full_runtime'] = str(datetime.now() - start_time)
-	#statistics['graph_nodes'] = G.order()
-	#statistics['graph_edges'] = G.size()
-	#inf_sup.append_to_log(log_filename, str(statistics))
 
 	return jsonify(result=data_results)
 

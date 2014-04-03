@@ -515,3 +515,882 @@
 2014-03-24 16:44:34.149889 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
 2014-03-24 16:44:53.466690 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
 2014-03-24 16:46:02.781905 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-27 14:43:29.949450 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 15:07:31.350102 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 15:08:37.486401 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 15:08:54.775901 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 15:10:27.571670 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 15:10:27.574722 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 15:11:21.354122 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 15:11:21.356922 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 15:14:18.776668 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 15:14:54.624111 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 15:14:54.627067 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 15:15:22.655767 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 15:16:18.410098 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 15:16:18.412730 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 15:16:18.415263 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 15:16:28.215537 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 15:16:28.218117 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 15:16:28.221617 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 15:16:28.225208 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 15:17:06.595440 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 15:17:22.271225 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 15:17:22.274101 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 15:19:27.877065 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 15:21:41.427385 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 15:22:15.385822 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 15:22:21.328230 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 15:22:21.333835 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 15:24:39.256431 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 15:24:39.259648 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 15:26:58.455529 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 15:26:58.458406 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 15:27:27.804122 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 15:27:27.807105 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 15:37:09.095276 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 15:37:09.098261 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 15:37:33.436390 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 15:37:33.439141 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 15:37:43.148220 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 15:37:43.151142 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 15:40:05.645732 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 15:40:05.648644 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 15:41:47.921892 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 15:41:47.926462 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 15:44:46.418651 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 15:44:46.421417 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 15:44:46.423681 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 15:47:26.898943 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 15:47:26.901805 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 15:47:26.904428 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 15:47:43.067428 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 15:47:43.070219 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 15:47:43.072680 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 15:47:58.605215 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 15:47:58.608350 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 15:47:58.611413 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:02:24.376367 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:02:24.379016 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:02:24.381321 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:03:38.923421 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:03:38.926564 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:03:38.929230 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:05:36.089947 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:05:36.093226 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:05:36.095871 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:05:47.541192 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:05:47.544051 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:05:47.546774 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:06:13.930272 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:06:13.933013 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:06:13.935290 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:06:33.178428 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:06:33.180855 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:06:33.184089 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:07:08.962289 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:07:08.965058 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:07:08.969290 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:08:43.034235 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:08:43.037025 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:08:43.039634 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:09:33.171891 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:09:33.174779 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:09:33.177412 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:14:47.963066 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:14:47.988447 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:14:47.993237 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:15:37.064252 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:15:37.067637 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:15:37.071088 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:16:58.564617 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:16:58.567569 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:16:58.571201 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:17:15.580462 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:17:15.583067 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:17:15.585510 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:17:37.001628 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:17:37.004849 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:17:37.007753 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:18:57.980672 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:18:57.983683 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:18:57.985958 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:22:06.326375 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:22:06.330729 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:22:06.333489 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:22:19.018235 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:22:19.021187 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:22:19.023721 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:22:27.627819 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:22:27.630447 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:22:27.633219 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:22:51.624358 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:22:51.627278 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:22:51.629777 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:25:11.166533 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:25:11.169855 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:25:11.172591 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:26:17.247246 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:26:17.249874 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:26:17.252737 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:28:03.353351 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:28:03.356587 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:28:03.359187 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:30:04.945284 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:30:04.948356 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:30:04.950941 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:30:23.365129 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:30:23.367951 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:30:48.170003 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:30:48.172733 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:30:48.176011 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:31:03.602288 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:31:03.605595 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:31:03.608472 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:52:31.405612 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:53:01.619798 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:53:01.622293 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:53:01.625153 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:53:28.440970 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:53:28.443743 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:53:28.447390 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:54:00.475192 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:54:00.478376 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:54:00.481265 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:54:31.149864 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:54:31.152909 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:54:31.155698 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:55:17.774890 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:55:17.777677 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:55:17.780405 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:56:35.880288 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:56:35.883332 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:56:35.887750 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:57:32.783565 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:57:32.786084 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:57:56.520604 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:57:56.523327 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:58:32.208092 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:58:32.211084 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:58:32.213661 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:58:43.032325 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:58:43.035783 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:58:43.038680 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:58:50.856228 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:58:50.859385 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-27 16:58:50.861838 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 08:13:06.292004 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 08:13:06.295063 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 08:13:06.297776 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 08:32:39.628732 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 08:32:56.292256 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 08:32:56.295197 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 08:33:09.644981 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 08:33:09.647956 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 08:33:09.650726 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 08:35:03.042420 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 08:35:03.045340 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 08:35:03.047861 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 08:35:20.520865 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 08:35:20.523936 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 08:35:20.526767 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 08:35:35.724825 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 08:35:35.727845 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 08:35:35.730435 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 08:42:30.614765 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 08:42:30.617967 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 08:42:30.620642 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 08:43:45.495156 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 08:43:45.498113 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 08:43:45.500714 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 08:44:03.509416 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 08:44:03.513900 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 08:44:11.424363 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 08:44:11.427890 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 08:44:11.432006 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 08:45:01.065085 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 08:45:01.067923 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 08:45:01.070383 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 08:48:57.626536 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 08:48:57.629737 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 08:48:57.634704 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 08:54:46.459174 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 08:54:46.462273 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 08:54:46.465207 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 08:55:45.503095 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 08:55:45.506142 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 08:57:09.822478 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 08:57:09.825365 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 08:58:46.275700 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 08:58:46.278624 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 08:59:21.838151 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 08:59:21.841268 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 09:01:09.194781 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 09:01:09.197735 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 09:01:24.605315 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 09:01:24.608282 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 09:02:00.876345 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 09:02:00.879374 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 09:02:00.881972 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 09:02:39.258081 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 09:02:39.261240 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 09:02:39.264211 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 09:02:46.120991 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 09:02:46.123857 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 09:03:36.069418 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 09:03:36.072262 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 09:23:12.613465 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 09:23:12.616800 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 09:23:12.619357 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 09:23:35.312029 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 09:23:35.315276 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 09:24:04.167401 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 09:24:04.170140 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 09:24:13.684303 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 09:24:13.687149 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 09:24:13.690033 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 09:25:00.106974 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 09:25:00.109961 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 09:25:42.687292 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 09:26:49.945785 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 09:26:49.949314 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 09:26:56.774826 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 09:26:56.778236 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 11:03:03.591751 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 11:03:03.594956 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 11:03:18.787298 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 11:03:18.790570 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 11:18:38.272341 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 11:18:38.276712 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 11:41:26.715967 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 11:41:41.195947 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 11:41:41.199155 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 11:42:20.023515 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 11:42:28.320343 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 11:42:28.323207 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 11:43:09.365443 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 11:43:09.368774 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 12:29:13.634967 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 12:29:13.638211 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 12:29:13.640993 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 12:30:52.779882 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 12:30:52.783288 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 12:31:27.274568 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 12:31:27.277823 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 12:32:51.610974 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 12:32:51.614287 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 12:33:12.125198 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 12:33:24.989566 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 12:33:24.993353 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 12:33:45.451932 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 12:33:45.454874 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 12:33:56.991223 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 12:33:56.995005 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 12:37:59.614606 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 12:37:59.619789 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 12:37:59.810518 >>> {'status': '400', 'error_message': 'Missing required parameter start_date'}
+2014-03-28 12:38:55.432049 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 12:38:55.436483 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 12:38:55.620581 >>> {'status': '400', 'error_message': 'Missing required parameter start_date'}
+2014-03-28 12:39:02.313868 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 12:39:02.317027 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 12:39:02.505382 >>> {'status': '400', 'error_message': 'Missing required parameter end_date'}
+2014-03-28 12:39:02.508601 >>> {'status': '400', 'error_message': 'Missing required parameter metric'}
+2014-03-28 12:39:02.511236 >>> {'status': '400', 'error_message': 'Missing required parameter network'}
+2014-03-28 12:39:02.513832 >>> {'status': '400', 'error_message': 'Missing required parameter start_date'}
+2014-03-28 12:39:28.850287 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 12:39:28.854013 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 12:39:29.050518 >>> {'status': '400', 'error_message': u'Invalid metric parameter test_metric'}
+2014-03-28 12:39:29.054603 >>> {'status': '400', 'error_message': 'Missing required parameter end_date'}
+2014-03-28 12:39:29.058316 >>> {'status': '400', 'error_message': 'Missing required parameter metric'}
+2014-03-28 12:39:29.062573 >>> {'status': '400', 'error_message': 'Missing required parameter network'}
+2014-03-28 12:39:29.066911 >>> {'status': '400', 'error_message': 'Missing required parameter start_date'}
+2014-03-28 12:39:43.093274 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 12:39:43.096699 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 12:39:43.281048 >>> {'status': '400', 'error_message': u'Invalid metric parameter test_metric'}
+2014-03-28 12:39:43.284508 >>> {'status': '400', 'error_message': 'Missing required parameter end_date'}
+2014-03-28 12:39:43.288534 >>> {'status': '400', 'error_message': 'Missing required parameter metric'}
+2014-03-28 12:39:43.292603 >>> {'status': '400', 'error_message': 'Missing required parameter network'}
+2014-03-28 12:39:43.295917 >>> {'status': '400', 'error_message': 'Missing required parameter start_date'}
+2014-03-28 12:41:35.256533 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 12:41:35.260299 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 12:41:35.453834 >>> {'status': '400', 'error_message': u'Invalid metric parameter test_metric'}
+2014-03-28 12:41:35.457368 >>> {'status': '400', 'error_message': 'Missing required parameter end_date'}
+2014-03-28 12:41:35.461421 >>> {'status': '400', 'error_message': 'Missing required parameter metric'}
+2014-03-28 12:41:35.465207 >>> {'status': '400', 'error_message': 'Missing required parameter network'}
+2014-03-28 12:41:35.468357 >>> {'status': '400', 'error_message': 'Missing required parameter start_date'}
+2014-03-28 12:41:35.471134 >>> {'status': '400', 'error_message': 'End date is before start date.'}
+2014-03-28 12:42:19.191921 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 12:42:19.195629 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 12:42:19.378737 >>> {'status': '400', 'error_message': u'Invalid metric parameter test_metric'}
+2014-03-28 12:42:19.382456 >>> {'status': '400', 'error_message': 'Missing required parameter end_date'}
+2014-03-28 12:42:19.385912 >>> {'status': '400', 'error_message': 'Missing required parameter metric'}
+2014-03-28 12:42:19.388898 >>> {'status': '400', 'error_message': 'Missing required parameter network'}
+2014-03-28 12:42:19.391703 >>> {'status': '400', 'error_message': 'Missing required parameter start_date'}
+2014-03-28 12:42:19.395055 >>> {'status': '400', 'error_message': 'End date is before start date.'}
+2014-03-28 12:42:46.017715 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 12:42:46.020951 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 12:42:46.207104 >>> {'status': '400', 'error_message': u'Invalid metric parameter test_metric'}
+2014-03-28 12:42:46.211574 >>> {'status': '400', 'error_message': 'Missing required parameter end_date'}
+2014-03-28 12:42:46.215242 >>> {'status': '400', 'error_message': 'Missing required parameter metric'}
+2014-03-28 12:42:46.218374 >>> {'status': '400', 'error_message': 'Missing required parameter network'}
+2014-03-28 12:42:46.221325 >>> {'status': '400', 'error_message': 'Missing required parameter start_date'}
+2014-03-28 12:42:46.224270 >>> {'status': '400', 'error_message': 'End date is before start date.'}
+2014-03-28 13:53:08.194617 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 13:53:08.198666 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 13:53:08.427198 >>> {'status': '400', 'error_message': u'Invalid metric parameter test_metric'}
+2014-03-28 13:53:08.430709 >>> {'status': '400', 'error_message': 'Missing required parameter end_date'}
+2014-03-28 13:53:08.434024 >>> {'status': '400', 'error_message': 'Missing required parameter metric'}
+2014-03-28 13:53:08.437473 >>> {'status': '400', 'error_message': 'Missing required parameter network'}
+2014-03-28 13:53:08.440798 >>> {'status': '400', 'error_message': 'Missing required parameter start_date'}
+2014-03-28 13:53:08.445373 >>> {'status': '400', 'error_message': 'End date is before start date.'}
+2014-03-28 13:55:38.931508 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 13:55:38.935781 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 13:55:39.293214 >>> {'status': '400', 'error_message': u'Invalid metric parameter test_metric'}
+2014-03-28 13:55:39.296332 >>> {'status': '400', 'error_message': 'Missing required parameter end_date'}
+2014-03-28 13:55:39.299536 >>> {'status': '400', 'error_message': 'Missing required parameter metric'}
+2014-03-28 13:55:39.302423 >>> {'status': '400', 'error_message': 'Missing required parameter network'}
+2014-03-28 13:55:39.305489 >>> {'status': '400', 'error_message': 'Missing required parameter start_date'}
+2014-03-28 13:55:39.308317 >>> {'status': '400', 'error_message': 'End date is before start date.'}
+2014-03-28 13:55:57.768348 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 13:55:57.771497 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 13:55:58.118655 >>> {'status': '400', 'error_message': u'Invalid metric parameter test_metric'}
+2014-03-28 13:55:58.121884 >>> {'status': '400', 'error_message': 'Missing required parameter end_date'}
+2014-03-28 13:55:58.126459 >>> {'status': '400', 'error_message': 'Missing required parameter metric'}
+2014-03-28 13:55:58.129110 >>> {'status': '400', 'error_message': 'Missing required parameter network'}
+2014-03-28 13:55:58.131981 >>> {'status': '400', 'error_message': 'Missing required parameter start_date'}
+2014-03-28 13:55:58.135524 >>> {'status': '400', 'error_message': 'End date is before start date.'}
+2014-03-28 13:56:32.297293 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 13:56:32.301192 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 13:56:32.667495 >>> {'status': '400', 'error_message': u'Invalid metric parameter test_metric'}
+2014-03-28 13:56:32.671518 >>> {'status': '400', 'error_message': 'Missing required parameter end_date'}
+2014-03-28 13:56:32.674195 >>> {'status': '400', 'error_message': 'Missing required parameter metric'}
+2014-03-28 13:56:32.677025 >>> {'status': '400', 'error_message': 'Missing required parameter network'}
+2014-03-28 13:56:32.679932 >>> {'status': '400', 'error_message': 'Missing required parameter start_date'}
+2014-03-28 13:56:32.683745 >>> {'status': '400', 'error_message': 'End date is before start date.'}
+2014-03-28 13:57:06.172383 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 13:57:06.175963 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 13:57:06.539775 >>> {'status': '400', 'error_message': u'Invalid metric parameter test_metric'}
+2014-03-28 13:57:06.543364 >>> {'status': '400', 'error_message': 'Missing required parameter end_date'}
+2014-03-28 13:57:06.546458 >>> {'status': '400', 'error_message': 'Missing required parameter metric'}
+2014-03-28 13:57:06.549703 >>> {'status': '400', 'error_message': 'Missing required parameter network'}
+2014-03-28 13:57:06.553295 >>> {'status': '400', 'error_message': 'Missing required parameter start_date'}
+2014-03-28 13:57:06.556966 >>> {'status': '400', 'error_message': 'End date is before start date.'}
+2014-03-28 13:57:59.659981 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 13:57:59.662834 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 13:58:00.008407 >>> {'status': '400', 'error_message': u'Invalid metric parameter test_metric'}
+2014-03-28 13:58:00.011723 >>> {'status': '400', 'error_message': 'Missing required parameter end_date'}
+2014-03-28 13:58:00.014687 >>> {'status': '400', 'error_message': 'Missing required parameter metric'}
+2014-03-28 13:58:00.017718 >>> {'status': '400', 'error_message': 'Missing required parameter network'}
+2014-03-28 13:58:00.021375 >>> {'status': '400', 'error_message': 'Missing required parameter start_date'}
+2014-03-28 13:58:00.025023 >>> {'status': '400', 'error_message': 'End date is before start date.'}
+2014-03-28 13:58:10.122601 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 13:58:10.125694 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 13:58:10.493955 >>> {'status': '400', 'error_message': u'Invalid metric parameter test_metric'}
+2014-03-28 13:58:10.497042 >>> {'status': '400', 'error_message': 'Missing required parameter end_date'}
+2014-03-28 13:58:10.499783 >>> {'status': '400', 'error_message': 'Missing required parameter metric'}
+2014-03-28 13:58:10.503120 >>> {'status': '400', 'error_message': 'Missing required parameter network'}
+2014-03-28 13:58:10.506946 >>> {'status': '400', 'error_message': 'Missing required parameter start_date'}
+2014-03-28 13:58:10.509876 >>> {'status': '400', 'error_message': 'End date is before start date.'}
+2014-03-28 13:59:50.717070 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 13:59:50.720922 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 13:59:51.112668 >>> {'status': '400', 'error_message': u'Invalid metric parameter test_metric'}
+2014-03-28 13:59:51.116509 >>> {'status': '400', 'error_message': 'Missing required parameter end_date'}
+2014-03-28 13:59:51.119455 >>> {'status': '400', 'error_message': 'Missing required parameter metric'}
+2014-03-28 13:59:51.122376 >>> {'status': '400', 'error_message': 'Missing required parameter network'}
+2014-03-28 13:59:51.126206 >>> {'status': '400', 'error_message': 'Missing required parameter start_date'}
+2014-03-28 13:59:51.129612 >>> {'status': '400', 'error_message': 'End date is before start date.'}
+2014-03-28 14:00:17.682422 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 14:00:17.685317 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 14:00:18.062217 >>> {'status': '400', 'error_message': u'Invalid metric parameter test_metric'}
+2014-03-28 14:00:18.066717 >>> {'status': '400', 'error_message': 'Missing required parameter end_date'}
+2014-03-28 14:00:18.072840 >>> {'status': '400', 'error_message': 'Missing required parameter metric'}
+2014-03-28 14:00:18.079879 >>> {'status': '400', 'error_message': 'Missing required parameter network'}
+2014-03-28 14:00:18.083028 >>> {'status': '400', 'error_message': 'Missing required parameter start_date'}
+2014-03-28 14:00:18.086448 >>> {'status': '400', 'error_message': 'End date is before start date.'}
+2014-03-28 14:50:07.051833 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 14:50:07.054970 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 14:50:07.762474 >>> {'status': '400', 'error_message': u'Invalid metric parameter test_metric'}
+2014-03-28 14:50:07.765578 >>> {'status': '400', 'error_message': 'Missing required parameter end_date'}
+2014-03-28 14:50:07.768507 >>> {'status': '400', 'error_message': 'Missing required parameter metric'}
+2014-03-28 14:50:07.771077 >>> {'status': '400', 'error_message': 'Missing required parameter network'}
+2014-03-28 14:50:07.773805 >>> {'status': '400', 'error_message': 'Missing required parameter start_date'}
+2014-03-28 14:50:07.778613 >>> {'status': '400', 'error_message': 'End date is before start date.'}
+2014-03-28 14:51:38.833593 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 14:51:38.837033 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 14:51:39.544362 >>> {'status': '400', 'error_message': u'Invalid metric parameter test_metric'}
+2014-03-28 14:51:39.548022 >>> {'status': '400', 'error_message': 'Missing required parameter end_date'}
+2014-03-28 14:51:39.551301 >>> {'status': '400', 'error_message': 'Missing required parameter metric'}
+2014-03-28 14:51:39.553910 >>> {'status': '400', 'error_message': 'Missing required parameter network'}
+2014-03-28 14:51:39.557078 >>> {'status': '400', 'error_message': 'Missing required parameter start_date'}
+2014-03-28 14:51:39.561059 >>> {'status': '400', 'error_message': 'End date is before start date.'}
+2014-03-28 15:01:15.449628 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 15:01:15.453598 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 15:01:16.145336 >>> {'status': '400', 'error_message': u'Invalid metric parameter test_metric'}
+2014-03-28 15:01:16.150526 >>> {'status': '400', 'error_message': 'Missing required parameter end_date'}
+2014-03-28 15:01:16.154223 >>> {'status': '400', 'error_message': 'Missing required parameter metric'}
+2014-03-28 15:01:16.158403 >>> {'status': '400', 'error_message': 'Missing required parameter network'}
+2014-03-28 15:01:16.161083 >>> {'status': '400', 'error_message': 'Missing required parameter start_date'}
+2014-03-28 15:01:16.163613 >>> {'status': '400', 'error_message': 'End date is before start date.'}
+2014-03-28 15:06:05.773071 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 15:06:05.776451 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 15:06:06.440229 >>> {'status': '400', 'error_message': u'Invalid metric parameter test_metric'}
+2014-03-28 15:06:06.443278 >>> {'status': '400', 'error_message': 'Missing required parameter end_date'}
+2014-03-28 15:06:06.446658 >>> {'status': '400', 'error_message': 'Missing required parameter metric'}
+2014-03-28 15:06:06.450721 >>> {'status': '400', 'error_message': 'Missing required parameter network'}
+2014-03-28 15:06:06.453810 >>> {'status': '400', 'error_message': 'Missing required parameter start_date'}
+2014-03-28 15:06:06.456625 >>> {'status': '400', 'error_message': 'End date is before start date.'}
+2014-03-28 15:09:05.283871 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 15:09:05.288327 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 15:09:05.941044 >>> {'status': '400', 'error_message': u'Invalid metric parameter test_metric'}
+2014-03-28 15:09:05.944927 >>> {'status': '400', 'error_message': 'Missing required parameter end_date'}
+2014-03-28 15:09:05.949787 >>> {'status': '400', 'error_message': 'Missing required parameter metric'}
+2014-03-28 15:09:05.953753 >>> {'status': '400', 'error_message': 'Missing required parameter network'}
+2014-03-28 15:09:05.958066 >>> {'status': '400', 'error_message': 'Missing required parameter start_date'}
+2014-03-28 15:09:05.962533 >>> {'status': '400', 'error_message': 'End date is before start date.'}
+2014-03-28 15:11:14.573622 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 15:11:14.588587 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 15:11:15.274464 >>> {'status': '400', 'error_message': u'Invalid metric parameter test_metric'}
+2014-03-28 15:11:15.278276 >>> {'status': '400', 'error_message': 'Missing required parameter end_date'}
+2014-03-28 15:11:15.281752 >>> {'status': '400', 'error_message': 'Missing required parameter metric'}
+2014-03-28 15:11:15.285044 >>> {'status': '400', 'error_message': 'Missing required parameter network'}
+2014-03-28 15:11:15.289032 >>> {'status': '400', 'error_message': 'Missing required parameter start_date'}
+2014-03-28 15:11:15.293141 >>> {'status': '400', 'error_message': 'End date is before start date.'}
+2014-03-28 15:11:53.807701 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 15:11:53.811605 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 15:11:54.486808 >>> {'status': '400', 'error_message': u'Invalid metric parameter test_metric'}
+2014-03-28 15:11:54.490141 >>> {'status': '400', 'error_message': 'Missing required parameter end_date'}
+2014-03-28 15:11:54.494889 >>> {'status': '400', 'error_message': 'Missing required parameter metric'}
+2014-03-28 15:11:54.499891 >>> {'status': '400', 'error_message': 'Missing required parameter network'}
+2014-03-28 15:11:54.503647 >>> {'status': '400', 'error_message': 'Missing required parameter start_date'}
+2014-03-28 15:11:54.506392 >>> {'status': '400', 'error_message': 'End date is before start date.'}
+2014-03-28 15:12:30.626107 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 15:12:30.629918 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 15:12:31.282176 >>> {'status': '400', 'error_message': u'Invalid metric parameter test_metric'}
+2014-03-28 15:12:31.285345 >>> {'status': '400', 'error_message': 'Missing required parameter end_date'}
+2014-03-28 15:12:31.288628 >>> {'status': '400', 'error_message': 'Missing required parameter metric'}
+2014-03-28 15:12:31.291276 >>> {'status': '400', 'error_message': 'Missing required parameter network'}
+2014-03-28 15:12:31.294954 >>> {'status': '400', 'error_message': 'Missing required parameter start_date'}
+2014-03-28 15:12:31.298440 >>> {'status': '400', 'error_message': 'End date is before start date.'}
+2014-03-28 15:26:26.110469 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 15:26:26.113831 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 15:26:26.730888 >>> {'status': '400', 'error_message': u'Invalid metric parameter test_metric'}
+2014-03-28 15:26:26.733962 >>> {'status': '400', 'error_message': 'Missing required parameter end_date'}
+2014-03-28 15:26:26.736983 >>> {'status': '400', 'error_message': 'Missing required parameter metric'}
+2014-03-28 15:26:26.739938 >>> {'status': '400', 'error_message': 'Missing required parameter network'}
+2014-03-28 15:26:26.743112 >>> {'status': '400', 'error_message': 'Missing required parameter start_date'}
+2014-03-28 15:26:26.746228 >>> {'status': '400', 'error_message': 'End date is before start date.'}
+2014-03-28 15:33:05.052714 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 15:33:05.056349 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 15:33:05.725026 >>> {'status': '400', 'error_message': u'Invalid metric parameter test_metric'}
+2014-03-28 15:33:05.728035 >>> {'status': '400', 'error_message': 'Missing required parameter end_date'}
+2014-03-28 15:33:05.730807 >>> {'status': '400', 'error_message': 'Missing required parameter metric'}
+2014-03-28 15:33:05.733844 >>> {'status': '400', 'error_message': 'Missing required parameter network'}
+2014-03-28 15:33:05.737741 >>> {'status': '400', 'error_message': 'Missing required parameter start_date'}
+2014-03-28 15:33:05.741530 >>> {'status': '400', 'error_message': 'End date is before start date.'}
+2014-03-28 15:41:49.212194 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 15:41:49.215428 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 15:41:49.848724 >>> {'status': '400', 'error_message': u'Invalid metric parameter test_metric'}
+2014-03-28 15:41:49.852374 >>> {'status': '400', 'error_message': 'Missing required parameter end_date'}
+2014-03-28 15:41:49.855374 >>> {'status': '400', 'error_message': 'Missing required parameter metric'}
+2014-03-28 15:41:49.857907 >>> {'status': '400', 'error_message': 'Missing required parameter network'}
+2014-03-28 15:41:49.860762 >>> {'status': '400', 'error_message': 'Missing required parameter start_date'}
+2014-03-28 15:41:49.863484 >>> {'status': '400', 'error_message': 'End date is before start date.'}
+2014-03-28 15:45:30.046870 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 15:45:30.049935 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 15:45:31.181503 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-28 15:45:31.320048 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-28 15:45:31.460844 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-28 15:45:31.598081 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-28 15:45:31.735629 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-28 15:45:31.874693 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-28 15:45:32.011906 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-28 15:45:32.150416 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-28 15:45:32.289482 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-28 15:45:32.438292 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-28 15:45:32.586818 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-28 15:45:34.192652 >>> {'status': '400', 'error_message': u'Invalid metric parameter test_metric'}
+2014-03-28 15:45:34.195745 >>> {'status': '400', 'error_message': 'Missing required parameter end_date'}
+2014-03-28 15:45:34.199542 >>> {'status': '400', 'error_message': 'Missing required parameter metric'}
+2014-03-28 15:45:34.202085 >>> {'status': '400', 'error_message': 'Missing required parameter network'}
+2014-03-28 15:45:34.204844 >>> {'status': '400', 'error_message': 'Missing required parameter start_date'}
+2014-03-28 15:45:34.207477 >>> {'status': '400', 'error_message': 'End date is before start date.'}
+2014-03-28 15:46:43.875843 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 15:46:43.878835 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 15:46:44.542616 >>> {'status': '400', 'error_message': u'Invalid metric parameter test_metric'}
+2014-03-28 15:46:44.545647 >>> {'status': '400', 'error_message': 'Missing required parameter end_date'}
+2014-03-28 15:46:44.548470 >>> {'status': '400', 'error_message': 'Missing required parameter metric'}
+2014-03-28 15:46:44.551230 >>> {'status': '400', 'error_message': 'Missing required parameter network'}
+2014-03-28 15:46:44.554056 >>> {'status': '400', 'error_message': 'Missing required parameter start_date'}
+2014-03-28 15:46:44.556674 >>> {'status': '400', 'error_message': 'End date is before start date.'}
+2014-03-28 15:46:54.252186 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 15:46:54.255214 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 15:46:55.044509 >>> {'status': '400', 'error_message': u'Invalid metric parameter test_metric'}
+2014-03-28 15:46:55.048017 >>> {'status': '400', 'error_message': 'Missing required parameter end_date'}
+2014-03-28 15:46:55.051314 >>> {'status': '400', 'error_message': 'Missing required parameter metric'}
+2014-03-28 15:46:55.054827 >>> {'status': '400', 'error_message': 'Missing required parameter network'}
+2014-03-28 15:46:55.059074 >>> {'status': '400', 'error_message': 'Missing required parameter start_date'}
+2014-03-28 15:46:55.061881 >>> {'status': '400', 'error_message': 'End date is before start date.'}
+2014-03-28 15:47:03.010713 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 15:47:03.013665 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 15:47:04.021724 >>> {'status': '400', 'error_message': u'Invalid metric parameter test_metric'}
+2014-03-28 15:47:04.025669 >>> {'status': '400', 'error_message': 'Missing required parameter end_date'}
+2014-03-28 15:47:04.029680 >>> {'status': '400', 'error_message': 'Missing required parameter metric'}
+2014-03-28 15:47:04.032573 >>> {'status': '400', 'error_message': 'Missing required parameter network'}
+2014-03-28 15:47:04.035403 >>> {'status': '400', 'error_message': 'Missing required parameter start_date'}
+2014-03-28 15:47:04.038248 >>> {'status': '400', 'error_message': 'End date is before start date.'}
+2014-03-28 15:47:12.029580 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 15:47:12.032554 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 15:47:13.225283 >>> {'status': '400', 'error_message': u'Invalid metric parameter test_metric'}
+2014-03-28 15:47:13.228285 >>> {'status': '400', 'error_message': 'Missing required parameter end_date'}
+2014-03-28 15:47:13.230952 >>> {'status': '400', 'error_message': 'Missing required parameter metric'}
+2014-03-28 15:47:13.233689 >>> {'status': '400', 'error_message': 'Missing required parameter network'}
+2014-03-28 15:47:13.236537 >>> {'status': '400', 'error_message': 'Missing required parameter start_date'}
+2014-03-28 15:47:13.239214 >>> {'status': '400', 'error_message': 'End date is before start date.'}
+2014-03-28 15:47:21.049084 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 15:47:21.052378 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 15:47:22.334967 >>> {'status': '400', 'error_message': u'Invalid metric parameter test_metric'}
+2014-03-28 15:47:22.337892 >>> {'status': '400', 'error_message': 'Missing required parameter end_date'}
+2014-03-28 15:47:22.340712 >>> {'status': '400', 'error_message': 'Missing required parameter metric'}
+2014-03-28 15:47:22.343678 >>> {'status': '400', 'error_message': 'Missing required parameter network'}
+2014-03-28 15:47:22.346380 >>> {'status': '400', 'error_message': 'Missing required parameter start_date'}
+2014-03-28 15:47:22.349215 >>> {'status': '400', 'error_message': 'End date is before start date.'}
+2014-03-28 15:47:28.466849 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 15:47:28.470136 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 15:47:29.968551 >>> {'status': '400', 'error_message': u'Invalid metric parameter test_metric'}
+2014-03-28 15:47:29.971554 >>> {'status': '400', 'error_message': 'Missing required parameter end_date'}
+2014-03-28 15:47:29.974305 >>> {'status': '400', 'error_message': 'Missing required parameter metric'}
+2014-03-28 15:47:29.977171 >>> {'status': '400', 'error_message': 'Missing required parameter network'}
+2014-03-28 15:47:29.979831 >>> {'status': '400', 'error_message': 'Missing required parameter start_date'}
+2014-03-28 15:47:29.982985 >>> {'status': '400', 'error_message': 'End date is before start date.'}
+2014-03-28 15:47:34.919220 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 15:47:34.922151 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 15:47:36.589289 >>> {'status': '400', 'error_message': u'Invalid metric parameter test_metric'}
+2014-03-28 15:47:36.592571 >>> {'status': '400', 'error_message': 'Missing required parameter end_date'}
+2014-03-28 15:47:36.600689 >>> {'status': '400', 'error_message': 'Missing required parameter metric'}
+2014-03-28 15:47:36.604027 >>> {'status': '400', 'error_message': 'Missing required parameter network'}
+2014-03-28 15:47:36.606966 >>> {'status': '400', 'error_message': 'Missing required parameter start_date'}
+2014-03-28 15:47:36.609974 >>> {'status': '400', 'error_message': 'End date is before start date.'}
+2014-03-28 15:47:57.003956 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 15:47:57.006717 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 15:47:58.118777 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-28 15:47:58.767766 >>> {'status': '400', 'error_message': u'Invalid metric parameter test_metric'}
+2014-03-28 15:47:58.772560 >>> {'status': '400', 'error_message': 'Missing required parameter end_date'}
+2014-03-28 15:47:58.775436 >>> {'status': '400', 'error_message': 'Missing required parameter metric'}
+2014-03-28 15:47:58.778172 >>> {'status': '400', 'error_message': 'Missing required parameter network'}
+2014-03-28 15:47:58.781054 >>> {'status': '400', 'error_message': 'Missing required parameter start_date'}
+2014-03-28 15:47:58.783936 >>> {'status': '400', 'error_message': 'End date is before start date.'}
+2014-03-28 15:48:03.528516 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 15:48:03.532103 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 15:48:04.738241 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-28 15:48:04.875521 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-28 15:48:05.531697 >>> {'status': '400', 'error_message': u'Invalid metric parameter test_metric'}
+2014-03-28 15:48:05.534710 >>> {'status': '400', 'error_message': 'Missing required parameter end_date'}
+2014-03-28 15:48:05.537760 >>> {'status': '400', 'error_message': 'Missing required parameter metric'}
+2014-03-28 15:48:05.540983 >>> {'status': '400', 'error_message': 'Missing required parameter network'}
+2014-03-28 15:48:05.543727 >>> {'status': '400', 'error_message': 'Missing required parameter start_date'}
+2014-03-28 15:48:05.546380 >>> {'status': '400', 'error_message': 'End date is before start date.'}
+2014-03-28 15:48:31.250851 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 15:48:31.253791 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 15:48:32.372360 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-28 15:48:33.014211 >>> {'status': '400', 'error_message': u'Invalid metric parameter test_metric'}
+2014-03-28 15:48:33.017142 >>> {'status': '400', 'error_message': 'Missing required parameter end_date'}
+2014-03-28 15:48:33.019837 >>> {'status': '400', 'error_message': 'Missing required parameter metric'}
+2014-03-28 15:48:33.023607 >>> {'status': '400', 'error_message': 'Missing required parameter network'}
+2014-03-28 15:48:33.026885 >>> {'status': '400', 'error_message': 'Missing required parameter start_date'}
+2014-03-28 15:48:33.029904 >>> {'status': '400', 'error_message': 'End date is before start date.'}
+2014-03-28 15:49:15.241759 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 15:49:15.245373 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 15:49:16.437555 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-28 15:49:16.574455 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-28 15:49:17.224881 >>> {'status': '400', 'error_message': u'Invalid metric parameter test_metric'}
+2014-03-28 15:49:17.227663 >>> {'status': '400', 'error_message': 'Missing required parameter end_date'}
+2014-03-28 15:49:17.230739 >>> {'status': '400', 'error_message': 'Missing required parameter metric'}
+2014-03-28 15:49:17.233709 >>> {'status': '400', 'error_message': 'Missing required parameter network'}
+2014-03-28 15:49:17.236519 >>> {'status': '400', 'error_message': 'Missing required parameter start_date'}
+2014-03-28 15:49:17.240355 >>> {'status': '400', 'error_message': 'End date is before start date.'}
+2014-03-28 15:49:45.224968 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 15:49:45.228228 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 15:49:46.328931 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-28 15:49:46.966383 >>> {'status': '400', 'error_message': u'Invalid metric parameter test_metric'}
+2014-03-28 15:49:46.969995 >>> {'status': '400', 'error_message': 'Missing required parameter end_date'}
+2014-03-28 15:49:46.972696 >>> {'status': '400', 'error_message': 'Missing required parameter metric'}
+2014-03-28 15:49:46.975413 >>> {'status': '400', 'error_message': 'Missing required parameter network'}
+2014-03-28 15:49:46.978003 >>> {'status': '400', 'error_message': 'Missing required parameter start_date'}
+2014-03-28 15:49:46.980762 >>> {'status': '400', 'error_message': 'End date is before start date.'}
+2014-03-28 15:49:57.286690 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 15:49:57.290218 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 15:49:58.421478 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-28 15:49:58.559959 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-28 15:49:59.208840 >>> {'status': '400', 'error_message': u'Invalid metric parameter test_metric'}
+2014-03-28 15:49:59.212342 >>> {'status': '400', 'error_message': 'Missing required parameter end_date'}
+2014-03-28 15:49:59.215091 >>> {'status': '400', 'error_message': 'Missing required parameter metric'}
+2014-03-28 15:49:59.217756 >>> {'status': '400', 'error_message': 'Missing required parameter network'}
+2014-03-28 15:49:59.220496 >>> {'status': '400', 'error_message': 'Missing required parameter start_date'}
+2014-03-28 15:49:59.223294 >>> {'status': '400', 'error_message': 'End date is before start date.'}
+2014-03-28 15:59:08.230219 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 15:59:08.233856 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 15:59:09.334566 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-28 15:59:09.485403 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-28 15:59:10.138752 >>> {'status': '400', 'error_message': u'Invalid metric parameter test_metric'}
+2014-03-28 15:59:10.141747 >>> {'status': '400', 'error_message': 'Missing required parameter end_date'}
+2014-03-28 15:59:10.144544 >>> {'status': '400', 'error_message': 'Missing required parameter metric'}
+2014-03-28 15:59:10.147060 >>> {'status': '400', 'error_message': 'Missing required parameter network'}
+2014-03-28 15:59:10.150102 >>> {'status': '400', 'error_message': 'Missing required parameter start_date'}
+2014-03-28 15:59:10.153075 >>> {'status': '400', 'error_message': 'End date is before start date.'}
+2014-03-28 16:02:15.613337 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 16:02:15.616461 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 16:02:16.726077 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-28 16:02:17.380524 >>> {'status': '400', 'error_message': u'Invalid metric parameter test_metric'}
+2014-03-28 16:02:17.384445 >>> {'status': '400', 'error_message': 'Missing required parameter end_date'}
+2014-03-28 16:02:17.388279 >>> {'status': '400', 'error_message': 'Missing required parameter metric'}
+2014-03-28 16:02:17.393535 >>> {'status': '400', 'error_message': 'Missing required parameter network'}
+2014-03-28 16:02:17.396600 >>> {'status': '400', 'error_message': 'Missing required parameter start_date'}
+2014-03-28 16:02:17.399503 >>> {'status': '400', 'error_message': 'End date is before start date.'}
+2014-03-28 16:02:24.831544 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 16:02:24.836342 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 16:02:26.002200 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-28 16:02:26.142467 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-28 16:02:26.797448 >>> {'status': '400', 'error_message': u'Invalid metric parameter test_metric'}
+2014-03-28 16:02:26.800858 >>> {'status': '400', 'error_message': 'Missing required parameter end_date'}
+2014-03-28 16:02:26.803741 >>> {'status': '400', 'error_message': 'Missing required parameter metric'}
+2014-03-28 16:02:26.806411 >>> {'status': '400', 'error_message': 'Missing required parameter network'}
+2014-03-28 16:02:26.809759 >>> {'status': '400', 'error_message': 'Missing required parameter start_date'}
+2014-03-28 16:02:26.812787 >>> {'status': '400', 'error_message': 'End date is before start date.'}
+2014-03-28 16:02:33.621836 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 16:02:33.624980 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 16:02:34.889680 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-28 16:02:35.534902 >>> {'status': '400', 'error_message': u'Invalid metric parameter test_metric'}
+2014-03-28 16:02:35.538007 >>> {'status': '400', 'error_message': 'Missing required parameter end_date'}
+2014-03-28 16:02:35.540727 >>> {'status': '400', 'error_message': 'Missing required parameter metric'}
+2014-03-28 16:02:35.543457 >>> {'status': '400', 'error_message': 'Missing required parameter network'}
+2014-03-28 16:02:35.546053 >>> {'status': '400', 'error_message': 'Missing required parameter start_date'}
+2014-03-28 16:02:35.549211 >>> {'status': '400', 'error_message': 'End date is before start date.'}
+2014-03-28 16:03:36.877232 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 16:03:36.880079 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 16:03:37.987760 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-28 16:03:38.636344 >>> {'status': '400', 'error_message': u'Invalid metric parameter test_metric'}
+2014-03-28 16:03:38.639773 >>> {'status': '400', 'error_message': 'Missing required parameter end_date'}
+2014-03-28 16:03:38.642666 >>> {'status': '400', 'error_message': 'Missing required parameter metric'}
+2014-03-28 16:03:38.645608 >>> {'status': '400', 'error_message': 'Missing required parameter network'}
+2014-03-28 16:03:38.648457 >>> {'status': '400', 'error_message': 'Missing required parameter start_date'}
+2014-03-28 16:03:38.651360 >>> {'status': '400', 'error_message': 'End date is before start date.'}
+2014-03-28 16:04:13.469817 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 16:04:13.473212 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 16:04:14.584568 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-28 16:04:14.724893 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-28 16:04:14.872970 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-28 16:04:15.012364 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-28 16:04:15.149911 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-28 16:04:15.288472 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-28 16:04:16.438359 >>> {'status': '400', 'error_message': u'Invalid metric parameter test_metric'}
+2014-03-28 16:04:16.441452 >>> {'status': '400', 'error_message': 'Missing required parameter end_date'}
+2014-03-28 16:04:16.444319 >>> {'status': '400', 'error_message': 'Missing required parameter metric'}
+2014-03-28 16:04:16.446922 >>> {'status': '400', 'error_message': 'Missing required parameter network'}
+2014-03-28 16:04:16.449608 >>> {'status': '400', 'error_message': 'Missing required parameter start_date'}
+2014-03-28 16:04:16.452516 >>> {'status': '400', 'error_message': 'End date is before start date.'}
+2014-03-28 16:05:18.981659 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 16:05:18.984969 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 16:05:20.171266 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-28 16:05:20.310425 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-28 16:05:20.447822 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-28 16:05:20.584572 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-28 16:05:20.723162 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-28 16:05:20.862876 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-28 16:05:21.002887 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-28 16:05:22.156416 >>> {'status': '400', 'error_message': u'Invalid metric parameter test_metric'}
+2014-03-28 16:05:22.159490 >>> {'status': '400', 'error_message': 'Missing required parameter end_date'}
+2014-03-28 16:05:22.162391 >>> {'status': '400', 'error_message': 'Missing required parameter metric'}
+2014-03-28 16:05:22.165398 >>> {'status': '400', 'error_message': 'Missing required parameter network'}
+2014-03-28 16:05:22.167986 >>> {'status': '400', 'error_message': 'Missing required parameter start_date'}
+2014-03-28 16:05:22.170940 >>> {'status': '400', 'error_message': 'End date is before start date.'}
+2014-03-28 16:06:32.774686 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 16:06:32.777583 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 16:06:33.908136 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-28 16:06:34.046962 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-28 16:06:34.185222 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-28 16:06:34.323584 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-28 16:06:34.462161 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-28 16:06:34.600083 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-28 16:06:34.739874 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-28 16:06:35.899398 >>> {'status': '400', 'error_message': u'Invalid metric parameter test_metric'}
+2014-03-28 16:06:35.902870 >>> {'status': '400', 'error_message': 'Missing required parameter end_date'}
+2014-03-28 16:06:35.906870 >>> {'status': '400', 'error_message': 'Missing required parameter metric'}
+2014-03-28 16:06:35.910034 >>> {'status': '400', 'error_message': 'Missing required parameter network'}
+2014-03-28 16:06:35.912767 >>> {'status': '400', 'error_message': 'Missing required parameter start_date'}
+2014-03-28 16:06:35.915549 >>> {'status': '400', 'error_message': 'End date is before start date.'}
+2014-03-28 16:11:06.737749 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 16:11:06.754290 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 16:11:07.840586 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-28 16:11:07.978152 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-28 16:11:08.118405 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-28 16:11:08.267532 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-28 16:11:08.406267 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-28 16:11:08.542246 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-28 16:11:08.680818 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-28 16:11:09.820863 >>> {'status': '400', 'error_message': u'Invalid metric parameter test_metric'}
+2014-03-28 16:11:09.823865 >>> {'status': '400', 'error_message': 'Missing required parameter end_date'}
+2014-03-28 16:11:09.826787 >>> {'status': '400', 'error_message': 'Missing required parameter metric'}
+2014-03-28 16:11:09.829534 >>> {'status': '400', 'error_message': 'Missing required parameter network'}
+2014-03-28 16:11:09.832290 >>> {'status': '400', 'error_message': 'Missing required parameter start_date'}
+2014-03-28 16:11:09.835287 >>> {'status': '400', 'error_message': 'End date is before start date.'}
+2014-03-28 16:11:31.684849 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 16:11:31.688592 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 16:11:32.775366 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-28 16:11:32.913059 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-28 16:11:33.052042 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-28 16:11:33.189948 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-28 16:11:33.335433 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-28 16:11:33.482849 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-28 16:11:33.632951 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-28 16:11:34.760233 >>> {'status': '400', 'error_message': u'Invalid metric parameter test_metric'}
+2014-03-28 16:11:34.763844 >>> {'status': '400', 'error_message': 'Missing required parameter end_date'}
+2014-03-28 16:11:34.768076 >>> {'status': '400', 'error_message': 'Missing required parameter metric'}
+2014-03-28 16:11:34.771433 >>> {'status': '400', 'error_message': 'Missing required parameter network'}
+2014-03-28 16:11:34.773867 >>> {'status': '400', 'error_message': 'Missing required parameter start_date'}
+2014-03-28 16:11:34.776871 >>> {'status': '400', 'error_message': 'End date is before start date.'}
+2014-03-28 16:12:25.462987 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 16:12:25.465966 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-03-28 16:12:26.557574 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-28 16:12:26.694854 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-28 16:12:26.835390 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-28 16:12:26.973627 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-28 16:12:27.113727 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-28 16:12:27.261196 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-28 16:12:27.411211 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-03-28 16:12:28.547382 >>> {'status': '400', 'error_message': u'Invalid metric parameter test_metric'}
+2014-03-28 16:12:28.550825 >>> {'status': '400', 'error_message': 'Missing required parameter end_date'}
+2014-03-28 16:12:28.553983 >>> {'status': '400', 'error_message': 'Missing required parameter metric'}
+2014-03-28 16:12:28.556932 >>> {'status': '400', 'error_message': 'Missing required parameter network'}
+2014-03-28 16:12:28.559751 >>> {'status': '400', 'error_message': 'Missing required parameter start_date'}
+2014-03-28 16:12:28.562470 >>> {'status': '400', 'error_message': 'End date is before start date.'}
+2014-04-03 11:58:25.870299 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-04-03 11:58:25.884472 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-04-03 11:58:26.832413 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-04-03 11:58:26.926487 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-04-03 11:58:27.060774 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-04-03 11:58:27.088210 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-04-03 11:58:27.115249 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-04-03 11:58:27.154181 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-04-03 11:58:27.189949 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-04-03 11:58:27.219825 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-04-03 11:58:27.246811 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-04-03 11:58:27.509475 >>> {'status': '400', 'error_message': u'Invalid metric parameter test_metric'}
+2014-04-03 11:58:27.512735 >>> {'status': '400', 'error_message': 'Missing required parameter end_date'}
+2014-04-03 11:58:27.515833 >>> {'status': '400', 'error_message': 'Missing required parameter metric'}
+2014-04-03 11:58:27.518740 >>> {'status': '400', 'error_message': 'Missing required parameter network'}
+2014-04-03 11:58:27.521991 >>> {'status': '400', 'error_message': 'Missing required parameter start_date'}
+2014-04-03 11:58:27.524868 >>> {'status': '400', 'error_message': 'End date is before start date.'}
+2014-04-03 11:59:53.358391 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-04-03 11:59:53.361455 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-04-03 11:59:53.509807 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-04-03 11:59:53.535659 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-04-03 11:59:53.598757 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-04-03 11:59:53.624338 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-04-03 11:59:53.650987 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-04-03 11:59:53.676871 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-04-03 11:59:53.704123 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-04-03 11:59:53.729988 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-04-03 11:59:53.757242 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-04-03 11:59:53.968584 >>> {'status': '400', 'error_message': u'Invalid metric parameter test_metric'}
+2014-04-03 11:59:53.971748 >>> {'status': '400', 'error_message': 'Missing required parameter end_date'}
+2014-04-03 11:59:53.975599 >>> {'status': '400', 'error_message': 'Missing required parameter metric'}
+2014-04-03 11:59:53.978590 >>> {'status': '400', 'error_message': 'Missing required parameter network'}
+2014-04-03 11:59:53.981590 >>> {'status': '400', 'error_message': 'Missing required parameter start_date'}
+2014-04-03 11:59:53.984700 >>> {'status': '400', 'error_message': 'End date is before start date.'}
+2014-04-03 12:05:54.487008 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-04-03 12:05:54.504071 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-04-03 12:05:54.666948 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-04-03 12:05:54.712701 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-04-03 12:05:54.852254 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-04-03 12:05:54.893670 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-04-03 12:05:54.925401 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-04-03 12:05:54.975697 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-04-03 12:05:55.010318 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-04-03 12:05:55.059409 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-04-03 12:05:55.103806 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-04-03 12:05:55.449637 >>> {'status': '400', 'error_message': u'Invalid metric parameter test_metric'}
+2014-04-03 12:05:55.453532 >>> {'status': '400', 'error_message': 'Missing required parameter end_date'}
+2014-04-03 12:05:55.457423 >>> {'status': '400', 'error_message': 'Missing required parameter metric'}
+2014-04-03 12:05:55.461761 >>> {'status': '400', 'error_message': 'Missing required parameter network'}
+2014-04-03 12:05:55.466834 >>> {'status': '400', 'error_message': 'Missing required parameter start_date'}
+2014-04-03 12:05:55.471072 >>> {'status': '400', 'error_message': 'End date is before start date.'}
+2014-04-03 12:07:22.084907 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-04-03 12:07:22.099793 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-04-03 12:07:22.223691 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-04-03 12:07:22.261659 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-04-03 12:07:22.330414 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-04-03 12:07:22.357379 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-04-03 12:07:22.383868 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-04-03 12:07:22.410385 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-04-03 12:07:22.437359 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-04-03 12:07:22.464246 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-04-03 12:07:22.490878 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-04-03 12:07:22.707826 >>> {'status': '400', 'error_message': u'Invalid metric parameter test_metric'}
+2014-04-03 12:07:22.710916 >>> {'status': '400', 'error_message': 'Missing required parameter end_date'}
+2014-04-03 12:07:22.715196 >>> {'status': '400', 'error_message': 'Missing required parameter metric'}
+2014-04-03 12:07:22.718100 >>> {'status': '400', 'error_message': 'Missing required parameter network'}
+2014-04-03 12:07:22.721074 >>> {'status': '400', 'error_message': 'Missing required parameter start_date'}
+2014-04-03 12:07:22.724246 >>> {'status': '400', 'error_message': 'End date is before start date.'}
+2014-04-03 12:08:55.367102 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-04-03 12:08:55.386362 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-04-03 12:08:55.483011 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-04-03 12:08:55.511518 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-04-03 12:08:55.569036 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-04-03 12:08:55.596616 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-04-03 12:08:55.624199 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-04-03 12:08:55.650878 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-04-03 12:08:55.679040 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-04-03 12:08:55.717590 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-04-03 12:08:55.745182 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-04-03 12:08:55.906510 >>> {'status': '400', 'error_message': u'Invalid metric parameter test_metric'}
+2014-04-03 12:08:55.910615 >>> {'status': '400', 'error_message': 'Missing required parameter end_date'}
+2014-04-03 12:08:55.915084 >>> {'status': '400', 'error_message': 'Missing required parameter metric'}
+2014-04-03 12:08:55.917982 >>> {'status': '400', 'error_message': 'Missing required parameter network'}
+2014-04-03 12:08:55.920873 >>> {'status': '400', 'error_message': 'Missing required parameter start_date'}
+2014-04-03 12:08:55.923497 >>> {'status': '400', 'error_message': 'End date is before start date.'}
+2014-04-03 12:11:14.024915 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-04-03 12:11:14.028676 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-04-03 12:11:14.274642 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-04-03 12:11:14.311644 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-04-03 12:11:14.346682 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-04-03 12:11:14.383740 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-04-03 12:11:14.420080 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-04-03 12:11:14.455776 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-04-03 12:11:14.492339 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-04-03 12:11:14.690227 >>> {'status': '400', 'error_message': u'Invalid metric parameter test_metric'}
+2014-04-03 12:11:14.693326 >>> {'status': '400', 'error_message': 'Missing required parameter end_date'}
+2014-04-03 12:11:14.696336 >>> {'status': '400', 'error_message': 'Missing required parameter metric'}
+2014-04-03 12:11:14.698888 >>> {'status': '400', 'error_message': 'Missing required parameter network'}
+2014-04-03 12:11:14.702475 >>> {'status': '400', 'error_message': 'Missing required parameter start_date'}
+2014-04-03 12:11:14.705192 >>> {'status': '400', 'error_message': 'End date is before start date.'}
+2014-04-03 12:11:58.995153 >>> {'status': '501', 'error_message': 'Format not currently supported, but will be in the future'}
+2014-04-03 12:59:09.486127 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-04-03 13:04:07.583152 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-04-03 13:04:50.113468 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-04-03 13:05:32.416617 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-04-03 13:09:27.571587 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-04-03 13:16:32.305105 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-04-03 13:17:09.902036 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-04-03 13:18:38.090597 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-04-03 13:19:00.175119 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-04-03 13:19:27.800465 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-04-03 13:20:08.020391 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-04-03 13:20:22.019576 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-04-03 13:22:48.306291 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-04-03 13:23:19.976771 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-04-03 13:37:34.130189 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-04-03 13:37:34.144385 >>> {'status': '401', 'error_message': 'Not Authorized - check your API key'}
+2014-04-03 13:37:34.436812 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-04-03 13:37:34.481397 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-04-03 13:37:34.536029 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-04-03 13:37:34.592561 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-04-03 13:37:34.640270 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-04-03 13:37:34.687619 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-04-03 13:37:34.733215 >>> {'status': '416', 'error_message': 'No connections found matching the criteria'}
+2014-04-03 13:37:34.974774 >>> {'status': '400', 'error_message': u'Invalid metric parameter test_metric'}
+2014-04-03 13:37:34.977599 >>> {'status': '400', 'error_message': 'Missing required parameter end_date'}
+2014-04-03 13:37:34.980416 >>> {'status': '400', 'error_message': 'Missing required parameter metric'}
+2014-04-03 13:37:34.986881 >>> {'status': '400', 'error_message': 'Missing required parameter network'}
+2014-04-03 13:37:34.990107 >>> {'status': '400', 'error_message': 'Missing required parameter start_date'}
+2014-04-03 13:37:34.993136 >>> {'status': '400', 'error_message': 'End date is before start date.'}
