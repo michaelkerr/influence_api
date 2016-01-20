@@ -18,7 +18,7 @@ import urllib2
 from bson.code import Code
 
 ## >MongoDB related
-mongoclient = MongoClient('192.168.1.152', 27017)
+mongoclient = MongoClient('<IP ADDRESS>', 27017)
 mongo_db = mongoclient['connections']
 author_collection = mongo_db['authorcons']
 

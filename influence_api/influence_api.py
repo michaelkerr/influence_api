@@ -28,7 +28,7 @@ db = MySQLdb.connect(host="ingest.cudb3djsmyrc.us-west-2.rds.amazonaws.com",
 			db="ingestdb")
 
 """ MongoDB Related """
-mongoclient = MongoClient('192.168.1.152', 27017)
+mongoclient = MongoClient('<IP ADDRESS>', 27017)
 mongo_db = mongoclient['connections']
 author_collection = mongo_db['authorcons']
 

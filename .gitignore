@@ -53,9 +53,8 @@ coverage.xml
 docs/_build/
 
 # General ignores
-*.txt
-*.gexf
-*.graphml
+*.kate-swp
+*.DS_Store
 
 # Project Specific
 influence_api_local.py
